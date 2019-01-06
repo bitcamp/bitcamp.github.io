@@ -1,6 +1,6 @@
-# bitcamp-site-2018
+# bitcamp-site-2019
 
-http://2018.bit.camp/
+http://2019.bit.camp/
 
 ## Quick Start
 
