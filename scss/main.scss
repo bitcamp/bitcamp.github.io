@@ -243,6 +243,22 @@ article.intro {
   }
 }
 
+article.trails {
+  @extend .page-section;
+  .col-content {
+    @media (max-width: 767.98px) {
+      text-align: center;
+    }
+    margin-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .icon {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 article.colorwar {
   @extend .page-section;
   background-image: url('../img/colorwarbg.jpg');
@@ -379,8 +395,4 @@ div.separator {
     background-color: $bp-midnight-blue-light;
     background-image: url('../img/testx2.jpg');
   }
-}
-
-.container {
-  position: relative;
 }
