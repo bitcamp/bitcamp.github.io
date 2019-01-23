@@ -187,61 +187,6 @@ article.hero {
 .page-section {
   position: relative;
   padding: 12rem 0rem;
-  .trail {
-    position: absolute;
-    z-index: 99;
-    top: -22rem;
-    // width: 50rem;
-    //max-width: 36%;
-    // height: 10rem;
-    &.left {
-      -webkit-transform: rotate(-10deg);
-      transform: rotate(-10deg);
-      right: 50%;
-      &.flipped {
-        -webkit-transform: scaleX(-1) rotate(-10deg);
-        transform: scaleX(-1) rotate(-10deg);
-      }
-    }
-    &.right {
-      -webkit-transform: rotate(-12deg);
-      transform: rotate(-12deg);
-      left: 50%;
-      &.flipped {
-        -webkit-transform: scaleY(-1) rotate(-12deg);
-        transform: scaleY(-1) rotate(-12deg);
-      }
-    }
-  }
-  @media (max-width: 767.98px) {
-    .first.trail {
-      left: 14%;
-    }
-    .trail {
-      position: absolute;
-      z-index: 99;
-      top: -22rem;
-      //max-width: 36%;
-      &.left {
-        -webkit-transform: scaleX(2) scaleY(2) rotate(-20deg);
-        transform: rotate(-20deg) scaleX(2) scaleY(2);
-        right: 30%;
-        &.flipped {
-          -webkit-transform: scaleX(-2) scaleY(2) rotate(-20deg);
-          transform: scaleX(-2) scaleY(2) rotate(-20deg);
-        }
-      }
-      &.right {
-        -webkit-transform: scaleY(-2) scaleX(2) rotate(-22deg);
-        transform: scaleY(-2) scaleX(2) rotate(-22deg);
-        left: 30%;
-        &.flipped {
-          -webkit-transform: scaleX(2) scaleY(2) rotate(-22deg);
-          transform: rotate(-22deg) scaleX(2) scaleY(2);
-        }
-      }
-    }
-  }
   h2 {
     font-size: 2.4rem;
     margin-bottom: 2rem;
@@ -450,28 +395,4 @@ div.separator {
     background-color: $bp-midnight-blue-light;
     background-image: url('../img/testx2.jpg');
   }
-}
-
-.trail_visible .trail_path {
-  stroke-dashoffset: 0;
-}
-
-.trail_path{
-  fill:none;
-  stroke:#CDECF9;
-  stroke-width:7;
-  vector-effect: non-scaling-stroke;
-  stroke-dasharray:21.706,14.706,21.706,14.706,21.706,14.706,
-                   21.706,14.706,21.706,14.706,21.706,14.706,
-                   21.706,14.706,21.706,14.706,21.706,14.706,
-                   21.706,14.706,21.706,14.706,21.706,14.706,
-                   21.706,14.706,21.706,14.706,21.706,14.706,
-                   21.706,14.706,21.706,14.706,21.706,14.706,
-                   0,100000;
-  stroke-dashoffset: 655.416;
-  transition: 2s;
-}
-
-.container {
-  position: relative;
 }
