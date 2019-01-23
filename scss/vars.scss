@@ -26,3 +26,10 @@ $primary-btn-color: $logo-color;
 $secondary-btn-color: #fcc7b5;
 
 $md-breakpoint: 767.98px;
+
+// FAQ Plus Sign
+$plus-length: 10px;
+$plus-thickness: 2px;
+$plus-offset: ($plus-length - $plus-thickness) / 2; // Centers both lines
+$plus-margin-top: 1rem;
+$plus-margin-right: 0.5rem;

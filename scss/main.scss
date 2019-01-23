@@ -292,10 +292,46 @@ article.schedule {
 article.faq {
   @extend .page-section;
   h5 {
-    margin-top: 4rem;
+    cursor: pointer;
+    border-bottom: 2px solid $bp-yellow-orange;
   }
   p {
     margin-top: 2rem;
+    display: none;
+  }
+  .faq-card {
+    margin-top: 4rem;
+    position: relative;
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: $bp-yellow-orange;
+      transition: transform 100ms ease-in-out;
+    }
+    &:before { // Horizontal Line
+      right: $plus-margin-right;
+      top: calc(#{$plus-margin-top} + #{$plus-offset});
+      width: $plus-length;
+      height: $plus-thickness;
+    }
+    &:after { // Vertical Line
+      right: calc(#{$plus-margin-right} + #{$plus-offset});
+      top: $plus-margin-top;
+      width: $plus-thickness;
+      height: $plus-length;
+    }
+    &.open {
+      p {
+        display: block;
+      }
+      &:before {
+        transform: rotate(-180deg);
+      }
+      &:after {
+        transform: rotate(-90deg  );
+      }
+    }
   }
 }
 
@@ -348,11 +384,6 @@ article.footer {
         margin-top: 4rem;
         margin-bottom: 2rem;
         width: 4rem;
-      }
-      &:hover {
-        .icon {
-          // opacity: .7;
-        }
       }
     }
   }

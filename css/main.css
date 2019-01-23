@@ -359,10 +359,44 @@ article.schedule .schedule-table th {
 }
 
 article.faq h5 {
-  margin-top: 4rem;
+  cursor: pointer;
+  border-bottom: 2px solid #FFAF3F;
 }
 article.faq p {
   margin-top: 2rem;
+  display: none;
+}
+article.faq .faq-card {
+  margin-top: 4rem;
+  position: relative;
+}
+article.faq .faq-card:before, article.faq .faq-card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #FFAF3F;
+  transition: transform 100ms ease-in-out;
+}
+article.faq .faq-card:before {
+  right: 0.5rem;
+  top: calc(1rem + 4px);
+  width: 10px;
+  height: 2px;
+}
+article.faq .faq-card:after {
+  right: calc(0.5rem + 4px);
+  top: 1rem;
+  width: 2px;
+  height: 10px;
+}
+article.faq .faq-card.open p {
+  display: block;
+}
+article.faq .faq-card.open:before {
+  transform: rotate(-180deg);
+}
+article.faq .faq-card.open:after {
+  transform: rotate(-90deg);
 }
 
 article.sponsors {
@@ -406,6 +440,7 @@ article.footer .social-icons a .icon {
   margin-bottom: 2rem;
   width: 4rem;
 }
+
 div.separator {
   height: 16rem;
   margin-top: -0.2rem;
