@@ -1,0 +1,34 @@
+@import 'vars';
+
+.navbar {
+    background: $primary-bg-color;
+}
+
+.nav-item {
+    color: $default-font-color;
+    margin: 0 0.75rem; 
+}
+
+.navbar-brand {
+    color: $logo-color;
+    font-size: 3.75rem;
+    font-family: Aleo;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#mlh-trust-badge {
+    display: block;
+    max-width: 10rem;
+    min-width: 8rem;
+    position: absolute;
+    right: 2rem;
+    top: -0.1rem;
+    width:10%;
+    transition: ease all .2s;
+    z-index: 100;
+  }
