@@ -6,7 +6,12 @@
 
 .nav-item {
     color: $default-font-color;
-    margin: 0 0.75rem; 
+    margin: 0 0.75rem;
+    &:last-child {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $logo-color;
+    }
 }
 
 .navbar-brand {

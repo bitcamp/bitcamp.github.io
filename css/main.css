@@ -61,6 +61,11 @@ h1, h2, h3, h4, h5, h6, p {
   color: #474b4e;
   margin: 0 0.75rem;
 }
+.nav-item:last-child {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fa7041;
+}
 
 .navbar-brand {
   color: #fa7041;
