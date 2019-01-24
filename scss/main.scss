@@ -118,7 +118,7 @@ article.hero {
     p {
       margin-bottom: 0;
     }
-    .call-to-action { 
+    .call-to-action {
       display: inline-block;
       text-transform: uppercase;
       font-size: 2rem;
@@ -165,34 +165,45 @@ article.hero {
   position: relative;
   padding: 12rem 0rem;
   h2 {
-    font-size: 2.4rem;
     margin-bottom: 2rem;
+    text-align: left;
+    font-size: 3.5rem;
+    color: $bp-bitcamp-orange;
   }
   h3 {
     font-weight: normal;
     opacity: .9;
   }
   h4 {
-    font-size: 2.0rem;
-    color: $bp-yellow-orange;
+    font-size: 2.5rem;
+    color: black;
+    font-family: Avenir;
+    font-weight: bolder;
   }
   h5 {
     font-size: 1.8rem;
     color: $bp-yellow-orange;
   }
   p {
-    margin-top: 4rem;
-    opacity: .9;
+    //margin-top: 3rem;
+  }
+  div.h2-accent {
+    border: 2px solid $bp-header-brown;
+    /*@media (max-width: $md-breakpoint) {
+      margin-left: auto;
+      margin-right: auto;
+    }*/
+    width: 14rem;
   }
   .btn-container {
     margin-top: 4rem;
   }
-  &.dark {
-    background-color: $bp-midnight-blue;
-    color: white;
+  &.white {
+    background-color: $bp-cloud-white;
+    color: black;
   }
   &.medium {
-    background-color: $bp-midnight-blue-light;
+    background-color: $bp-bitcamp-orange;
     color: white;
   }
 }
@@ -204,11 +215,11 @@ article.intro {
   }
   .img-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
   }
   img {
-    width: 100%;
+    width: 30rem;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
@@ -217,6 +228,13 @@ article.intro {
     @media (max-width: $md-breakpoint) {
       margin-top: 8rem;
     }
+  }
+  p {
+    margin-top: 3rem;
+    font-size: 2.1rem;
+  }
+  h2 {
+    margin-top: 8rem;
   }
 }
 
@@ -250,23 +268,64 @@ article.colorwar {
 
 article.schedule {
   @extend .page-section;
-  .trail-hightlight {
+  /*.trail-hightlight {
     font-weight: bold;
     color: $bp-yellow-orange;
   }
   .bp-btn {
     min-width: 20rem;
     // margin-left: .8rem;
+  }*/
+  .schedule-navbar {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  .tab {
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   p {
-    margin-bottom: 4rem;
+    text-align: left;
+    margin-bottom: 0rem;
   }
   h4 {
-    text-align: center;
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    //margin-top: 8rem;
+    text-align: left;
   }
-  .schedule-table {
+  .external-link {
+    text-align: right;
+    height: 100%;
+    padding-top: 3.25rem;
+    font-size: 2rem;
+    @media (max-width: $md-breakpoint) {
+      text-align: left;
+      padding-top: 0rem;
+    }
+  }
+  .col-md {
+    border-bottom: 5px solid $bp-warm-grey;
+  }
+  .curr {
+    border-color: $bp-bitcamp-orange;
+  }
+  .event {
+    background-color: $bp-warm-grey;
+    border-radius: 1.75rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  /*.schedule-table {
     margin-top: 4rem;
     text-align: left;
     width: 100%;
@@ -286,7 +345,7 @@ article.schedule {
       color: $bp-sky-blue;
       font-weight: bold;
     }
-  }
+  }*/
 }
 
 article.faq {
