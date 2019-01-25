@@ -112,7 +112,12 @@ article.hero {
       margin-bottom: 1rem;
       & + p {
         font-weight: bold;
-        font-size: 2.25rem;
+        font-size: 130%;
+        @media (max-width: $lg-breakpoint) {
+          span {
+            display: block;
+          }
+        }
       }
     }
     p {
@@ -381,19 +386,42 @@ article.sponsors {
 
 article.footer {
   @extend .page-section;
+  //TODO: remove when merged
+  background: $primary-bg-color !important;
+  color: black !important;
+  .contact-card {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 350px;
+    width: 80%;
+    background: #fff7f4;
+    padding: 2rem;
+    .email {
+      display: block;
+      font-family: $serif-stack;
+      font-size: 150%;
+      font-weight: bold;
+      color: #c79b72;
+      margin: 1.75rem 0;   
+    }
+  }
+  p {
+    margin: 0;
+  }
   .social-icons {
     a {
       transition: ease all .2s;
-      margin-left: 2rem;
+      margin-left: 1rem;
       &:first-child {
         margin-left: 0;
       }
       .icon {
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        width: 4rem;
+        width: 3.5rem;
       }
     }
+  }
+  @media (max-width: $md-breakpoint) {
+    text-align: center;
   }
 }
 

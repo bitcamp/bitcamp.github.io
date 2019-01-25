@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: Aleo, Times, serif;
   font-weight: bold;
+  color: #fa7041;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -239,7 +240,12 @@ article.hero .content h1 {
 }
 article.hero .content h1 + p {
   font-weight: bold;
-  font-size: 2.25rem;
+  font-size: 130%;
+}
+@media (max-width: 991.98px) {
+  article.hero .content h1 + p span {
+    display: block;
+  }
 }
 article.hero .content p {
   margin-bottom: 0;
@@ -485,17 +491,43 @@ article.sponsors .sponsors-img {
   display: block;
 }
 
+article.footer {
+  background: #ffeee7 !important;
+  color: black !important;
+}
+article.footer .contact-card {
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 350px;
+  width: 80%;
+  background: #fff7f4;
+  padding: 2rem;
+}
+article.footer .contact-card .email {
+  display: block;
+  font-family: Aleo, Times, serif;
+  font-size: 150%;
+  font-weight: bold;
+  color: #c79b72;
+  margin: 1.75rem 0;
+}
+article.footer p {
+  margin: 0;
+}
 article.footer .social-icons a {
   transition: ease all 0.2s;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 article.footer .social-icons a:first-child {
   margin-left: 0;
 }
 article.footer .social-icons a .icon {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  width: 4rem;
+  width: 3.5rem;
+}
+@media (max-width: 767.98px) {
+  article.footer {
+    text-align: center;
+  }
 }
 
 div.separator {
