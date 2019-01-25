@@ -362,14 +362,5 @@ div.separator {
   height: 16rem;
   margin-top: -.2rem;
   margin-bottom: -.2rem;
-  background-repeat: repeat-x;
   background-size: cover;
-  &.light-sky {
-    background-color: $bp-midnight-blue;
-    background-image: url('../img/testx.jpg');
-  }
-  &.dark-sky {
-    background-color: $bp-midnight-blue-light;
-    background-image: url('../img/testx2.jpg');
-  }
 }

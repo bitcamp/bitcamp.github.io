@@ -1,39 +1,81 @@
 @import 'vars';
 
-.navbar {
+$nav-height: 80px;
+$nav-link-hover-color: #ffad77;
+
+#nav {
     background: $primary-bg-color;
+    height: $nav-height;
+    @media (max-width: $lg-breakpoint) {
+        height: 65px;
+    }
+    .navbar {
+        width: 80%;
+    }
+    .nav-link {
+        color: $default-font-color;
+        margin: 0 0.75rem;
+        @media (max-width: $lg-breakpoint) {
+            font-size: 1.375rem;
+        }
+        &:hover,
+        &.sign-up-link:hover {
+            color: $nav-link-hover-color;
+            filter: none;
+        }
+        &.sign-up-link {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $logo-color;
+        }
+    }
+    .navbar-brand {
+        color: $logo-color;
+        font-family: Aleo;
+        font-weight: bold;
+        font-size: 3.75rem;
+        &:hover {
+            filter: none;
+        }
+    }
+    .navbar-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #mlh-trust-badge {
+        display: block;
+        max-width: 10rem;
+        min-width: 8rem;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width:10%;
+        transition: ease all .2s;
+        z-index: 100;
+  }
 }
 
-.nav-item {
-    color: $default-font-color;
-    margin: 0 0.75rem;
-    &:last-child {
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $logo-color;
+body.fixed-nav {
+    margin-top: $nav-height;
+    #nav {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
+        z-index: 100;
+        top: -$nav-height;
+        animation: appear 300ms ease-in-out forwards;
+        @keyframes appear {
+            100% {
+                top: 0;
+            }
+        }
+        #mlh-trust-badge {
+            display: none;
+        }
+    }
+    &.no-animation #nav {
+        top: 0;
+        animation: none;
     }
 }
-
-.navbar-brand {
-    color: $logo-color;
-    font-size: 3.75rem;
-    font-family: Aleo;
-    font-weight: bold;
-}
-
-.navbar-nav {
-    width: 100%;
-    justify-content: flex-end;
-}
-
-#mlh-trust-badge {
-    display: block;
-    max-width: 10rem;
-    min-width: 8rem;
-    position: absolute;
-    right: 2rem;
-    top: -0.1rem;
-    width:10%;
-    transition: ease all .2s;
-    z-index: 100;
-  }

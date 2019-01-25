@@ -44,6 +44,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- PRELOAD HERO IMG -->
@@ -72,25 +73,27 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRPP8J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav class="navbar navbar-expand-md justify-content-between fixed-top">
-    <a href="#" class="navbar-brand">bitcamp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#link-container" aria-controls="link-container" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="link-container" class="collapse navbar-collapse">
-      <div class="navbar-nav">
-        <a href="#about" class="nav-item nav-link">About</a>
-        <a href="#schedule" class="nav-item nav-link">Schedule</a>
-        <a href="#faq" class="nav-item nav-link">FAQ</a>
-        <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
-        <a href="#contact" class="nav-item nav-link">Contact</a>
-        <a href="#" class="nav-item nav-link">Sign In/Up</a>
-        <!--<a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black" target="_blank">
-          <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
-        </a>-->
+  <section id="nav">
+    <nav class="navbar-custom container navbar navbar-expand-md justify-content-between">
+      <a href="#" class="navbar-brand">bitcamp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#linkContainer" aria-controls="linkContainer" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="linkContainer" class="collapse navbar-collapse">
+        <div class="navbar-nav">
+          <a href="#about" class="nav-item nav-link">About</a>
+          <a href="#schedule" class="nav-item nav-link">Schedule</a>
+          <a href="#faq" class="nav-item nav-link">FAQ</a>
+          <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
+          <a href="#contact" class="nav-item nav-link">Contact</a>
+          <a href="#" class="nav-item nav-link sign-up-link">Sign In/Up</a>
+          <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black" target="_blank">
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+</section>
 
   <article class="page-body">
 
@@ -185,8 +188,6 @@
         </div>
       </div>
     </article>
-
-    <div class="separator light-sky"></div>
 
     <article id="colorwar" class="colorwar dark">
       <div class="container text-center">
@@ -510,8 +511,6 @@ PM</td>
       </div>
     </article>
 
-    <div class="separator light-sky"></div>
-
     <article class="faq dark" id="faq">
       <div class="container">
         <div class="text-center">
@@ -624,8 +623,6 @@ PM</td>
           </div>
         </div>
     </article>
-
-    <div class="separator dark-sky"></div>
 
 
     <article class="sponsors medium" id="sponsors">
@@ -992,9 +989,6 @@ PM</td>
         </div>
     </article>
 
-    <div class="separator light-sky"></div>
-
-
     <article id="contact" class="footer dark">
       <div class="container">
         <div class="text-center">
@@ -1025,40 +1019,6 @@ PM</td>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="./js/main.js"></script>
-
-  <script type="text/javascript">
-    /**
-     * inViewport jQuery plugin by Roko C.B.
-     * http://stackoverflow.com/a/26831113/383904
-     * Returns a callback function with an argument holding
-     * the current amount of px an element is visible in viewport
-     * (The min returned value is 0 (element outside of viewport)
-     */
-    ;
-    (function ($, win) {
-      $.fn.inViewport = function (cb) {
-        return this.each(function (i, el) {
-          function visPx() {
-            var elH = $(el).outerHeight(),
-              H = $(win).height(),
-              r = el.getBoundingClientRect(),
-              t = r.top,
-              b = r.bottom;
-            return cb.call(el, Math.max(0, t > 0 ? Math.min(elH, H - t) : (b < H ? b : H)));
-          }
-          visPx();
-          $(win).on("resize scroll", visPx);
-        });
-      };
-    }(jQuery, window));
-
-    $(document).ready(function () {
-      $(".trail").inViewport(function (px) {
-        if (px) $(this).addClass("trail_visible");
-        // console.log("here!");
-      })
-    });
-  </script>
 </body>
 
 </html>
