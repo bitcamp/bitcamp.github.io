@@ -15,8 +15,11 @@ $bp-medium-blue: #528CA5;
 $bp-sky-blue: #CBF2FF;
 
 // Custom
-
 $bp-midnight-blue-light: #22363c;
+
+// Font
+$sans-serif-stack: Avenir, Georgia, sans-serif;
+$serif-stack: Aleo, Times, serif;
 
 // 2019 Color Palette
 $default-font-color: #474b4e;
@@ -25,11 +28,12 @@ $logo-color: #fa7041;
 $primary-btn-color: $logo-color;
 $secondary-btn-color: #fcc7b5;
 
-$md-breakpoint: 767.98px;
-
 // FAQ Plus Sign
 $plus-length: 10px;
 $plus-thickness: 2px;
 $plus-offset: ($plus-length - $plus-thickness) / 2; // Centers both lines
 $plus-margin-top: 1rem;
 $plus-margin-right: 0.5rem;
+// Bootstrap breakpoints
+$md-breakpoint: 767.98px;
+$lg-breakpoint: 991.98px;

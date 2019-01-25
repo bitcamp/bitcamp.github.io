@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1.8rem;
-  font-family: Avenir;
+  font-family: Avenir, Georgia, sans-serif;
   color: #474b4e;
   line-height: 1.5;
   overflow-x: hidden !important;
@@ -45,7 +45,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: Aleo;
+  font-family: Aleo, Times, serif;
   font-weight: bold;
 }
 
@@ -53,37 +53,84 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
 }
 
-.navbar {
+#nav {
   background: #ffeee7;
+  height: 80px;
 }
-
-.nav-item {
+@media (max-width: 991.98px) {
+  #nav {
+    height: 65px;
+  }
+}
+#nav .navbar {
+  width: 80%;
+}
+#nav .nav-link {
   color: #474b4e;
   margin: 0 0.75rem;
 }
-
-.navbar-brand {
+@media (max-width: 991.98px) {
+  #nav .nav-link {
+    font-size: 1.375rem;
+  }
+}
+#nav .nav-link:hover, #nav .nav-link.sign-up-link:hover {
+  color: #ffad77;
+  filter: none;
+}
+#nav .nav-link.sign-up-link {
+  font-weight: bold;
+  text-transform: uppercase;
   color: #fa7041;
-  font-size: 3.75rem;
+}
+#nav .navbar-brand {
+  color: #fa7041;
   font-family: Aleo;
   font-weight: bold;
+  font-size: 3.75rem;
 }
-
-.navbar-nav {
+#nav .navbar-brand:hover {
+  filter: none;
+}
+#nav .navbar-nav {
   width: 100%;
   justify-content: flex-end;
 }
-
-#mlh-trust-badge {
+#nav #mlh-trust-badge {
   display: block;
   max-width: 10rem;
   min-width: 8rem;
   position: absolute;
-  right: 2rem;
-  top: -0.1rem;
+  top: 0;
+  left: 100%;
   width: 10%;
   transition: ease all 0.2s;
   z-index: 100;
+}
+
+body.fixed-nav {
+  margin-top: 80px;
+}
+body.fixed-nav #nav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
+  z-index: 100;
+  top: -80px;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  100% {
+    top: 0;
+  }
+}
+body.fixed-nav #nav #mlh-trust-badge {
+  display: none;
+}
+body.fixed-nav.no-animation #nav {
+  top: 0;
+  animation: none;
 }
 
 a {
@@ -358,13 +405,23 @@ article.schedule .schedule-table th {
   font-weight: bold;
 }
 
+article.faq {
+  background: white !important;
+}
+article.faq h2 {
+  color: #fa7041;
+  text-align: left;
+}
 article.faq h5 {
   cursor: pointer;
-  border-bottom: 2px solid #FFAF3F;
+  font-family: Avenir, Georgia, sans-serif;
+  border-bottom: 1px solid #8c8c8c;
+  color: black;
 }
 article.faq p {
   margin-top: 2rem;
   display: none;
+  color: black;
 }
 article.faq .faq-card {
   margin-top: 4rem;
@@ -374,7 +431,7 @@ article.faq .faq-card:before, article.faq .faq-card:after {
   content: "";
   display: block;
   position: absolute;
-  background: #FFAF3F;
+  background: black;
   transition: transform 100ms ease-in-out;
 }
 article.faq .faq-card:before {
@@ -445,16 +502,7 @@ div.separator {
   height: 16rem;
   margin-top: -0.2rem;
   margin-bottom: -0.2rem;
-  background-repeat: repeat-x;
   background-size: cover;
-}
-div.separator.light-sky {
-  background-color: #1A2E33;
-  background-image: url("../img/testx.jpg");
-}
-div.separator.dark-sky {
-  background-color: #22363c;
-  background-image: url("../img/testx2.jpg");
 }
 
 /*# sourceMappingURL=main.css.map */

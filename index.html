@@ -44,6 +44,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- PRELOAD HERO IMG -->
@@ -72,25 +73,27 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRPP8J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav class="navbar navbar-expand-md justify-content-between fixed-top">
-    <a href="#" class="navbar-brand">bitcamp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#link-container" aria-controls="link-container" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="link-container" class="collapse navbar-collapse">
-      <div class="navbar-nav">
-        <a href="" class="nav-item nav-link">About</a>
-        <a href="" class="nav-item nav-link">Schedule</a>
-        <a href="" class="nav-item nav-link">FAQ</a>
-        <a href="" class="nav-item nav-link">Sponsors</a>
-        <a href="" class="nav-item nav-link">Contact</a>
-        <a href="" class="nav-item nav-link">Sign In/Up</a>
-        <!--<a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black" target="_blank">
-          <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
-        </a>-->
+  <section id="nav">
+    <nav class="navbar-custom container navbar navbar-expand-md justify-content-between">
+      <a href="#" class="navbar-brand">bitcamp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#linkContainer" aria-controls="linkContainer" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="linkContainer" class="collapse navbar-collapse">
+        <div class="navbar-nav">
+          <a href="#about" class="nav-item nav-link">About</a>
+          <a href="#schedule" class="nav-item nav-link">Schedule</a>
+          <a href="#faq" class="nav-item nav-link">FAQ</a>
+          <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
+          <a href="#contact" class="nav-item nav-link">Contact</a>
+          <a href="#" class="nav-item nav-link sign-up-link">Sign In/Up</a>
+          <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black" target="_blank">
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+</section>
 
   <article class="page-body">
 
@@ -111,7 +114,7 @@
       </div>
     </article>
 
-    <article class="intro dark">
+    <article id="about" class="intro dark">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -185,8 +188,6 @@
         </div>
       </div>
     </article>
-
-    <div class="separator light-sky"></div>
 
     <article id="colorwar" class="colorwar dark">
       <div class="container text-center">
@@ -510,8 +511,6 @@ PM</td>
       </div>
     </article>
 
-    <div class="separator light-sky"></div>
-
     <article class="faq dark" id="faq">
       <div class="container">
         <div class="text-center">
@@ -669,8 +668,6 @@ PM</td>
           </div>
         </div>
     </article>
-
-    <div class="separator dark-sky"></div>
 
 
     <article class="sponsors medium" id="sponsors">
@@ -1037,10 +1034,7 @@ PM</td>
         </div>
     </article>
 
-    <div class="separator light-sky"></div>
-
-
-    <article class="footer dark">
+    <article id="contact" class="footer dark">
       <div class="container">
         <div class="text-center">
           <h2>Send us mail at <a href="mailto:hello@bit.camp">hello@bit.camp</a> or tweet <a target="_blank" href="https://twitter.com/bitcmp">@bitcmp</a></h2>

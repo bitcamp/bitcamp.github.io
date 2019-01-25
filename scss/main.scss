@@ -291,13 +291,21 @@ article.schedule {
 
 article.faq {
   @extend .page-section;
+  background: white !important; //TODO: remove important tag with new layout
+  h2 { // TODO: remove
+    color: $logo-color;
+    text-align: left;
+  }
   h5 {
     cursor: pointer;
-    border-bottom: 2px solid $bp-yellow-orange;
+    font-family: $sans-serif-stack;
+    border-bottom: 1px solid #8c8c8c;
+    color: black; //TODO: remove
   }
   p {
     margin-top: 2rem;
     display: none;
+    color: black; //TODO: remove
   }
   .faq-card {
     margin-top: 4rem;
@@ -306,7 +314,7 @@ article.faq {
       content: '';
       display: block;
       position: absolute;
-      background: $bp-yellow-orange;
+      background: black;
       transition: transform 100ms ease-in-out;
     }
     &:before { // Horizontal Line
@@ -329,7 +337,7 @@ article.faq {
         transform: rotate(-180deg);
       }
       &:after {
-        transform: rotate(-90deg  );
+        transform: rotate(-90deg);
       }
     }
   }
@@ -393,14 +401,5 @@ div.separator {
   height: 16rem;
   margin-top: -.2rem;
   margin-bottom: -.2rem;
-  background-repeat: repeat-x;
   background-size: cover;
-  &.light-sky {
-    background-color: $bp-midnight-blue;
-    background-image: url('../img/testx.jpg');
-  }
-  &.dark-sky {
-    background-color: $bp-midnight-blue-light;
-    background-image: url('../img/testx2.jpg');
-  }
 }
