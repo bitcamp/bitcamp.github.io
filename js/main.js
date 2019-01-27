@@ -1,8 +1,10 @@
 "use strict";
 
+// Setup event listeners
 $(".faq-card h5").click(toggleFAQInfo);
+$('#nav .nav-link').click(handleNavLinkClick);
 $(window).scroll(adjustFixedNavbar);
-$('#nav .nav-link').click(setNoNavbarAnimation);
+$(document).ready(adjustFixedNavbar);
 
 // Open up the faq-card info
 function toggleFAQInfo(event) {
@@ -11,14 +13,25 @@ function toggleFAQInfo(event) {
 
 // Make nav fixed to the top after leaving the intro section
 function adjustFixedNavbar(event) {
-  if($(event.target).scrollTop() > 528) {
+  if($(window).scrollTop() > 528) {
     $('body').addClass('fixed-nav');
   } else {
     $('body').removeClass('fixed-nav no-animation');
   }
 }
 
-//
-function setNoNavbarAnimation() {
+// Handle a nav-link click
+function handleNavLinkClick() {
+  collapseNavbar();
+  turnOffNavbarAnimation();
+}
+
+// Hide the expanded menu
+function collapseNavbar() {
+  $('.navbar-collapse').collapse('hide');
+}
+
+// Ensure that the fixed-nav doesn't animate into frame
+function turnOffNavbarAnimation() {
   $('body').addClass('no-animation');
 }

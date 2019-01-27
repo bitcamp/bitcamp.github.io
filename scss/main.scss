@@ -103,8 +103,17 @@ article.hero {
   margin-bottom: -.2rem; // gap glitch fix
   background-color: $primary-bg-color;
   .content {
-    .col:nth-child(1) { // First column
+    .col-sm:nth-child(1) { // First column
       text-align: right;
+    }
+    @media (max-width: $sm-breakpoint) {
+      .col-sm,
+      .col-sm:nth-child(1) {
+        text-align: center;
+      }
+    }
+    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+      font-size: 75%;
     }
     h1 {
       color: $logo-color;
@@ -112,12 +121,7 @@ article.hero {
       margin-bottom: 1rem;
       & + p {
         font-weight: bold;
-        font-size: 130%;
-        @media (max-width: $lg-breakpoint) {
-          span {
-            display: block;
-          }
-        }
+        font-size: 115%;
       }
     }
     p {
@@ -156,11 +160,12 @@ article.hero {
       }
     }
     .logo-box {
-      position: relative;
-      // Get ready for this hardcoded fire gif beauty :')
       img.logo {
         width: 20rem;
         margin-right: 3rem;
+        @media (max-width: $md-breakpoint) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -396,6 +401,10 @@ article.footer {
     width: 80%;
     background: #fff7f4;
     padding: 2rem;
+    @media (max-width: $md-breakpoint) {
+      width: 100%;
+      background: inherit;
+    }
     .email {
       display: block;
       font-family: $serif-stack;

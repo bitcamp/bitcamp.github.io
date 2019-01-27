@@ -57,22 +57,39 @@ h1, h2, h3, h4, h5, h6, p {
 #nav {
   background: #ffeee7;
   height: 80px;
+  z-index: 100;
 }
 @media (max-width: 991.98px) {
   #nav {
     height: 65px;
   }
 }
+@media (max-width: 767.98px) {
+  #nav {
+    height: initial;
+  }
+}
 #nav .navbar {
+  height: 100%;
   width: 80%;
+}
+@media (max-width: 767.98px) {
+  #nav .navbar {
+    width: 100%;
+  }
 }
 #nav .nav-link {
   color: #474b4e;
   margin: 0 0.75rem;
 }
-@media (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 991.98px) {
   #nav .nav-link {
     font-size: 1.375rem;
+  }
+}
+@media (max-width: 767.98px) {
+  #nav .nav-link {
+    text-align: center;
   }
 }
 #nav .nav-link:hover, #nav .nav-link.sign-up-link:hover {
@@ -89,9 +106,15 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: Aleo;
   font-weight: bold;
   font-size: 3.75rem;
+  line-height: inherit;
 }
 #nav .navbar-brand:hover {
   filter: none;
+}
+#nav .navbar-toggler .navbar-toggler-icon {
+  color: #fa7041;
+  font-size: 2rem;
+  line-height: 3.75rem;
 }
 #nav .navbar-nav {
   width: 100%;
@@ -108,6 +131,11 @@ h1, h2, h3, h4, h5, h6, p {
   transition: ease all 0.2s;
   z-index: 100;
 }
+@media (max-width: 767.98px) {
+  #nav #mlh-trust-badge {
+    display: none;
+  }
+}
 
 body.fixed-nav {
   margin-top: 80px;
@@ -117,7 +145,6 @@ body.fixed-nav #nav {
   width: 100%;
   left: 0;
   box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
-  z-index: 100;
   top: -80px;
   animation: appear 300ms ease-in-out forwards;
 }
@@ -230,8 +257,19 @@ article.hero {
   margin-bottom: -0.2rem;
   background-color: #ffeee7;
 }
-article.hero .content .col:nth-child(1) {
+article.hero .content .col-sm:nth-child(1) {
   text-align: right;
+}
+@media (max-width: 575.98px) {
+  article.hero .content .col-sm,
+article.hero .content .col-sm:nth-child(1) {
+    text-align: center;
+  }
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  article.hero .content {
+    font-size: 75%;
+  }
 }
 article.hero .content h1 {
   color: #fa7041;
@@ -240,12 +278,7 @@ article.hero .content h1 {
 }
 article.hero .content h1 + p {
   font-weight: bold;
-  font-size: 130%;
-}
-@media (max-width: 991.98px) {
-  article.hero .content h1 + p span {
-    display: block;
-  }
+  font-size: 115%;
 }
 article.hero .content p {
   margin-bottom: 0;
@@ -282,12 +315,14 @@ article.hero .content .call-to-action span:first-child:after {
   height: 100%;
   transform: skewX(-20deg);
 }
-article.hero .content .logo-box {
-  position: relative;
-}
 article.hero .content .logo-box img.logo {
   width: 20rem;
   margin-right: 3rem;
+}
+@media (max-width: 767.98px) {
+  article.hero .content .logo-box img.logo {
+    margin-right: 0;
+  }
 }
 
 .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.trails, article.intro {
@@ -502,6 +537,12 @@ article.footer .contact-card {
   width: 80%;
   background: #fff7f4;
   padding: 2rem;
+}
+@media (max-width: 767.98px) {
+  article.footer .contact-card {
+    width: 100%;
+    background: inherit;
+  }
 }
 article.footer .contact-card .email {
   display: block;
