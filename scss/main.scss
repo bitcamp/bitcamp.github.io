@@ -163,7 +163,7 @@ article.hero {
 
 .page-section {
   position: relative;
-  padding: 12rem 0rem;
+  padding: 10rem 0rem;
   h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -244,13 +244,15 @@ article.trails {
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
-    margin-top: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    //padding-left: 2rem;
+    //padding-right: 2rem;
     .icon {
-      margin-top: 4rem;
+      //margin-top: 2rem;
       margin-bottom: 2rem;
     }
+  }
+  h2 {
+    color: white;
   }
 }
 
@@ -268,32 +270,30 @@ article.colorwar {
 
 article.schedule {
   @extend .page-section;
-  /*.trail-hightlight {
-    font-weight: bold;
-    color: $bp-yellow-orange;
-  }
-  .bp-btn {
-    min-width: 20rem;
-    // margin-left: .8rem;
-  }*/
+  /* Remove bootstrap styling */
   ul.nav-tabs {
     border: 0px solid;
     margin-top: 7rem;
-    margin-bottom: 1rem;
-  }
-  ul.nav-tabs li.nav-item a {
-    border: 0px solid;
-  }
-  ul.nav-tabs li.nav-item a:hover {
-    filter: none;
-  }
-  ul.nav-tabs li.nav-item {
-    margin: 0; /* Get rid of spacing between buttom borders */
-    border-bottom: 5px solid $bp-warm-grey;
-    width: 30rem;
-  }
-  ul.nav-tabs li.current {
-    border-color: $bp-bitcamp-orange;
+    margin-bottom: 5rem;
+
+    li.nav-item {
+      margin: 0; /* Get rid of spacing between buttom borders */
+      border-bottom: 5px solid $bp-warm-grey;
+      //width: 31rem;
+      width: 29%;
+      a {
+        &:hover {
+          filter: none; /* Remove link hover styling */
+        }
+        border: 0px solid;
+        padding-bottom: 1rem;
+      }
+    }
+    /* Style for currently active tab */
+    li.current {
+      border-color: $bp-bitcamp-orange;
+      font-weight: bold;
+    }
   }
   .tab {
     text-align: center;
@@ -330,27 +330,6 @@ article.schedule {
     text-align: center;
     margin-top: 2.5rem;
   }
-  /*.schedule-table {
-    margin-top: 4rem;
-    text-align: left;
-    width: 100%;
-    tr {
-      border-bottom: 2px solid #394a50;
-      &.heading {
-        border: none;
-      }
-    }
-    th, td {
-      min-width: 12rem;
-      padding: 1rem;
-      // padding-right: 1rem;
-      // padding-bottom: .8rem;
-    }
-    th {
-      color: $bp-sky-blue;
-      font-weight: bold;
-    }
-  }*/
 }
 
 article.faq {
@@ -367,11 +346,11 @@ article.sponsors {
   @extend .page-section;
   div.pitch {
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    //margin-bottom: 4rem;
   }
   div.logo {
     // width: 100%;
-    padding: 3.6rem 2rem;
+    padding: 3.5rem 2rem;
     a {
       &:hover {
         filter: none;

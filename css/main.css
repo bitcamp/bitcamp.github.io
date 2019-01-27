@@ -193,7 +193,7 @@ article.hero {
 
 .page-section, article.intro, article.trails, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
-  padding: 12rem 0rem; }
+  padding: 10rem 0rem; }
   .page-section h2, article.intro h2, article.trails h2, article.colorwar h2, article.schedule h2, article.faq h2, article.sponsors h2, article.footer h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -253,16 +253,15 @@ article.intro p {
 article.intro h2 {
   margin-top: 8rem; }
 
-article.trails .col-content {
-  margin-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem; }
-  @media (max-width: 767.98px) {
-    article.trails .col-content {
-      text-align: center; } }
-  article.trails .col-content .icon {
-    margin-top: 4rem;
-    margin-bottom: 2rem; }
+@media (max-width: 767.98px) {
+  article.trails .col-content {
+    text-align: center; } }
+
+article.trails .col-content .icon {
+  margin-bottom: 2rem; }
+
+article.trails h2 {
+  color: white; }
 
 article.colorwar {
   background-image: url("../img/colorwarbg.jpg");
@@ -274,57 +273,26 @@ article.colorwar {
     margin-bottom: 4rem; }
 
 article.schedule {
-  /*.trail-hightlight {
-    font-weight: bold;
-    color: $bp-yellow-orange;
-  }
-  .bp-btn {
-    min-width: 20rem;
-    // margin-left: .8rem;
-  }*/
-  /*.schedule-navbar {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-  }*/
-  /*.schedule-table {
-    margin-top: 4rem;
-    text-align: left;
-    width: 100%;
-    tr {
-      border-bottom: 2px solid #394a50;
-      &.heading {
-        border: none;
-      }
-    }
-    th, td {
-      min-width: 12rem;
-      padding: 1rem;
-      // padding-right: 1rem;
-      // padding-bottom: .8rem;
-    }
-    th {
-      color: $bp-sky-blue;
-      font-weight: bold;
-    }
-  }*/ }
-  article.schedule h2 {
-    margin-top: 1rem; }
+  /* Remove bootstrap styling */ }
   article.schedule ul.nav-tabs {
     border: 0px solid;
     margin-top: 7rem;
-    margin-bottom: 1rem; }
-  article.schedule ul.nav-tabs li.nav-item a {
-    border: 0px solid; }
-  article.schedule ul.nav-tabs li.nav-item a:hover {
-    filter: none; }
-  article.schedule ul.nav-tabs li.nav-item {
-    margin: 0;
-    /* Get rid of spacing between buttom borders */
-    border-bottom: 5px solid #EFEFEF;
-    width: 30rem; }
-  article.schedule ul.nav-tabs li.current {
-    border-color: #FF6F3F; }
+    margin-bottom: 5rem;
+    /* Style for currently active tab */ }
+    article.schedule ul.nav-tabs li.nav-item {
+      margin: 0;
+      /* Get rid of spacing between buttom borders */
+      border-bottom: 5px solid #EFEFEF;
+      width: 29%; }
+      article.schedule ul.nav-tabs li.nav-item a {
+        border: 0px solid;
+        padding-bottom: 1rem; }
+        article.schedule ul.nav-tabs li.nav-item a:hover {
+          filter: none;
+          /* Remove link hover styling */ }
+    article.schedule ul.nav-tabs li.current {
+      border-color: #FF6F3F;
+      font-weight: bold; }
   article.schedule .tab {
     text-align: center; }
   article.schedule p {
@@ -341,8 +309,6 @@ article.schedule {
       article.schedule .external-link {
         text-align: left;
         padding-top: 0rem; } }
-  article.schedule .col-md {
-    border-bottom: 5px solid #EFEFEF; }
   article.schedule .event {
     background-color: #EFEFEF;
     border-radius: 1.75rem;
@@ -366,10 +332,9 @@ article.faq p {
 article.sponsors {
   /* image styling for sponsor logos */ }
   article.sponsors div.pitch {
-    margin-top: 4rem;
-    margin-bottom: 4rem; }
+    margin-top: 4rem; }
   article.sponsors div.logo {
-    padding: 3.6rem 2rem; }
+    padding: 3.5rem 2rem; }
     article.sponsors div.logo a {
       display: block;
       height: 8rem;
