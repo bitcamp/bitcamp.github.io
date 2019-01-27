@@ -44,12 +44,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- PRELOAD HERO IMG -->
   <link rel="preload" href="./img/herov6.jpg" as="image">
-
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -218,52 +219,148 @@
             <div class="h2-accent"></div>
             <div class="container">
               <!-- Scedule Navbar -->
-              <div class="row justify-content-center">
-                <div class="col-md-11 col-11">
-                  <div class="container">
-                    <div class="row schedule-navbar">
-                      <div class="col-md curr">
-                        <h4 class="tab">Friday, April 12th</h4>
-                      </div>
-                      <div class="col-md">
-                        <h4 class="tab">Saturday, April 13th</h4>
-                      </div>
-                      <div class="col-md">
-                        <h4 class="tab">Sunday, April 14th</h4>
-                      </div>
+              <ul class="nav nav-tabs justify-content-center" id="ScheduleTabs" role="tablist">
+                <li class="nav-item current" id="Friday-tab">
+                  <a class="nav-link active" data-toggle="tab" href="#Friday" role="tab"><h4 class="tab">Friday, April 12th</h4></a>
+                </li>
+                <li class="nav-item" id="Saturday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Saturday" role="tab"><h4 class="tab">Saturday, April 13th</h4></a>
+                </li>
+                <li class="nav-item" id="Sunday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Sunday" role="tab"><h4 class="tab">Sunday, April 14th</h4></a>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="myTabContent">
+                <!-- Friday, April 12th -->
+                <div class="tab-pane fade active show" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>5:00 PM</p>
+                      <h4>Hacker Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">hacker checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>UMD Student Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">UMD Student Checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>Dinner: Pizza</h4>
+                      <p>Canteen</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">dietary accomodations <span><i class="fas fa-chevron-right"></i></span></a></p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- Event Space -->
-              <div class="row justify-content-center event">
-                <div class="col-md-6">
-                  <p>5:00 PM</p>
-                  <h4>Hacker Check-in</h4>
-                  <p>Xfinity Center, Gate A</p>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>Insomnia Cookies</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 AM</p>
+                      <h4>Smash Tournament</h4>
+                      <p>Power Peak</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:30 AM</p>
+                      <h4>Lifesize Hungry Hungry Hippos</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>8:30 AM</p>
+                      <h4>Breakfast</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Attorney AMA</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>10:00 AM</p>
+                      <h4>Amp Up Your Apps With Maps by Esri</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Discover the Office 365 Developer Platform by Microsoft</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <p class="external-link"><a href="">hacker checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
-                </div>
-              </div>
-              <div class="row justify-content-center event">
-                <div class="col-md-6">
-                  <p>6:00 PM</p>
-                  <h4>UMD Student Check-in</h4>
-                  <p>Xfinity Center, Gate A</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="external-link"><a href="">UMD Student Checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
-                </div>
-              </div>
-              <div class="row justify-content-center event">
-                <div class="col-md-6">
-                  <p>6:00 PM</p>
-                  <h4>Dinner: Pizza</h4>
-                  <p>The Canteen</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="external-link"><a href="">dietary accomodations <span><i class="fas fa-chevron-right"></i></span></a></p>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>S&apos;mores by APT</h4>
+                      <p>Campire II</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Hacking Ends</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:30 AM</p>
+                      <h4>Expo A</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Expo B</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 PM</p>
+                      <h4>Lunch</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 PM</p>
+                      <h4>Closing Ceremony</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Footer -->

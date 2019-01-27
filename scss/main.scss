@@ -276,14 +276,26 @@ article.schedule {
     min-width: 20rem;
     // margin-left: .8rem;
   }*/
-  .schedule-navbar {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+  ul.nav-tabs {
+    border: 0px solid;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+  }
+  ul.nav-tabs li.nav-item a {
+    border: 0px solid;
+  }
+  ul.nav-tabs li.nav-item a:hover {
+    filter: none;
+  }
+  ul.nav-tabs li.nav-item {
+    margin: 0; /* Get rid of spacing between buttom borders */
+    border-bottom: 5px solid $bp-warm-grey;
+    width: 30rem;
+  }
+  ul.nav-tabs li.current {
+    border-color: $bp-bitcamp-orange;
   }
   .tab {
-    margin-top: 8rem;
-    margin-bottom: 1rem;
     text-align: center;
   }
   p {
@@ -291,7 +303,6 @@ article.schedule {
     margin-bottom: 0rem;
   }
   h4 {
-    //margin-top: 8rem;
     text-align: left;
   }
   .external-link {
@@ -303,12 +314,6 @@ article.schedule {
       text-align: left;
       padding-top: 0rem;
     }
-  }
-  .col-md {
-    border-bottom: 5px solid $bp-warm-grey;
-  }
-  .curr {
-    border-color: $bp-bitcamp-orange;
   }
   .event {
     background-color: $bp-warm-grey;
