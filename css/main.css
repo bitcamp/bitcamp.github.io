@@ -1,4 +1,8 @@
 @font-face {
+  font-family: AvenirBold;
+  src: url("../fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype"); }
+
+@font-face {
   font-family: Avenir;
   src: url("../fonts/Avenir/AvenirLTStd-Book.otf") format("opentype"); }
 
@@ -204,9 +208,7 @@ article.hero {
     opacity: .9; }
   .page-section h4, article.intro h4, article.trails h4, article.colorwar h4, article.schedule h4, article.faq h4, article.sponsors h4, article.footer h4 {
     font-size: 2.5rem;
-    color: black;
-    font-family: Avenir;
-    font-weight: bolder; }
+    color: black; }
   .page-section h5, article.intro h5, article.trails h5, article.colorwar h5, article.schedule h5, article.faq h5, article.sponsors h5, article.footer h5 {
     font-size: 1.8rem;
     color: #FFAF3F; }
@@ -241,7 +243,10 @@ article.intro img {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: pixelated; }
+  image-rendering: pixelated;
+  -webkit-box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.6); }
   @media (max-width: 767.98px) {
     article.intro img {
       margin-top: 8rem; } }
@@ -262,6 +267,9 @@ article.trails .col-content .icon {
 
 article.trails h2 {
   color: white; }
+  @media (max-width: 767.98px) {
+    article.trails h2 {
+      text-align: center; } }
 
 article.colorwar {
   background-image: url("../img/colorwarbg.jpg");
@@ -291,15 +299,18 @@ article.schedule {
           filter: none;
           /* Remove link hover styling */ }
     article.schedule ul.nav-tabs li.current {
-      border-color: #FF6F3F;
-      font-weight: bold; }
+      border-color: #FF6F3F; }
+      article.schedule ul.nav-tabs li.current a h4 {
+        font-family: AvenirBold; }
   article.schedule .tab {
-    text-align: center; }
+    text-align: center;
+    font-family: Avenir; }
   article.schedule p {
     text-align: left;
     margin-bottom: 0rem; }
   article.schedule h4 {
-    text-align: left; }
+    text-align: left;
+    font-family: AvenirBold; }
   article.schedule .external-link {
     text-align: right;
     height: 100%;
@@ -321,7 +332,8 @@ article.schedule {
     padding-right: 3.25rem; }
   article.schedule .footer {
     text-align: center;
-    margin-top: 2.5rem; }
+    margin-top: 2.5rem;
+    font-family: Avenir; }
 
 article.faq h5 {
   margin-top: 4rem; }
@@ -337,7 +349,7 @@ article.sponsors {
     padding: 3.5rem 2rem; }
     article.sponsors div.logo a {
       display: block;
-      height: 8rem;
+      height: 12rem;
       display: flex;
       justify-content: center;
       align-items: center; }
@@ -348,7 +360,7 @@ article.sponsors {
       max-width: 100%; }
   article.sponsors .sponsors-img {
     max-width: 100%;
-    display: block; }
+    display: flex; }
 
 article.footer .social-icons a {
   transition: ease all .2s;

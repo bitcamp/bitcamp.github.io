@@ -177,8 +177,6 @@ article.hero {
   h4 {
     font-size: 2.5rem;
     color: black;
-    font-family: Avenir;
-    font-weight: bolder;
   }
   h5 {
     font-size: 1.8rem;
@@ -225,6 +223,9 @@ article.intro {
     image-rendering: -webkit-optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
+    -webkit-box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
     @media (max-width: $md-breakpoint) {
       margin-top: 8rem;
     }
@@ -253,6 +254,9 @@ article.trails {
   }
   h2 {
     color: white;
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+    }
   }
 }
 
@@ -292,11 +296,14 @@ article.schedule {
     /* Style for currently active tab */
     li.current {
       border-color: $bp-bitcamp-orange;
-      font-weight: bold;
+      a h4 {
+        font-family: AvenirBold;
+      }
     }
   }
   .tab {
     text-align: center;
+    font-family: Avenir;
   }
   p {
     text-align: left;
@@ -304,6 +311,7 @@ article.schedule {
   }
   h4 {
     text-align: left;
+    font-family: AvenirBold;
   }
   .external-link {
     text-align: right;
@@ -329,6 +337,7 @@ article.schedule {
   .footer {
     text-align: center;
     margin-top: 2.5rem;
+    font-family: Avenir;
   }
 }
 
@@ -356,7 +365,7 @@ article.sponsors {
         filter: none;
       }
       display: block;
-      height: 8rem;
+      height: 12rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -374,7 +383,7 @@ article.sponsors {
   .sponsors-img {
       max-width: 100%;
       // max-height: 100%;
-      display: block;
+      display: flex;
   }
 }
 
