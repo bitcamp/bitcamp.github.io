@@ -311,6 +311,7 @@ article.faq {
     font-family: $sans-serif-stack;
     border-bottom: 1px solid #8c8c8c;
     color: black; //TODO: remove
+    user-select: none;
   }
   p {
     margin-top: 2rem;

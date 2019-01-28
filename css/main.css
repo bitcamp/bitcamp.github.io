@@ -458,6 +458,7 @@ article.faq h5 {
   font-family: Avenir, Georgia, sans-serif;
   border-bottom: 1px solid #8c8c8c;
   color: black;
+  user-select: none;
 }
 article.faq p {
   margin-top: 2rem;
