@@ -1,4 +1,8 @@
 @font-face {
+  font-family: AvenirBold;
+  src: url("../fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype");
+}
+@font-face {
   font-family: Avenir;
   src: url("../fonts/Avenir/AvenirLTStd-Book.otf") format("opentype");
 }
@@ -168,6 +172,7 @@ a:hover {
   text-decoration: none;
   color: #FF6F3F;
   opacity: 1;
+  -webkit-filter: brightness(140%);
   filter: brightness(140%);
 }
 
@@ -177,6 +182,7 @@ img.icon {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -o-pixelated;
   image-rendering: pixelated;
 }
 
@@ -186,6 +192,7 @@ a.bp-btn {
   padding: 1.2rem 1.8rem;
   font-family: Aleo;
   font-weight: bold;
+  -webkit-transition: ease all 0.2s;
   transition: ease all 0.2s;
   text-transform: uppercase;
   background-color: purple;
@@ -210,10 +217,12 @@ a.bp-btn.lg {
 }
 a.bp-btn:hover {
   opacity: 1;
+  -webkit-filter: brightness(140%);
   filter: brightness(140%);
 }
 a.bp-btn:active {
   opacity: 1;
+  -webkit-filter: brightness(90%);
   filter: brightness(90%);
 }
 
@@ -223,17 +232,28 @@ article.mobile-top {
   position: relative;
   z-index: 999;
   height: 16rem;
+  -webkit-transition: ease height 0.3s;
   transition: ease height 0.3s;
 }
 article.mobile-top .links {
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 article.mobile-top a {
+  -webkit-transition: ease all 0.3s;
   transition: ease all 0.3s;
   text-align: center;
   display: block;
@@ -313,6 +333,7 @@ article.hero .content .call-to-action span:first-child:after {
   background: #fa7041;
   width: 20px;
   height: 100%;
+  -webkit-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
 article.hero .content .logo-box img.logo {
@@ -327,37 +348,43 @@ article.hero .content .logo-box img.logo {
 
 .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.trails, article.intro {
   position: relative;
-  padding: 12rem 0rem;
+  padding: 10rem 0rem;
 }
 .page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.colorwar h2, article.trails h2, article.intro h2 {
-  font-size: 2.4rem;
   margin-bottom: 2rem;
+  text-align: left;
+  font-size: 3.5rem;
+  color: #FF6F3F;
 }
 .page-section h3, article.footer h3, article.sponsors h3, article.faq h3, article.schedule h3, article.colorwar h3, article.trails h3, article.intro h3 {
   font-weight: normal;
   opacity: 0.9;
 }
 .page-section h4, article.footer h4, article.sponsors h4, article.faq h4, article.schedule h4, article.colorwar h4, article.trails h4, article.intro h4 {
-  font-size: 2rem;
-  color: #FFAF3F;
+  font-size: 2.5rem;
+  color: black;
 }
 .page-section h5, article.footer h5, article.sponsors h5, article.faq h5, article.schedule h5, article.colorwar h5, article.trails h5, article.intro h5 {
   font-size: 1.8rem;
   color: #FFAF3F;
 }
-.page-section p, article.footer p, article.sponsors p, article.faq p, article.schedule p, article.colorwar p, article.trails p, article.intro p {
-  margin-top: 4rem;
-  opacity: 0.9;
+.page-section div.h2-accent, article.footer div.h2-accent, article.sponsors div.h2-accent, article.faq div.h2-accent, article.schedule div.h2-accent, article.colorwar div.h2-accent, article.trails div.h2-accent, article.intro div.h2-accent {
+  border: 2px solid #C79970;
+  /*@media (max-width: $md-breakpoint) {
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+  width: 14rem;
 }
 .page-section .btn-container, article.footer .btn-container, article.sponsors .btn-container, article.faq .btn-container, article.schedule .btn-container, article.colorwar .btn-container, article.trails .btn-container, article.intro .btn-container {
   margin-top: 4rem;
 }
-.page-section.dark, article.dark.footer, article.dark.sponsors, article.dark.faq, article.dark.schedule, article.dark.colorwar, article.dark.trails, article.dark.intro {
-  background-color: #1A2E33;
-  color: white;
+.page-section.white, article.white.footer, article.white.sponsors, article.white.faq, article.white.schedule, article.white.colorwar, article.white.trails, article.white.intro {
+  background-color: #FFFFFF;
+  color: black;
 }
 .page-section.medium, article.medium.footer, article.medium.sponsors, article.medium.faq, article.medium.schedule, article.medium.colorwar, article.medium.trails, article.medium.intro {
-  background-color: #22363c;
+  background-color: #FF6F3F;
   color: white;
 }
 
@@ -367,37 +394,55 @@ article.hero .content .logo-box img.logo {
   }
 }
 article.intro .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 article.intro img {
-  width: 100%;
+  width: 30rem;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -o-pixelated;
   image-rendering: pixelated;
+  -webkit-box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.6);
 }
 @media (max-width: 767.98px) {
   article.intro img {
     margin-top: 8rem;
   }
 }
-
-article.trails .col-content {
-  margin-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+article.intro p {
+  margin-top: 3rem;
+  font-size: 2.1rem;
 }
+article.intro h2 {
+  margin-top: 8rem;
+}
+
 @media (max-width: 767.98px) {
   article.trails .col-content {
     text-align: center;
   }
 }
 article.trails .col-content .icon {
-  margin-top: 4rem;
   margin-bottom: 2rem;
+}
+article.trails h2 {
+  color: white;
+}
+@media (max-width: 767.98px) {
+  article.trails h2 {
+    text-align: center;
+  }
 }
 
 article.colorwar {
@@ -411,39 +456,75 @@ article.colorwar .icon {
   margin-bottom: 4rem;
 }
 
-article.schedule .trail-hightlight {
-  font-weight: bold;
-  color: #FFAF3F;
+article.schedule {
+  /* Remove bootstrap styling */
 }
-article.schedule .bp-btn {
-  min-width: 20rem;
+article.schedule ul.nav-tabs {
+  border: 0px solid;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  /* Style for currently active tab */
+}
+article.schedule ul.nav-tabs li.nav-item {
+  margin: 0;
+  /* Get rid of spacing between buttom borders */
+  border-bottom: 5px solid #EFEFEF;
+  width: 29%;
+}
+article.schedule ul.nav-tabs li.nav-item a {
+  border: 0px solid;
+  padding-bottom: 1rem;
+}
+article.schedule ul.nav-tabs li.nav-item a:hover {
+  -webkit-filter: none;
+  filter: none;
+  /* Remove link hover styling */
+}
+article.schedule ul.nav-tabs li.current {
+  border-color: #FF6F3F;
+}
+article.schedule ul.nav-tabs li.current a h4 {
+  font-family: AvenirBold;
+}
+article.schedule .tab {
+  text-align: center;
+  font-family: Avenir;
 }
 article.schedule p {
-  margin-bottom: 4rem;
+  text-align: left;
+  margin-bottom: 0rem;
 }
 article.schedule h4 {
-  text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
-}
-article.schedule .schedule-table {
-  margin-top: 4rem;
   text-align: left;
-  width: 100%;
+  font-family: AvenirBold;
 }
-article.schedule .schedule-table tr {
-  border-bottom: 2px solid #394a50;
+article.schedule .external-link {
+  text-align: right;
+  height: 100%;
+  padding-top: 3.25rem;
+  font-size: 2rem;
 }
-article.schedule .schedule-table tr.heading {
-  border: none;
+@media (max-width: 767.98px) {
+  article.schedule .external-link {
+    text-align: left;
+    padding-top: 0rem;
+  }
 }
-article.schedule .schedule-table th, article.schedule .schedule-table td {
-  min-width: 12rem;
-  padding: 1rem;
+article.schedule .event {
+  background-color: #EFEFEF;
+  border-radius: 1.75rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
 }
-article.schedule .schedule-table th {
-  color: #CBF2FF;
-  font-weight: bold;
+article.schedule .footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: Avenir;
 }
 
 article.faq {
@@ -458,6 +539,9 @@ article.faq h5 {
   font-family: Avenir, Georgia, sans-serif;
   border-bottom: 1px solid #8c8c8c;
   color: black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 article.faq p {
@@ -474,7 +558,10 @@ article.faq .faq-card:before, article.faq .faq-card:after {
   display: block;
   position: absolute;
   background: black;
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 article.faq .faq-card:before {
   right: 0.5rem;
@@ -492,9 +579,11 @@ article.faq .faq-card.open p {
   display: block;
 }
 article.faq .faq-card.open:before {
+  -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 article.faq .faq-card.open:after {
+  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
@@ -503,19 +592,25 @@ article.sponsors {
 }
 article.sponsors div.pitch {
   margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 article.sponsors div.logo {
-  padding: 3.6rem 2rem;
+  padding: 3.5rem 2rem;
 }
 article.sponsors div.logo a {
   display: block;
-  height: 8rem;
+  height: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 article.sponsors div.logo a:hover {
+  -webkit-filter: none;
   filter: none;
 }
 article.sponsors div.logo img {
@@ -524,7 +619,9 @@ article.sponsors div.logo img {
 }
 article.sponsors .sponsors-img {
   max-width: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 article.footer {
@@ -557,6 +654,7 @@ article.footer p {
   margin: 0;
 }
 article.footer .social-icons a {
+  -webkit-transition: ease all 0.2s;
   transition: ease all 0.2s;
   margin-left: 1rem;
 }
@@ -567,7 +665,7 @@ article.footer .social-icons a .icon {
   width: 3.5rem;
 }
 @media (max-width: 767.98px) {
-  article.footer {
+  article.footer, article.footer h2 {
     text-align: center;
   }
 }

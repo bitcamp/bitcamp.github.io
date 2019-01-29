@@ -50,7 +50,6 @@
   <link rel="shortcut icon" href="favicon.ico">
   <!-- PRELOAD HERO IMG -->
   <link rel="preload" href="./img/herov6.jpg" as="image">
-
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -115,20 +114,21 @@
       </div>
     </article>
 
-    <article id="about" class="intro dark">
+    <article id="about" class="intro white">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h2>What is Bitcamp?</h2>
-            <p>
-              Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn
-              something new, and make something awesome. With world-class mentors and 1,200+ fellow campers, you're in
-              for an amazing time. Whether you’re a seasoned hacker or completely new to the world of hacking, we’ll
-              have something for you. If you're ready for an adventure, see you by the fire!
-            </p>
+          <div class="col-md-5 img-container">
+            <img src="./img/bitcamp-intro-photo.jpg" alt="">
           </div>
-          <div class="col-md-6 img-container">
-            <img src="./img/icons/grid.png" alt="">
+          <div class="col-md-7">
+            <h2>Bitcamp is a place for exploration.</h2>
+            <div class="h2-accent"></div>
+            <p>
+              You will have 36 hours to delve into your curiosities, learn something new, and make something awesome.
+              With world-class mentors and 1,200+ fellow campers, you're in for an amazing time.
+              Whether you're a seasoned hacker or completely new to the world of hacking, we'll have something for you.
+              If yoou're ready for an adventure, see you by the fire!
+            </p>
           </div>
         </div>
       </div>
@@ -136,16 +136,10 @@
     
     <article class="trails medium" id="trails">
       <div class="container">
-        <div class="text-center">
-          <h2>Explore Our New Trails</h2>
-          <h3>
-            Participate in Bitcamp this year as a hacker, designer, venturer, or scout.
-          </h3>
-        </div>
         <div class="row">
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/desktop.png" alt="">
-            <h4>Hacker Trail</h4>
+            <h2>COLORWAR</h2>
             <p>
               The classic hackathon experience! Build anything cool that comes to your mind, and don’t be afraid to try
               new technologies. The sky is the limit, and we will have plenty of workshops with topics ranging from Web
@@ -153,9 +147,9 @@
               weekend, as well as many sponsor prizes up for grabs.
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/eraser.png" alt="">
-            <h4>Design Trail</h4>
+            <h2>Design Desk</h2>
             <p>
               Through this Trail, you will have the opportunity to submit a portfolio of your design work for the
               chance to participate in Bitcamp as a designer. You will act as a mentor and contributor to multiple
@@ -163,9 +157,9 @@
               the end of the hackathon by design professionals.
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/mug.png" alt="">
-            <h4>Venture Trail</h4>
+            <h2>Minors Program</h2>
             <p>
               The bustling world of entrepreneurship can be hard to navigate, so we want to offer you the opportunity
               to hear from key players in the startup space: venture capitalists and student entrepreneurs! We will
@@ -174,47 +168,170 @@
               judged by veteran entrepreneurs!
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
-            <img class="icon" src="img/icons/cookie.png" alt="">
-            <h4>Scout Trail</h4>
-            <p>
-              Bitcamp is all about exploration and pursuing your passions, regardless of your experience level. We will
-              have special beginner-oriented workshops and sessions to guide first-timers through both the world of
-              coding and hacking, covering essentials such as how to form your own team, make use of mentors, and
-              submit a project. Beginners will also be able to apply their newly developed skills to a project to
-              compete for the “Best Scout Hack” prize.
-            </p>
-          </div>
         </div>
       </div>
     </article>
 
-    <article id="colorwar" class="colorwar dark">
+    <article class="schedule white" id="schedule">
       <div class="container text-center">
         <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <img class="icon" src="img/icons/colorwar_logo.png" alt="">
-            <h2>Are You Ready for COLORWAR?</h2>
-            <p>
-              COLORWAR is a rapid-fire live-design competition and one of the highlights of Bitcamp. Compete in our
-              online design challenge for a chance to draw in front of a live audience at Bitcamp for some cool prizes!
-            </p>
-            <br>
-            <div class="btn-container">
-              <a target="_blank" href="https://medium.com/@bitcmp/calling-all-creatives-for-colorwar-708f0b29543d"
-                class="bp-btn orange">Learn More &nbsp;&rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="schedule medium" id="schedule">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+          <div class="col-md-12 col-12">
             <h2>Schedule</h2>
-            <p>
+            <div class="h2-accent"></div>
+            <div class="container">
+              <!-- Scedule Navbar -->
+              <ul class="nav nav-tabs justify-content-center" id="ScheduleTabs" role="tablist">
+                <li class="nav-item current" id="Friday-tab">
+                  <a class="nav-link active" data-toggle="tab" href="#Friday" role="tab"><h4 class="tab">Friday, April 12th</h4></a>
+                </li>
+                <li class="nav-item" id="Saturday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Saturday" role="tab"><h4 class="tab">Saturday, April 13th</h4></a>
+                </li>
+                <li class="nav-item" id="Sunday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Sunday" role="tab"><h4 class="tab">Sunday, April 14th</h4></a>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="myTabContent">
+                <!-- Friday, April 12th -->
+                <div class="tab-pane fade active show" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>5:00 PM</p>
+                      <h4>Hacker Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">hacker checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>UMD Student Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">UMD Student Checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>Dinner: Pizza</h4>
+                      <p>Canteen</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">dietary accomodations <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>Insomnia Cookies</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 AM</p>
+                      <h4>Smash Tournament</h4>
+                      <p>Power Peak</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:30 AM</p>
+                      <h4>Lifesize Hungry Hungry Hippos</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>8:30 AM</p>
+                      <h4>Breakfast</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Attorney AMA</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>10:00 AM</p>
+                      <h4>Amp Up Your Apps With Maps by Esri</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Discover the Office 365 Developer Platform by Microsoft</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>S&apos;mores by APT</h4>
+                      <p>Campire II</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Hacking Ends</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:30 AM</p>
+                      <h4>Expo A</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Expo B</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 PM</p>
+                      <h4>Lunch</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 PM</p>
+                      <h4>Closing Ceremony</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Footer -->
+              <div class="row justify-content-center">
+                <div class="col">
+                  <h4 class="footer">schedule subject to change</h4>
+                </div>
+              </div>
+            </div>
+            <!--<p>
               For the latest updates, schedules, maps, and more about Bitcamp, download our new mobile applications for
               iOS and Android.
             </p>
@@ -222,290 +339,8 @@
               for iOS</a>
             <a href="https://play.google.com/store/apps/details?id=com.bitcamp2018" target="_blank" class="bp-btn orange ">Get
               for Android</a>
-            <!--
-              <table class="schedule-table">
-                  <tr class="heading">
-                      <th colspan="3">
-                          <h4>Friday, April 12th</h4>
-                      </th>
-                  </tr>
-                  <tr>
-                  <th>TIME</th>
-                  <th>EVENT</th>
-                  <th>LOCATION</th>
-                  </tr><tr>
-                  <td>5:00 PM</td>
-                  <td>Hacker Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>5:00 PM</td>
-                  <td>Mentor Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>UMD Student Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>Dinner</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>Sponsorship Fair</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>7:30 PM</td>
-                  <td>Opening Ceremony</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Hacking Starts</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Dessert</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Ark-IoT Blockchain Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>9:45 PM</td>
-                  <td><span class="trail-hightlight">[Scout Trail]</span> Hackathon 101 Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>10:15
-PM</td>
-                  <td>Team Formation</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>10:30 PM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Turn a Hackathon Project into a VC-Funded Product</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:30 PM</td>
-                  <td><span class="trail-hightlight">[Design Trail]</span> Intro to Design and Branding Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr class="heading">
-                  <th colspan="3">
-                  <h4>Saturday, April 13th</h4>
-                  </th>
-              </tr>
-              <tr>
-                      <th>TIME</th>
-                      <th>EVENT</th>
-                      <th>LOCATION</th>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>Insomnia Cookies</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 AM</td>
-                  <td>Smash Tournament</td>
-                  <td>Power Peak</td>
-              </tr>
-              <tr>
-                  <td>1:30 AM</td>
-                  <td>Lifesize Hungry Hungry Hippos</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:30 AM</td>
-                  <td>Breakfast</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 AM</td>
-                  <td>Attorney AMA</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>10:00 AM</td>
-                  <td>Amp Up Your Apps With Maps by Esri</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:00 AM</td>
-                  <td>Discover the Office 365 Developer Platform by Microsoft</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:30 AM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Entrepeneurship Panel</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>12:00 PM</td>
-                  <td>Open-Source Intelligence Techniques Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>12:30 PM</td>
-                  <td>Lunch</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 PM</td>
-                  <td><span class="trail-hightlight">[Design Trail]</span> GIFs Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>2:00 PM</td>
-                  <td>Go Bananas Over UX by FINRA</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>2:00 PM</td>
-                  <td>Office Hours with 1517 Fund</td>
-                  <td>1517 Fund Booth</td>
-              </tr>
-              <tr>
-                  <td>2:30 PM</td>
-                  <td>Women in Tech Fireside Chat</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>3:00 PM</td>
-                  <td>Using Technology to Improve Healthcare by Credible Behaviorial Health</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>3:30 PM</td>
-                  <td><span class="trail-hightlight">[Design & Scout Trail]</span> Design Thinking Workshop</td>
-                  <td>Breakout Room</td>
-              </tr>
-              <tr>
-                  <td>4:00 PM</td>
-                  <td>COLORWAR</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Venture Capital and the Art of Funding Your Startup w/ Mike Volpi</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>6:30 PM</td>
-                  <td>Dinner</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>7:00 PM</td>
-                  <td>How 2 Blink LEDs Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>7:30 PM</td>
-                  <td>The Coding Interview Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:00 PM</td>
-                  <td>Self-Driving Cars Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:00 PM</td>
-                  <td>Ballroom Dancing</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td><span class="trail-hightlight">[Scout Trail]</span> Intro to Web Development Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>10:00 PM</td>
-                  <td>Insomnia Cookies</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>10:00 PM</td>
-                  <td>Intro to Crypto and Blockchain Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:00 PM</td>
-                  <td>SLAM: Why Robots Don&apos;t Crash Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr class="heading">
-                  <th colspan="3">
-                  <h4>Sunday, April 14th</h4>
-                  </th>
-              </tr>
-              <tr>
-                      <th>TIME</th>
-                      <th>EVENT</th>
-                      <th>LOCATION</th>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>S&apos;mores by APT</td>
-                  <td>Campfire II</td>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>MLH Cup Stacking</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>1:00 AM</td>
-                  <td>Late Night Board Game Break</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>8:00 AM</td>
-                  <td>Devpost Submission Deadline</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>8:00 AM</td>
-                  <td>Breakfast</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 AM</td>
-                  <td>Hacking Ends</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>9:30 AM</td>
-                  <td>Expo A</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>11:00 AM</td>
-                  <td>Expo B</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>12:00 PM</td>
-                  <td>Lunch</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 PM</td>
-                  <td>Closing Ceremony</td>
-                  <td>Campfire</td>
-              </tr>
-              </table>
-            -->
+              -->
+
           </div>
         </div>
       </div>
@@ -670,15 +505,68 @@ PM</td>
     </article>
 
 
-    <article class="sponsors medium" id="sponsors">
+    <article class="sponsors white" id="sponsors">
       <div class="container">
         <div class="text-center">
           <h2>Sponsors</h2>
+          <div class="h2-accent"></div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://careers.microsoft.com/us/en/"><img class="sponsors-img" src="img/sponsor_logos_2019/microsoft.png"
+                    title="Microsoft"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://github.com/about/careers/"><img class="sponsors-img" src="img/sponsor_logos_2019/github.png"
+                    title="Github"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://jobs.td.com/en/"><img class="sponsors-img" src="img/sponsor_logos_2019/TD-bank.png"
+                    title="TD Bank"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.stickergiant.com/jobs"><img class="sponsors-img" src="img/sponsor_logos_2019/sticker-giant.png"
+                    title="Microsoft"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.nuix.com/careers/"><img class="sponsors-img" src="img/sponsor_logos_2019/nuix.png"
+                    title="Nuix"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.firstdata.com/en_us/about-first-data/careers-home.html"><img class="sponsors-img" src="img/sponsor_logos_2019/first-data.png"
+                    title="First Data"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://jobs.jobvite.com/paloaltonetworks/"><img class="sponsors-img" src="img/sponsor_logos_2019/palo-alto.png"
+                    title="Palo Alto Netowrks"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.tmprotection.com/careers-and-employment"><img class="sponsors-img" src="img/sponsor_logos_2019/T&M.png"
+                    title="T&M Protection Resources"></a>
+              </div>
+            </div>
+          </div>
           <div class="pitch">
-            <h3>Interested in sponsoring us? <br>Send us an email at <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a>!</h3>
+            <h3>Interested in sponsoring us? Send us an email at <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a>!</h3>
           </div>
           <!--  corporate -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-6">
               <div class="logo">
                 <a target="_blank" href="http://eng.umd.edu/"><img class="sponsors-img" src="img/sponsor_logos/eng.svg"
@@ -691,9 +579,9 @@ PM</td>
                     title="College of Mathematical and Natural Sciences"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!--  design partner and recruiter+ -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-6">
               <div class="logo">
                 <a target="_blank" href="http://www.finra.org/"><img class="sponsors-img" src="img/sponsor_logos/finra.svg"
@@ -730,9 +618,9 @@ PM</td>
                     title="Ocuclus"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!-- recruiter -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-4">
               <div class="logo">
                 <a target="_blank" href="https://www.concur.com/"><img class="sponsors-img" src="img/sponsor_logos/concur2.png"
@@ -769,12 +657,7 @@ PM</td>
                     title="Fannie Mae"></a>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="logo">
-                <a target="_blank" href="https://careers.microsoft.com/"><img class="sponsors-img" src="img/sponsor_logos/microsoft.svg"
-                    title="Microsoft"></a>
-              </div>
-            </div>
+
             <div class="col-sm-4">
               <div class="logo">
                 <a target="_blank" href="https://www.esri.com/en-us/home"><img class="sponsors-img" src="img/sponsor_logos/esri.png"
@@ -787,9 +670,9 @@ PM</td>
                     title="Lockheed Martin"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!-- api and startet -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-3">
               <div class="logo">
                 <a target="_blank" href="https://www.ciphertechsolutions.com/"><img class="sponsors-img" src="img/sponsor_logos/cipher.svg"
@@ -1029,7 +912,7 @@ PM</td>
                 <a target="_blank" href="https://www.pepsico.com/"><img class="sponsors-img" src="img/sponsor_logos/pepsi.svg"
                     title="PepsiCo"></a>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
     </article>
