@@ -12,6 +12,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 @media (max-width: 575.98px) {
   html {
@@ -115,6 +116,13 @@ h1, h2, h3, h4, h5, h6, p {
 #nav .navbar-brand:hover {
   filter: none;
 }
+#nav .navbar-brand img {
+  height: 3.75rem;
+  vertical-align: sub;
+  margin-right: 1rem;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
 #nav .navbar-toggler .navbar-toggler-icon {
   color: #fa7041;
   font-size: 2rem;
@@ -159,6 +167,9 @@ body.fixed-nav #nav {
 }
 body.fixed-nav #nav #mlh-trust-badge {
   display: none;
+}
+body.fixed-nav #nav .navbar-brand img {
+  opacity: 1;
 }
 body.fixed-nav.no-animation #nav {
   top: 0;

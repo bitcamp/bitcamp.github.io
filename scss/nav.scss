@@ -50,6 +50,13 @@ $logo-font-size: 3.75rem;
         &:hover {
             filter: none;
         }
+        img {
+            height: $logo-font-size;
+            vertical-align: sub;
+            margin-right: 1rem;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+        }
     }
     .navbar-toggler {
         .navbar-toggler-icon {
@@ -94,6 +101,9 @@ body.fixed-nav {
         }
         #mlh-trust-badge {
             display: none;
+        }
+        .navbar-brand img {
+            opacity: 1;
         }
     }
     &.no-animation #nav {
