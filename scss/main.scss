@@ -14,39 +14,25 @@ img {
   user-drag: none;
 }
 
-.parallax {
+.parallax-bg {
   color: white;
-  touch-action: none;
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  //opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-   overflow-x: hidden;
-}
-.bgimg-1 {
-  background-image: url("../img/forest.jpg");
-  min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url("../img/cabin.jpg");
   min-height: 400px;
-}
-
-.bgimg-3 {
-  background-image: url("img_parallax3.jpg");
-  min-height: 400px;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  // Turn off parallax scrolling for tablets and phones
+  @media only screen and (max-device-width: 1024px) {
     background-attachment: scroll;
+  }
+  &#encompass {
+    background-image: url("../img/forest.jpg");
+  }
+  &#minors   {
+    background-image: url("../img/minors-program.jpg");
+  }
+  &#schedule {
+    background-image: url("../img/cabin.jpg");
   }
 }
 
@@ -322,7 +308,7 @@ article.intro {
   }
 }
 
-article.trails {
+article.tracks {
   @extend .page-section;
   .col-content {
     @media (max-width: $md-breakpoint) {
