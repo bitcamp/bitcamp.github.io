@@ -42,13 +42,14 @@
   <!-- End Meta Tags -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- PRELOAD HERO IMG -->
   <link rel="preload" href="./img/herov6.jpg" as="image">
-
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -72,82 +73,73 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRPP8J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-  <!-- TODO UNHIDE THE MOBILE NAV WHEN COLORWAR.html GOES LIVE -->
-  <article id="mobile-top" class="mobile-top hidden">
-    <div class="links">
-      <a href="https://bitcamp2018.devpost.com/" target="_blank" class="bp-btn blue ">Devpost</a>
-      <a href="https://apply.bit.camp/login" target="_blank" class="bp-btn orange ">Dashboard</a>
-    </div>
-  </article>
-
-  <!-- PRELOAD hero img for non chrome and non opera -->
-  <img src="./img/herov6.jpg" style="display:none;">
+  <section id="nav">
+    <nav class="navbar-custom container navbar navbar-expand-md justify-content-between">
+      <a href="#" class="navbar-brand">bitcamp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#linkContainer" aria-controls="linkContainer" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="navbar-toggler-icon fas fa-bars"></i>
+      </button>
+      <div id="linkContainer" class="navbar-collapse collapse">
+        <div class="navbar-nav">
+          <a href="#about" class="nav-item nav-link">About</a>
+          <a href="#schedule" class="nav-item nav-link">Schedule</a>
+          <a href="#faq" class="nav-item nav-link">FAQ</a>
+          <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
+          <a href="#contact" class="nav-item nav-link">Contact</a>
+          <a href="#" class="nav-item nav-link sign-up-link">Sign In/Up</a>
+          <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black" target="_blank">
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
+          </a>
+        </div>
+      </div>
+    </nav>
+</section>
 
   <article class="page-body">
 
-    <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=black"
-      target="_blank">
-      <img src="./img/mlh-trust-badge-bitcamp-dark-brown.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
-
     <article class="hero">
-      <!-- TODO UNHIDE THE NABAR WHEN COLORWAR.html GOES LIVE -->
-      <!-- <section class="top">
-          <div class="links d-md-none">
-            <a href="#" id="menu-btn" class="bp-btn brown">Menu</a>
-          </div>
-          <div class="links d-none d-sm-none d-md-block">
-            <a href="https://bitcamp2018.devpost.com/" target="_blank" class="bp-btn blue ">Devpost</a>
-            <a href="https://apply.bit.camp/login" target="_blank" class="bp-btn orange ">Dashboard</a>
-          </div>
-        </section> -->
-      <div class="content">
-        <div class="logo-box">
-          <img class="fire" src="./img/fire.gif" alt="">
-          <img class="logo" src="./img/logo_no_fire.svg" alt="">
+      <div class="row content justify-content-center">
+        <div class="col-sm logo-box">
+          <img class="logo" src="./img/no-text-logo.svg" alt="Bitcamp Logo">
         </div>
-        <h1>Mark Your Trail</h1>
-        <p>
-          April 12-14, 2019<br>
-          Xfinity Center<br>
-          University of Maryland
-        </p>
-        <a target="_blank" href="https://bitcamp2018.devpost.com/" class="bp-btn orange lg">View Submissions &rarr;</a>
+        <div class="col-sm">
+          <h1>bitcamp</h1>
+          <p>Build with purpose. April 12-14, 2019</p>
+          <p>Xfinity Center | University of Maryland</p>
+          <a href="" class="btn call-to-action">
+            <span>Sign Up</span><!--
+            --><span>Sign In</span>
+          </a>
+        </div>
       </div>
     </article>
 
-    <article class="intro dark">
+    <article id="about" class="intro white">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h2>What is Bitcamp?</h2>
+          <div class="col-md-5 img-container">
+            <img src="./img/bitcamp-intro-photo.jpg" alt="">
+          </div>
+          <div class="col-md-7">
+            <h2>Bitcamp is a place for exploration.</h2>
+            <div class="h2-accent"></div>
             <p>
-              Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn
-              something new, and make something awesome. With world-class mentors and 1,200+ fellow campers, you're in
-              for an amazing time. Whether you’re a seasoned hacker or completely new to the world of hacking, we’ll
-              have something for you. If you're ready for an adventure, see you by the fire!
+              You will have 36 hours to delve into your curiosities, learn something new, and make something awesome.
+              With world-class mentors and 1,200+ fellow campers, you're in for an amazing time.
+              Whether you're a seasoned hacker or completely new to the world of hacking, we'll have something for you.
+              If yoou're ready for an adventure, see you by the fire!
             </p>
           </div>
-          <div class="col-md-6 img-container">
-            <img src="./img/icons/grid.png" alt="">
-          </div>
         </div>
       </div>
     </article>
-
-    <div class="separator dark-sky"></div>
+    
     <article class="trails medium" id="trails">
       <div class="container">
-        <div class="text-center">
-          <h2>Explore Our New Trails</h2>
-          <h3>
-            Participate in Bitcamp this year as a hacker, designer, venturer, or scout.
-          </h3>
-        </div>
         <div class="row">
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/desktop.png" alt="">
-            <h4>Hacker Trail</h4>
+            <h2>COLORWAR</h2>
             <p>
               The classic hackathon experience! Build anything cool that comes to your mind, and don’t be afraid to try
               new technologies. The sky is the limit, and we will have plenty of workshops with topics ranging from Web
@@ -155,9 +147,9 @@
               weekend, as well as many sponsor prizes up for grabs.
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/eraser.png" alt="">
-            <h4>Design Trail</h4>
+            <h2>Design Desk</h2>
             <p>
               Through this Trail, you will have the opportunity to submit a portfolio of your design work for the
               chance to participate in Bitcamp as a designer. You will act as a mentor and contributor to multiple
@@ -165,9 +157,9 @@
               the end of the hackathon by design professionals.
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
+          <div class="col-content col-lg-4 col-md-6">
             <img class="icon" src="img/icons/mug.png" alt="">
-            <h4>Venture Trail</h4>
+            <h2>Minors Program</h2>
             <p>
               The bustling world of entrepreneurship can be hard to navigate, so we want to offer you the opportunity
               to hear from key players in the startup space: venture capitalists and student entrepreneurs! We will
@@ -176,49 +168,170 @@
               judged by veteran entrepreneurs!
             </p>
           </div>
-          <div class="col-content col-lg-3 col-md-6">
-            <img class="icon" src="img/icons/cookie.png" alt="">
-            <h4>Scout Trail</h4>
-            <p>
-              Bitcamp is all about exploration and pursuing your passions, regardless of your experience level. We will
-              have special beginner-oriented workshops and sessions to guide first-timers through both the world of
-              coding and hacking, covering essentials such as how to form your own team, make use of mentors, and
-              submit a project. Beginners will also be able to apply their newly developed skills to a project to
-              compete for the “Best Scout Hack” prize.
-            </p>
-          </div>
         </div>
       </div>
     </article>
 
-    <div class="separator light-sky"></div>
-
-    <article id="colorwar" class="colorwar dark">
+    <article class="schedule white" id="schedule">
       <div class="container text-center">
         <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <img class="icon" src="img/icons/colorwar_logo.png" alt="">
-            <h2>Are You Ready for COLORWAR?</h2>
-            <p>
-              COLORWAR is a rapid-fire live-design competition and one of the highlights of Bitcamp. Compete in our
-              online design challenge for a chance to draw in front of a live audience at Bitcamp for some cool prizes!
-            </p>
-            <br>
-            <div class="btn-container">
-              <a target="_blank" href="https://medium.com/@bitcmp/calling-all-creatives-for-colorwar-708f0b29543d"
-                class="bp-btn orange">Learn More &nbsp;&rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="schedule medium" id="schedule">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+          <div class="col-md-12 col-12">
             <h2>Schedule</h2>
-            <p>
+            <div class="h2-accent"></div>
+            <div class="container">
+              <!-- Scedule Navbar -->
+              <ul class="nav nav-tabs justify-content-center" id="ScheduleTabs" role="tablist">
+                <li class="nav-item current" id="Friday-tab">
+                  <a class="nav-link active" data-toggle="tab" href="#Friday" role="tab"><h4 class="tab">Friday, April 12th</h4></a>
+                </li>
+                <li class="nav-item" id="Saturday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Saturday" role="tab"><h4 class="tab">Saturday, April 13th</h4></a>
+                </li>
+                <li class="nav-item" id="Sunday-tab">
+                  <a class="nav-link" data-toggle="tab" href="#Sunday" role="tab"><h4 class="tab">Sunday, April 14th</h4></a>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="myTabContent">
+                <!-- Friday, April 12th -->
+                <div class="tab-pane fade active show" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>5:00 PM</p>
+                      <h4>Hacker Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">hacker checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>UMD Student Check-in</h4>
+                      <p>Xfinity Center, Gate A</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">UMD Student Checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col-md-6">
+                      <p>6:00 PM</p>
+                      <h4>Dinner: Pizza</h4>
+                      <p>Canteen</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="external-link"><a href="">dietary accomodations <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>Insomnia Cookies</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 AM</p>
+                      <h4>Smash Tournament</h4>
+                      <p>Power Peak</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:30 AM</p>
+                      <h4>Lifesize Hungry Hungry Hippos</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>8:30 AM</p>
+                      <h4>Breakfast</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Attorney AMA</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>10:00 AM</p>
+                      <h4>Amp Up Your Apps With Maps by Esri</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Discover the Office 365 Developer Platform by Microsoft</h4>
+                      <p>Cabin</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Saturday, April 13th -->
+                <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 AM</p>
+                      <h4>S&apos;mores by APT</h4>
+                      <p>Campire II</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:00 AM</p>
+                      <h4>Hacking Ends</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>9:30 AM</p>
+                      <h4>Expo A</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>11:00 AM</p>
+                      <h4>Expo B</h4>
+                      <p>Campgrounds</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>12:00 PM</p>
+                      <h4>Lunch</h4>
+                      <p>Canteen</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center event">
+                    <div class="col">
+                      <p>1:00 PM</p>
+                      <h4>Closing Ceremony</h4>
+                      <p>Campfire</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Footer -->
+              <div class="row justify-content-center">
+                <div class="col">
+                  <h4 class="footer">schedule subject to change</h4>
+                </div>
+              </div>
+            </div>
+            <!--<p>
               For the latest updates, schedules, maps, and more about Bitcamp, download our new mobile applications for
               iOS and Android.
             </p>
@@ -226,296 +339,12 @@
               for iOS</a>
             <a href="https://play.google.com/store/apps/details?id=com.bitcamp2018" target="_blank" class="bp-btn orange ">Get
               for Android</a>
-            <!--
-              <table class="schedule-table">
-                  <tr class="heading">
-                      <th colspan="3">
-                          <h4>Friday, April 12th</h4>
-                      </th>
-                  </tr>
-                  <tr>
-                  <th>TIME</th>
-                  <th>EVENT</th>
-                  <th>LOCATION</th>
-                  </tr><tr>
-                  <td>5:00 PM</td>
-                  <td>Hacker Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>5:00 PM</td>
-                  <td>Mentor Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>UMD Student Check-in</td>
-                  <td><a href="./img/check-in-xfinity-gate-a.png">Xfinity Center Gate A</a></td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>Dinner</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td>Sponsorship Fair</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>7:30 PM</td>
-                  <td>Opening Ceremony</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Hacking Starts</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Dessert</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td>Ark-IoT Blockchain Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>9:45 PM</td>
-                  <td><span class="trail-hightlight">[Scout Trail]</span> Hackathon 101 Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>10:15
-PM</td>
-                  <td>Team Formation</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>10:30 PM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Turn a Hackathon Project into a VC-Funded Product</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:30 PM</td>
-                  <td><span class="trail-hightlight">[Design Trail]</span> Intro to Design and Branding Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr class="heading">
-                  <th colspan="3">
-                  <h4>Saturday, April 13th</h4>
-                  </th>
-              </tr>
-              <tr>
-                      <th>TIME</th>
-                      <th>EVENT</th>
-                      <th>LOCATION</th>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>Insomnia Cookies</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 AM</td>
-                  <td>Smash Tournament</td>
-                  <td>Power Peak</td>
-              </tr>
-              <tr>
-                  <td>1:30 AM</td>
-                  <td>Lifesize Hungry Hungry Hippos</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:30 AM</td>
-                  <td>Breakfast</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 AM</td>
-                  <td>Attorney AMA</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>10:00 AM</td>
-                  <td>Amp Up Your Apps With Maps by Esri</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:00 AM</td>
-                  <td>Discover the Office 365 Developer Platform by Microsoft</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:30 AM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Entrepeneurship Panel</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>12:00 PM</td>
-                  <td>Open-Source Intelligence Techniques Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>12:30 PM</td>
-                  <td>Lunch</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 PM</td>
-                  <td><span class="trail-hightlight">[Design Trail]</span> GIFs Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>2:00 PM</td>
-                  <td>Go Bananas Over UX by FINRA</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>2:00 PM</td>
-                  <td>Office Hours with 1517 Fund</td>
-                  <td>1517 Fund Booth</td>
-              </tr>
-              <tr>
-                  <td>2:30 PM</td>
-                  <td>Women in Tech Fireside Chat</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>3:00 PM</td>
-                  <td>Using Technology to Improve Healthcare by Credible Behaviorial Health</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>3:30 PM</td>
-                  <td><span class="trail-hightlight">[Design & Scout Trail]</span> Design Thinking Workshop</td>
-                  <td>Breakout Room</td>
-              </tr>
-              <tr>
-                  <td>4:00 PM</td>
-                  <td>COLORWAR</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>6:00 PM</td>
-                  <td><span class="trail-hightlight">[Venture Trail]</span> Venture Capital and the Art of Funding Your Startup w/ Mike Volpi</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>6:30 PM</td>
-                  <td>Dinner</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>7:00 PM</td>
-                  <td>How 2 Blink LEDs Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>7:30 PM</td>
-                  <td>The Coding Interview Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:00 PM</td>
-                  <td>Self-Driving Cars Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>8:00 PM</td>
-                  <td>Ballroom Dancing</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>9:00 PM</td>
-                  <td><span class="trail-hightlight">[Scout Trail]</span> Intro to Web Development Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>10:00 PM</td>
-                  <td>Insomnia Cookies</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>10:00 PM</td>
-                  <td>Intro to Crypto and Blockchain Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr>
-                  <td>11:00 PM</td>
-                  <td>SLAM: Why Robots Don&apos;t Crash Workshop</td>
-                  <td>Cabin</td>
-              </tr>
-              <tr class="heading">
-                  <th colspan="3">
-                  <h4>Sunday, April 14th</h4>
-                  </th>
-              </tr>
-              <tr>
-                      <th>TIME</th>
-                      <th>EVENT</th>
-                      <th>LOCATION</th>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>S&apos;mores by APT</td>
-                  <td>Campfire II</td>
-              </tr>
-              <tr>
-                  <td>12:00 AM</td>
-                  <td>MLH Cup Stacking</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>1:00 AM</td>
-                  <td>Late Night Board Game Break</td>
-                  <td>Campfire</td>
-              </tr>
-              <tr>
-                  <td>8:00 AM</td>
-                  <td>Devpost Submission Deadline</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>8:00 AM</td>
-                  <td>Breakfast</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>9:00 AM</td>
-                  <td>Hacking Ends</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>9:30 AM</td>
-                  <td>Expo A</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>11:00 AM</td>
-                  <td>Expo B</td>
-                  <td>Campgrounds</td>
-              </tr>
-              <tr>
-                  <td>12:00 PM</td>
-                  <td>Lunch</td>
-                  <td>Canteen</td>
-              </tr>
-              <tr>
-                  <td>1:00 PM</td>
-                  <td>Closing Ceremony</td>
-                  <td>Campfire</td>
-              </tr>
-              </table>
-            -->
+              -->
+
           </div>
         </div>
       </div>
     </article>
-
-    <div class="separator light-sky"></div>
 
     <article class="faq dark" id="faq">
       <div class="container">
@@ -524,124 +353,220 @@ PM</td>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <h5>What is Bitcamp?</h5>
-            <p>
-              Bitcamp is a hackathon that values participant experience and mentorship over competitiveness and points.
-              Come to have fun with your friends, learn something new, eat s’mores, and have a generally awesome time.
-              We have all sorts of crazy activities planned for you...come find out the rest!
-            </p>
-            <h5>What’s a hackathon?</h5>
-            <p>
-              A hackathon is a creative marathon all about building cool things. Students are encouraged to come with
-              an idea, form teams, and then build out that idea into a product in 36 hours. We want you to take
-              something you love (sports, art, camping, anything!) and combine it with technology to make something
-              awesome. It's a great time to push the envelope and learn some new skills.
-            </p>
-            <h5>What have past Bitcampers created?</h5>
-            <p>
-              From Augmented Reality Human-Scale Pong to a research paper detailing vulnerabilities in Google’s
-              reCaptcha system, the projects at Bitcamp span across all categories and interests. You can check out all
-              of the amazing submissions at the Bitcamp 2017 <a target="_blank" href="https://bitcamp2017.devpost.com/">Devpost</a>!
-            </p>
-            <!-- <h5>Who can apply?</h5>
+            <div class="faq-card">
+              <h5>What is Bitcamp?</h5>
+              <p>
+                Bitcamp is a hackathon that values participant experience and mentorship over competitiveness and
+                points.
+                Come to have fun with your friends, learn something new, eat s’mores, and have a generally awesome
+                time.
+                We have all sorts of crazy activities planned for you...come find out the rest!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>What’s a hackathon?</h5>
+              <p>
+                A hackathon is a creative marathon all about building cool things. Students are encouraged to come with
+                an idea, form teams, and then build out that idea into a product in 36 hours. We want you to take
+                something you love (sports, art, camping, anything!) and combine it with technology to make something
+                awesome. It's a great time to push the envelope and learn some new skills.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>What have past Bitcampers created?</h5>
+              <p>
+                From Augmented Reality Human-Scale Pong to a research paper detailing vulnerabilities in Google’s
+                reCaptcha system, the projects at Bitcamp span across all categories and interests. You can check out
+                all
+                of the amazing submissions at the Bitcamp 2017 <a target="_blank" href="https://bitcamp2017.devpost.com/">Devpost</a>!
+              </p>
+            </div>
+            <!-- <div class="faq-card">
+              <h5>Who can apply?</h5>
               <p>
                 Anyone over the age of 18 can apply.
                 <br><br>
                 Unfortunately, minors will not be able to register this year. However, as a part of our new Minors Programs, we will be partnering with various high schools to bring five teams of high school students to Bitcamp.
-              </p> -->
-            <h5>What if I have no experience or ideas?</h5>
-            <p>
-              Don't be afraid if you don't think you have enough experience, a team, or an idea. Everyone has a first
-              hackathon, and we would love for Bitcamp to be yours! Mentors who are well-versed in a variety of topics
-              will also be there to help you, whether it be finding a team, fleshing out an idea, or just figuring out
-              where to begin.
-            </p>
-            <h5>How else can I get involved?</h5>
-            <p>
-              We'd love to get you on our volunteering or mentoring teams! If you'd like to help, please fill out <a
-                target="_blank" href="https://bitcamp.typeform.com/to/m5K1bI">this form</a>. Also, be sure to follow us
-              on <a target="_blank" href="https://www.facebook.com/bitcmp">Facebook</a> and <a target="_blank" href="https://twitter.com/bitcmp">Twitter</a>
-              for updates!
-            </p>
-            <h5>What is Slack?</h5>
-            <p>
-              Throughout the event, we will be using Slack as the main form of communication. Never used Slack before?
-              <a target="_blank" href="https://docs.google.com/presentation/d/1rLijx3npVBSLCfxYSGzmBF8Q6B_NQkkPMlmPhUM4BFQ/edit#slide=id.g2f89ed3a1a_0_25">Here's</a>
-              a quick introduction!
-            </p>
-            <h5>What is Devpost?</h5>
-            <p>
-              After the 36 hours, you’ll be submitting your project to DevPost for judging! New to Devpost? <a target="_blank"
-                href="https://docs.google.com/presentation/d/1rLijx3npVBSLCfxYSGzmBF8Q6B_NQkkPMlmPhUM4BFQ/edit#slide=id.g2e3ac65a77_0_35">Here's</a>
-              a quick introduction!
-            </p>
-            <h5>What hardware will be available at Bitcamp?</h5>
-            <p>
-              Arduinos, sensors (ultrasonic, photoresistors, thermisters), inputs (buttons, switches), outputs (LEDs,
-              piezo speakers, 7-segment displays, micro servo motors), passive components (resistors, capacitors,
-              diodes), and wiring.
-            </p>
+              </p>
+            </div> -->
+            <div class="faq-card">
+              <h5>What if I have no experience or ideas?</h5>
+              <p>
+                Don't be afraid if you don't think you have enough experience, a team, or an idea. Everyone has a first
+                hackathon, and we would love for Bitcamp to be yours! Mentors who are well-versed in a variety of
+                topics
+                will also be there to help you, whether it be finding a team, fleshing out an idea, or just figuring
+                out
+                where to begin.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>How else can I get involved?</h5>
+              <p>
+                We'd love to get you on our volunteering or mentoring teams! If you'd like to help, please fill out <a
+                  target="_blank" href="https://bitcamp.typeform.com/to/m5K1bI">this form</a>. Also, be sure to follow
+                us
+                on <a target="_blank" href="https://www.facebook.com/bitcmp">Facebook</a> and <a target="_blank" href="https://twitter.com/bitcmp">Twitter</a>
+                for updates!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>What is Slack?</h5>
+              <p>
+                Throughout the event, we will be using Slack as the main form of communication. Never used Slack
+                before?
+                <a target="_blank" href="https://docs.google.com/presentation/d/1rLijx3npVBSLCfxYSGzmBF8Q6B_NQkkPMlmPhUM4BFQ/edit#slide=id.g2f89ed3a1a_0_25">Here's</a>
+                a quick introduction!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>What is Devpost?</h5>
+              <p>
+                After the 36 hours, you’ll be submitting your project to DevPost for judging! New to Devpost? <a target="_blank"
+                  href="https://docs.google.com/presentation/d/1rLijx3npVBSLCfxYSGzmBF8Q6B_NQkkPMlmPhUM4BFQ/edit#slide=id.g2e3ac65a77_0_35">Here's</a>
+                a quick introduction!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>What hardware will be available at Bitcamp?</h5>
+              <p>
+                Arduinos, sensors (ultrasonic, photoresistors, thermisters), inputs (buttons, switches), outputs (LEDs,
+                piezo speakers, 7-segment displays, micro servo motors), passive components (resistors, capacitors,
+                diodes), and wiring.
+              </p>
+            </div>
           </div>
 
           <div class="col-md-6">
-            <h5>Timing</h5>
-            <p>
-              Participants will arrive between 6PM and 8PM on Friday, April 12th, 2019. Our Sponsor Fair will also be
-              at 7PM, where you can spend time going around and check out our different sponsor booths. Hacking starts
-              Friday evening after opening ceremony. Closing ceremony will begin at 3PM on Sunday, April 14th, 2019.
-              For a better idea of the flow of the event, check out our <a href="https://2018.bit.camp/" target="_blank">schedule</a>
-              from Bitcamp 2018!
-            </p>
-            <h5>Location</h5>
-            <p>
-              We are proud to host Bitcamp at the Xfinity Center on the University of Maryland campus! This expansive
-              sports arena is a unique spot for any event, and we’re excited to be back again!
-            </p>
-            <h5>Travel</h5>
-            <p>
-              We'll have buses covering the hike from many colleges. If there are many registered campers from one
-              specific college, we will try to have a bus for it. We will be reimbursing any individual’s hiking
-              expenses on a case-by-case basis. Please contact travel@bit.camp for more information.
-            </p>
-            <h5>Packing List</h5>
-            <p>
-              Bring yourself, a photo ID, your signed waiver (if applicable), a change of clothes, toiletries, a
-              sleeping bag/blanket, your hacker setup (laptop, charger, headphones, tablet for designers), and maybe an
-              idea or two!
-            </p>
-            <h5>Teams</h5>
-            <p>
-              Projects are submitted by teams to DevPost. You don't need to finalize your team until project
-              submissions are due during the event. You may work individually or in a team of up to four campers. Don’t
-              have a team in mind? No problem! Hacking will kick off with an optional team formation event.
-            </p>
-            <h5>Guidelines</h5>
-            <p>
-              Don't bring any firearms, knives, weapons, drugs, or alcohol. Don't use an old project. Start a new trail
-              instead! Also, please read the <a target="_blank" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">Major
-                League Hacking Code of Conduct</a> and the <a target="_blank" href="./terms-code-waiver.pdf">Bitcamp
-                Terms, Code of Conduct, and Release Waiver</a>. Organizers will enforce this code throughout the event.
-              We are expecting cooperation from all participants to help ensure a safe environment for everybody (TL;DR
-              be nice).
-            </p>
-            <h5>Other questions?</h5>
-            <p>Please send some mail to <a href="mailto:hello@bit.camp">hello@bit.camp</a>!</p>
+            <div class="faq-card">
+              <h5>Timing</h5>
+              <p>
+                Participants will arrive between 6PM and 8PM on Friday, April 12th, 2019. Our Sponsor Fair will also be
+                at 7PM, where you can spend time going around and check out our different sponsor booths. Hacking
+                starts
+                Friday evening after opening ceremony. Closing ceremony will begin at 3PM on Sunday, April 14th, 2019.
+                For a better idea of the flow of the event, check out our <a href="https://2018.bit.camp/" target="_blank">schedule</a>
+                from Bitcamp 2018!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Location</h5>
+              <p>
+                We are proud to host Bitcamp at the Xfinity Center on the University of Maryland campus! This expansive
+                sports arena is a unique spot for any event, and we’re excited to be back again!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Travel</h5>
+              <p>
+                We'll have buses covering the hike from many colleges. If there are many registered campers from one
+                specific college, we will try to have a bus for it. We will be reimbursing any individual’s hiking
+                expenses on a case-by-case basis. Please contact travel@bit.camp for more information.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Packing List</h5>
+              <p>
+                Bring yourself, a photo ID, your signed waiver (if applicable), a change of clothes, toiletries, a
+                sleeping bag/blanket, your hacker setup (laptop, charger, headphones, tablet for designers), and maybe
+                an
+                idea or two!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Teams</h5>
+              <p>
+                Projects are submitted by teams to DevPost. You don't need to finalize your team until project
+                submissions are due during the event. You may work individually or in a team of up to four campers.
+                Don’t
+                have a team in mind? No problem! Hacking will kick off with an optional team formation event.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Guidelines</h5>
+              <p>
+                Don't bring any firearms, knives, weapons, drugs, or alcohol. Don't use an old project. Start a new
+                trail
+                instead! Also, please read the <a target="_blank" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">Major
+                  League Hacking Code of Conduct</a> and the <a target="_blank" href="./terms-code-waiver.pdf">Bitcamp
+                  Terms, Code of Conduct, and Release Waiver</a>. Organizers will enforce this code throughout the
+                event.
+                We are expecting cooperation from all participants to help ensure a safe environment for everybody
+                (TL;DR
+                be nice).
+              </p>
+            </div>
+            <div class="faq-card">
+              <h5>Other questions?</h5>
+              <p>Please send some mail to <a href="mailto:hello@bit.camp">hello@bit.camp</a>!</p>
+            </div>
           </div>
         </div>
     </article>
 
-    <div class="separator dark-sky"></div>
 
-
-    <article class="sponsors medium" id="sponsors">
+    <article class="sponsors white" id="sponsors">
       <div class="container">
         <div class="text-center">
           <h2>Sponsors</h2>
+          <div class="h2-accent"></div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://careers.microsoft.com/us/en/"><img class="sponsors-img" src="img/sponsor_logos_2019/microsoft.png"
+                    title="Microsoft"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://github.com/about/careers/"><img class="sponsors-img" src="img/sponsor_logos_2019/github.png"
+                    title="Github"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://jobs.td.com/en/"><img class="sponsors-img" src="img/sponsor_logos_2019/TD-bank.png"
+                    title="TD Bank"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.stickergiant.com/jobs"><img class="sponsors-img" src="img/sponsor_logos_2019/sticker-giant.png"
+                    title="Microsoft"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.nuix.com/careers/"><img class="sponsors-img" src="img/sponsor_logos_2019/nuix.png"
+                    title="Nuix"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.firstdata.com/en_us/about-first-data/careers-home.html"><img class="sponsors-img" src="img/sponsor_logos_2019/first-data.png"
+                    title="First Data"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://jobs.jobvite.com/paloaltonetworks/"><img class="sponsors-img" src="img/sponsor_logos_2019/palo-alto.png"
+                    title="Palo Alto Netowrks"></a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="logo">
+                <a target="_blank" href="https://www.tmprotection.com/careers-and-employment"><img class="sponsors-img" src="img/sponsor_logos_2019/T&M.png"
+                    title="T&M Protection Resources"></a>
+              </div>
+            </div>
+          </div>
           <div class="pitch">
-            <h3>Interested in sponsoring us? <br>Send us an email at <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a>!</h3>
+            <h3>Interested in sponsoring us? Send us an email at <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a>!</h3>
           </div>
           <!--  corporate -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-6">
               <div class="logo">
                 <a target="_blank" href="http://eng.umd.edu/"><img class="sponsors-img" src="img/sponsor_logos/eng.svg"
@@ -654,9 +579,9 @@ PM</td>
                     title="College of Mathematical and Natural Sciences"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!--  design partner and recruiter+ -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-6">
               <div class="logo">
                 <a target="_blank" href="http://www.finra.org/"><img class="sponsors-img" src="img/sponsor_logos/finra.svg"
@@ -693,9 +618,9 @@ PM</td>
                     title="Ocuclus"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!-- recruiter -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-4">
               <div class="logo">
                 <a target="_blank" href="https://www.concur.com/"><img class="sponsors-img" src="img/sponsor_logos/concur2.png"
@@ -732,12 +657,7 @@ PM</td>
                     title="Fannie Mae"></a>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="logo">
-                <a target="_blank" href="https://careers.microsoft.com/"><img class="sponsors-img" src="img/sponsor_logos/microsoft.svg"
-                    title="Microsoft"></a>
-              </div>
-            </div>
+
             <div class="col-sm-4">
               <div class="logo">
                 <a target="_blank" href="https://www.esri.com/en-us/home"><img class="sponsors-img" src="img/sponsor_logos/esri.png"
@@ -750,9 +670,9 @@ PM</td>
                     title="Lockheed Martin"></a>
               </div>
             </div>
-          </div>
+          </div>-->
           <!-- api and startet -->
-          <div class="row">
+          <!--<div class="row">
             <div class="col-sm-3">
               <div class="logo">
                 <a target="_blank" href="https://www.ciphertechsolutions.com/"><img class="sponsors-img" src="img/sponsor_logos/cipher.svg"
@@ -992,78 +912,45 @@ PM</td>
                 <a target="_blank" href="https://www.pepsico.com/"><img class="sponsors-img" src="img/sponsor_logos/pepsi.svg"
                     title="PepsiCo"></a>
               </div>
+            </div>-->
+          </div>
+        </div>
+    </article>
+
+    <article id="contact" class="footer dark">
+      <div class="row justify-content-around">
+        <div class="col-md-4">
+          <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <p>Interested in sponsoring, mentoring, have a question, or just want to say hi? Please email:</p>
+            <a class="email" href="mailto:hello@bit.camp">hello@bit.camp</a>
+            <div class="social-icons">
+              <a target="_blank" href="https://www.facebook.com/bitcmp">
+                <img class="icon" src="img/social/face.png" alt="">
+              </a>
+              <a target="_blank" href="https://instagram.com/bitcamp">
+                <img class="icon" src="img/social/insta.png" alt="">
+              </a>
+              <a target="_blank" href="https://www.youtube.com/channel/UC_F_7Hv3SAUcQBubYWD-2BA">
+                <img class="icon" src="img/social/youtube.png" alt="">
+              </a>
+              <a target="_blank" href="https://twitter.com/bitcmp">
+                <img class="icon" src="img/social/twit.png" alt="">
+              </a>
+              <a target="_blank" href="https://go.snapchat.com/add/bitcamp">
+                <img class="icon" src="img/social/snap.png" alt="">
+              </a>
             </div>
           </div>
         </div>
-    </article>
-
-    <div class="separator light-sky"></div>
-
-
-    <article class="footer dark">
-      <div class="container">
-        <div class="text-center">
-          <h2>Send us mail at <a href="mailto:hello@bit.camp">hello@bit.camp</a> or tweet <a target="_blank" href="https://twitter.com/bitcmp">@bitcmp</a></h2>
-          <div class="social-icons">
-            <a target="_blank" href="https://www.facebook.com/bitcmp">
-              <img class="icon" src="img/social/face.png" alt="">
-            </a>
-            <a target="_blank" href="https://instagram.com/bitcamp">
-              <img class="icon" src="img/social/insta.png" alt="">
-            </a>
-            <a target="_blank" href="https://www.youtube.com/channel/UC_F_7Hv3SAUcQBubYWD-2BA">
-              <img class="icon" src="img/social/youtube.png" alt="">
-            </a>
-            <a target="_blank" href="https://twitter.com/bitcmp">
-              <img class="icon" src="img/social/twit.png" alt="">
-            </a>
-            <a target="_blank" href="https://go.snapchat.com/add/bitcamp">
-              <img class="icon" src="img/social/snap.png" alt="">
-            </a>
-          </div>
-          <br>
+        <div class="col-md-4 text-center">
+          <img class="logo" src="./img/logo.svg" alt="">
           <p>Copyright © 2019 Bitcamp</p>
         </div>
       </div>
+      </div>
     </article>
   </article>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
   <script src="./js/main.js"></script>
-
-  <script type="text/javascript">
-    /**
-     * inViewport jQuery plugin by Roko C.B.
-     * http://stackoverflow.com/a/26831113/383904
-     * Returns a callback function with an argument holding
-     * the current amount of px an element is visible in viewport
-     * (The min returned value is 0 (element outside of viewport)
-     */
-    ;
-    (function ($, win) {
-      $.fn.inViewport = function (cb) {
-        return this.each(function (i, el) {
-          function visPx() {
-            var elH = $(el).outerHeight(),
-              H = $(win).height(),
-              r = el.getBoundingClientRect(),
-              t = r.top,
-              b = r.bottom;
-            return cb.call(el, Math.max(0, t > 0 ? Math.min(elH, H - t) : (b < H ? b : H)));
-          }
-          visPx();
-          $(win).on("resize scroll", visPx);
-        });
-      };
-    }(jQuery, window));
-
-    $(document).ready(function () {
-      $(".trail").inViewport(function (px) {
-        if (px) $(this).addClass("trail_visible");
-        // console.log("here!");
-      })
-    });
-  </script>
 </body>
-
 </html>

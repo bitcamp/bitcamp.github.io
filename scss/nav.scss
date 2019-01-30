@@ -1,0 +1,103 @@
+@import 'vars';
+
+$nav-height: 80px;
+$nav-link-hover-color: #ffad77;
+$logo-font-size: 3.75rem;
+
+#nav {
+    background: $primary-bg-color;
+    height: $nav-height;
+    z-index: 100;
+    @media (max-width: $lg-breakpoint) {
+        height: 65px;
+    }
+    @media (max-width: $md-breakpoint) {
+        height: initial;
+    }
+    .navbar {
+        height: 100%;
+        width: 80%;
+        @media (max-width: $md-breakpoint) {
+            width: 100%;
+        }
+    }
+    .nav-link {
+        color: $default-font-color;
+        margin: 0 0.75rem;
+        @media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+            font-size: 1.375rem;
+        }
+        @media (max-width: $md-breakpoint) {
+            text-align: center;
+        }
+        &:hover,
+        &.sign-up-link:hover {
+            color: $nav-link-hover-color;
+            filter: none;
+        }
+        &.sign-up-link {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $logo-color;
+        }
+    }
+    .navbar-brand {
+        color: $logo-color;
+        font-family: Aleo;
+        font-weight: bold;
+        font-size: $logo-font-size;
+        line-height: inherit;
+        &:hover {
+            filter: none;
+        }
+    }
+    .navbar-toggler {
+        .navbar-toggler-icon {
+            color: $logo-color;
+            font-size: 2rem;
+            line-height: $logo-font-size;
+        }
+    }
+    .navbar-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #mlh-trust-badge {
+        display: block;
+        max-width: 10rem;
+        min-width: 8rem;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width:10%;
+        transition: ease all .2s;
+        z-index: 100;
+        @media (max-width: $md-breakpoint) {
+            display: none;
+        }
+  }
+}
+
+body.fixed-nav {
+    margin-top: $nav-height;
+    #nav {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
+        top: -$nav-height;
+        animation: appear 300ms ease-in-out forwards;
+        @keyframes appear {
+            100% {
+                top: 0;
+            }
+        }
+        #mlh-trust-badge {
+            display: none;
+        }
+    }
+    &.no-animation #nav {
+        top: 0;
+        animation: none;
+    }
+}
