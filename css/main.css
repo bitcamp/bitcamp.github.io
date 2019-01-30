@@ -128,16 +128,8 @@ body, html {
   height: 100%;
   overflow-x: hidden; }
 
-img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none; }
-
 .parallax {
-  color: white;
-  touch-action: none; }
+  color: white; }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
@@ -145,25 +137,25 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden; }
-
-.bgimg-1 {
-  background-image: url("../img/forest.jpg");
+  overflow-x: hidden;
   min-height: 100%; }
 
+.bgimg-1 {
+  background-image: url("../img/forest.jpg"); }
+
 .bgimg-2 {
-  background-image: url("../img/cabin.jpg");
-  min-height: 400px; }
+  background-image: url("../img/cabin.jpg"); }
 
-.bgimg-3 {
+/*.bgimg-3 {
   background-image: url("img_parallax3.jpg");
-  min-height: 400px; }
-
+  min-height: 400px;
+}*/
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
+/*@media only screen and (max-device-width: 1024px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll; } }
-
+    background-attachment: scroll;
+  }
+}*/
 a {
   color: #FF6F3F; }
   a:hover {
@@ -514,6 +506,8 @@ article.sponsors {
   /* image styling for sponsor logos */ }
   article.sponsors div.pitch {
     margin-top: 4rem; }
+    article.sponsors div.pitch h3 {
+      color: black; }
   article.sponsors div.logo {
     padding: 3.5rem 2rem; }
     article.sponsors div.logo a {
