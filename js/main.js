@@ -1,37 +1,39 @@
-"use strict";
+'use strict';
 
-// Store whether or not the
+// Store whether or not the window is in the middle of a smooth scroll animation
 let isSmoothScrolling = false;
 
-
 // Setup event listeners
-$(".faq-card h5").click(toggleFAQInfo);
+$('.faq-card h5').click(toggleFAQInfo);
 $('#nav .nav-link').click(handleNavLinkClick);
+$('#ScheduleTabs .nav-item').click(switchScheduleTab);
 $(window).scroll(adjustFixedNavbar);
 $(document).ready(adjustFixedNavbar);
 
 // Open up the faq-card info
 function toggleFAQInfo(event) {
-  $(event.target).parent().toggleClass("open");
+  $(event.target).parent().toggleClass('open');
 }
 
 // Make nav fixed to the top after leaving the intro section
-function adjustFixedNavbar(event) {
+function adjustFixedNavbar() {
+  const body = $('body');
+
   if($(window).scrollTop() > 528 || isSmoothScrolling) {
-    $('body').addClass('fixed-nav');
+    body.addClass('fixed-nav');
   } else {
-    $('body').removeClass('fixed-nav no-animation');
+    body.removeClass('fixed-nav no-animation');
   }
 }
 
-// Handle a nav-link click
+// Prevent the default animation behavior of the navbar on a link click
 function handleNavLinkClick() {
   collapseNavbar();
   turnOffNavbarAnimation();
   timeSmoothScrolling();
 }
 
-// Hide the expanded menu
+// Hide the expanded menu on mobile devices when a link is pressed
 function collapseNavbar() {
   $('.navbar-collapse').collapse('hide');
 }
@@ -43,37 +45,19 @@ function turnOffNavbarAnimation() {
 
 // Ensure that the scroll events aren't being triggered during a smooth scroll due to a link click
 function timeSmoothScrolling() {
-  const scrollDuration = 500; // ms
+  const SMOOTH_SCROLL_DURATION = 500; // ms
 
   isSmoothScrolling = true;
   setTimeout(() => {
     isSmoothScrolling = false;
-  }, scrollDuration);
+  }, SMOOTH_SCROLL_DURATION);
 }
 
-$("#Friday-tab").click(function(e) {
-  e.preventDefault();
-  if (!$("#Friday-tab").hasClass("current")) {
-    $("#Saturday-tab").removeClass("current");
-    $("#Sunday-tab").removeClass("current");
-    $("#Friday-tab").addClass("current");
-  }
-});
+// Navigate between different tabs in the schedule section
+function switchScheduleTab(event) {
 
-$("#Saturday-tab").click(function(e) {
-  e.preventDefault();
-  if (!$("#Saturday-tab").hasClass("current")) {
-    $("#Friday-tab").removeClass("current");
-    $("#Sunday-tab").removeClass("current");
-    $("#Saturday-tab").addClass("current");
+  if (!$(event.target).hasClass('current')) {
+    $('#ScheduleTabs .nav-item').removeClass('current');
+    $(event.target).addClass('current');
   }
-});
-
-$("#Sunday-tab").click(function(e) {
-  e.preventDefault();
-  if (!$("#Sunday-tab").hasClass("current")) {
-    $("#Friday-tab").removeClass("current");
-    $("#Saturday-tab").removeClass("current");
-    $("#Sunday-tab").addClass("current");
-  }
-});
+}

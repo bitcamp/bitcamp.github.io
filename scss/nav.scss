@@ -17,16 +17,18 @@ $logo-font-size: 3.75rem;
     .navbar {
         height: 100%;
         width: 80%;
+        min-width: 900px;
+        @media (max-width: $lg-breakpoint) {
+            min-width: $md-breakpoint - 1px;
+        }
         @media (max-width: $md-breakpoint) {
+            min-width: initial;
             width: 100%;
         }
     }
     .nav-link {
-        color: $default-font-color;
+        color: $header-font-color;
         margin: 0 0.75rem;
-        @media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
-            font-size: 1.375rem;
-        }
         @media (max-width: $md-breakpoint) {
             text-align: center;
         }
