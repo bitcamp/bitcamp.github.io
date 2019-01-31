@@ -1,5 +1,9 @@
 "use strict";
 
+// Store whether or not the
+let isSmoothScrolling = false;
+
+
 // Setup event listeners
 $(".faq-card h5").click(toggleFAQInfo);
 $('#nav .nav-link').click(handleNavLinkClick);
@@ -13,7 +17,7 @@ function toggleFAQInfo(event) {
 
 // Make nav fixed to the top after leaving the intro section
 function adjustFixedNavbar(event) {
-  if($(window).scrollTop() > 528) {
+  if($(window).scrollTop() > 528 || isSmoothScrolling) {
     $('body').addClass('fixed-nav');
   } else {
     $('body').removeClass('fixed-nav no-animation');
@@ -24,6 +28,7 @@ function adjustFixedNavbar(event) {
 function handleNavLinkClick() {
   collapseNavbar();
   turnOffNavbarAnimation();
+  timeSmoothScrolling();
 }
 
 // Hide the expanded menu
@@ -33,7 +38,17 @@ function collapseNavbar() {
 
 // Ensure that the fixed-nav doesn't animate into frame
 function turnOffNavbarAnimation() {
-  $('body').addClass('no-animation');
+  $('body').addClass('fixed-nav no-animation');
+}
+
+// Ensure that the scroll events aren't being triggered during a smooth scroll due to a link click
+function timeSmoothScrolling() {
+  const scrollDuration = 500; // ms
+
+  isSmoothScrolling = true;
+  setTimeout(() => {
+    isSmoothScrolling = false;
+  }, scrollDuration);
 }
 
 $("#Friday-tab").click(function(e) {
