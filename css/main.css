@@ -493,9 +493,34 @@ article.schedule ul.nav-tabs li.current {
 article.schedule ul.nav-tabs li.current a h4 {
   font-family: AvenirBold;
 }
+@media (max-width: 767.98px) {
+  article.schedule ul.nav-tabs li.current .date {
+    color: #FF6F3F;
+  }
+}
 article.schedule .tab {
   text-align: center;
   font-family: Avenir;
+}
+@media (max-width: 767.98px) {
+  article.schedule .tab span {
+    display: block;
+  }
+  article.schedule .tab .spacer {
+    visibility: hidden;
+  }
+  article.schedule .tab .date {
+    font-size: 1.75rem;
+    margin-left: -1.5rem;
+    padding: 0;
+    margin: 0;
+    margin-top: -2.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  article.schedule .tab .weekday {
+    font-size: 2rem;
+  }
 }
 article.schedule p {
   text-align: left;
