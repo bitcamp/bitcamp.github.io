@@ -373,11 +373,33 @@ article.schedule {
       a h4 {
         font-family: AvenirBold;
       }
+      @media (max-width: $md-breakpoint) {
+        .date {
+          color: $bp-bitcamp-orange;
+        }
+      }
     }
   }
   .tab {
     text-align: center;
     font-family: Avenir;
+    @media (max-width: $md-breakpoint) {
+      span {
+        display: block;
+      }
+      .weekday {
+      }
+      .spacer {
+        visibility: hidden;
+      }
+      .date {
+        font-size: 1.75rem;
+        margin-left: -1.5rem;
+        padding: 0;
+        margin: 0;
+        margin-top: -2.5rem;
+      }
+    }
   }
   p {
     text-align: left;
