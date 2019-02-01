@@ -53,11 +53,12 @@ $logo-font-size: 3.75rem;
             filter: none;
         }
         img {
-            height: $logo-font-size;
+            width: $logo-font-size;
             vertical-align: sub;
             margin-right: 1rem;
+            margin-left: -$logo-font-size;
             opacity: 0;
-            transition: opacity 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
         }
     }
     .navbar-toggler {
@@ -106,6 +107,7 @@ body.fixed-nav {
         }
         .navbar-brand img {
             opacity: 1;
+            margin-left: 0;
         }
     }
     &.no-animation #nav {

@@ -55,9 +55,9 @@ function timeSmoothScrolling() {
 
 // Navigate between different tabs in the schedule section
 function switchScheduleTab(event) {
-
-  if (!$(event.target).hasClass('current')) {
+  event.preventDefault();
+  if (!$(event.currentTarget).hasClass('current')) {
     $('#ScheduleTabs .nav-item').removeClass('current');
-    $(event.target).addClass('current');
+    $(event.currentTarget).addClass('current');
   }
 }

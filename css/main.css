@@ -119,11 +119,12 @@ h1, h2, h3, h4, h5, h6, p {
   filter: none;
 }
 #nav .navbar-brand img {
-  height: 3.75rem;
+  width: 3.75rem;
   vertical-align: sub;
   margin-right: 1rem;
+  margin-left: -3.75rem;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 #nav .navbar-toggler .navbar-toggler-icon {
   color: #fa7041;
@@ -172,6 +173,7 @@ body.fixed-nav #nav #mlh-trust-badge {
 }
 body.fixed-nav #nav .navbar-brand img {
   opacity: 1;
+  margin-left: 0;
 }
 body.fixed-nav.no-animation #nav {
   top: 0;
@@ -360,7 +362,7 @@ article.hero .content .logo-box img.logo {
 }
 @media (max-width: 767.98px) {
   .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.tracks, article.intro {
-    padding: 5rem 0 10rem;
+    padding: 8rem 0 10rem;
   }
 }
 .page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.colorwar h2, article.tracks h2, article.intro h2 {
