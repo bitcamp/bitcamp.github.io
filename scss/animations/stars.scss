@@ -1,0 +1,233 @@
+#stars-bg {
+    background-image : url('../img/parallax-backgrounds/stars/sky.png');
+
+    @mixin setSize($sideLength) {
+        height: $sideLength;
+        width: $sideLength;
+    }
+
+    .star, .shooting-star, {
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+    .shooting-star {
+        opacity: 0;
+    }
+
+    .star-1 {
+        @include setSize(5vw);
+        left: 32%;
+        top: 8%;
+        background-image : url('../img/parallax-backgrounds/stars/star1.png');
+        background-size: 40vw 5vw;
+        animation: twinkle1 4s steps(8) infinite;
+
+        @keyframes twinkle1 {
+            0%{background-position-x:0px;}
+            20%{background-position-x:-40vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
+    }
+     
+    .star-2 {
+        @include setSize(4.5vw);
+        right: 24%;
+        top: 32%;
+        background-image : url('../img/parallax-backgrounds/stars/star2.png');
+        background-size: 18vw 4.5vw;
+        animation: twinkle2 1.5s steps(4) infinite;
+
+        @keyframes twinkle2 {
+            0%{background-position-x:0px;}
+            40%{background-position-x:-18vw;}
+            40.001%,100%{background-position-x:0px;}
+        }
+     }
+     
+     .star-3 {
+        @include setSize(3.5vw);
+        right: 7%;
+        top: 30%;
+        background-image : url('../img/parallax-backgrounds/stars/star3.png');
+        background-size: 17.5vw 3.5vw;
+        animation: twinkle3 4s steps(5) 2s infinite;
+        
+        @keyframes twinkle3{
+            0%{background-position-x:0px;}
+            20%{background-position-x:-17.5vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
+     }
+     
+     .star-4 {
+        @include setSize(3vw);
+        right: 50%;
+        top: 2%;
+        background-image : url('../img/parallax-backgrounds/stars/star2.png');
+        background-size: 12vw 3vw;
+        animation: twinkle4 6s steps(4) -2s infinite;
+
+        @keyframes twinkle4 {
+            0%{background-position-x:0px;}
+            20%{background-position-x:-12vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
+     }
+     
+     
+     .star-5 {
+        @include setSize(2vw);
+        right: 41%;
+        top: 11%;
+        background-image : url('../img/parallax-backgrounds/stars/star3.png');
+        background-size: 10vw 2vw;
+        animation: twinkle5 1.5s steps(5) -2s infinite;
+        
+        @keyframes twinkle5 {
+            0%{background-position-x:0px;}
+            40%{background-position-x:-10vw;}
+            40.001%,100%{background-position-x:0px;}
+        }
+    }
+     
+    .star-6 {
+        @include setSize(2.5vw);
+        right: 30%;
+        top: 14%;
+        background-image : url('../img/parallax-backgrounds/stars/star1.png');
+        background-size: 20vw 2.5vw;
+        animation: twinkle6 5.5s steps(8) 3s infinite;
+        
+        @keyframes twinkle6{
+            0%{background-position-x:0px;}
+            12.5%{background-position-x:-20vw;}
+            12.501%,100%{background-position-x:0px;}
+        }
+     }
+     
+     .shooting-1 {
+        @include setSize(5vw);
+        right: 20%;
+        top: 24%;
+        background-image : url('../img/parallax-backgrounds/stars/shooting1.png');
+        background-size: 35vw 5vw;
+        animation: shoot1 8s steps(7) infinite;
+
+        @keyframes shoot1{
+            0%{
+               background-position-x:0px;
+               transform: translateY(5vh) translateX(5vw);
+               opacity: 0;
+            }
+            2% {
+               opacity: 1;
+            }
+            4% {
+               opacity: 1;
+            }
+            7%{
+               background-position-x:-35vw;
+               transform: translateY(25vh) translateX(-5vw);
+               opacity: 0;
+            }
+            7.001%,100%{
+               opacity: 0;
+            }
+        }
+     }
+     
+     .shooting-2 {
+        @include setSize(5vw);
+        left: 20%;
+        top: 14%;
+        background-image : url('../img/parallax-backgrounds/stars/shooting2.png');
+        background-size: 35vw 5vw;
+        animation: shoot2 4s steps(7) 3s infinite;
+        @keyframes shoot2{
+           0%{
+              background-position-x:0px;
+              transform: translateX(0vw);
+              opacity: 0;
+           }
+           4% {
+              opacity: 1;
+           }
+           6% {
+              opacity: 1;
+           }
+           9%{
+              background-position-x:-35vw;
+              transform: translateX(20vw);
+              opacity: 0;
+           }
+           9.001%,100%{
+              opacity: 0;
+           }
+        }
+     }
+     
+     
+     .shooting-3 {
+        @include setSize(5vw);
+        left: 30%;
+        top: 22%;
+        background-image : url('../img/parallax-backgrounds/stars/shooting3.png');
+        background-size: 35vw 5vw;
+        animation: shoot3 6s steps(7) 3.5s infinite;
+        @keyframes shoot3{
+            0%{
+               background-position-x:0px;
+               transform: translateX(0vw);
+               opacity: 0;
+            }
+            4% {
+               opacity: 1;
+            }
+            6% {
+               opacity: 1;
+            }
+            9%{
+               background-position-x:-35vw;
+               transform: translateX(20vw);
+               opacity: 0;
+            }
+            9.001%,100%{
+               opacity: 0;
+            }
+        }
+     }
+     
+     
+     
+     .shooting-4 {
+        @include setSize(4vw);
+        left: 10%;
+        top: 42%;
+        background-image : url('../img/parallax-backgrounds/stars/shooting4.png');
+        background-size: 20vw 4vw;
+        animation: shoot4 6s steps(5) 9.5s infinite;
+
+        @keyframes shoot4{
+            0% {
+               background-position-x:0px;
+               transform: translateX(0vw) translateY(0vw);
+               opacity: 0;
+            }
+            4% {
+               opacity: 1;
+            }
+            6% {
+               opacity: 1;
+            }
+            9%{
+               background-position-x:-20vw;
+               transform: translateX(10vw) translateY(10vw);
+               opacity: 0;
+            }
+            9.001%,100%{
+               opacity: 0;
+            }
+        }
+    }
+}

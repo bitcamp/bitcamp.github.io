@@ -2,10 +2,10 @@
 
 $nav-height: 80px;
 $nav-link-hover-color: #ffad77;
-$logo-font-size: 3.75rem;
+$logo-font-size: 3rem;
 
 #nav {
-    background: $primary-bg-color;
+    background-color: white;
     height: $nav-height;
     z-index: 100;
     @media (max-width: $lg-breakpoint) {
@@ -24,6 +24,7 @@ $logo-font-size: 3.75rem;
     .nav-link {
         color: $default-font-color;
         margin: 0 0.75rem;
+        font-weight: bold;
         @media (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
             font-size: 1.375rem;
         }
@@ -36,7 +37,6 @@ $logo-font-size: 3.75rem;
             filter: none;
         }
         &.sign-up-link {
-            font-weight: bold;
             text-transform: uppercase;
             color: $logo-color;
         }
@@ -44,9 +44,9 @@ $logo-font-size: 3.75rem;
     .navbar-brand {
         color: $logo-color;
         font-family: Aleo;
+        line-height: inherit;
         font-weight: bold;
         font-size: $logo-font-size;
-        line-height: inherit;
         &:hover {
             filter: none;
         }
@@ -64,8 +64,8 @@ $logo-font-size: 3.75rem;
     }
     #mlh-trust-badge {
         display: block;
-        max-width: 10rem;
-        min-width: 8rem;
+        max-width: 8rem;
+        min-width: 6rem;
         position: absolute;
         top: 0;
         left: 100%;

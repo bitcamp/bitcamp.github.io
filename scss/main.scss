@@ -1,44 +1,37 @@
 @import 'base';
 @import 'vars';
 @import 'nav';
+@import 'animations';
 
 body, html {
   height: 100%;
   overflow-x: hidden;
-}
-.parallax {
-  color: white;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges; 
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  //opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x:hidden;
-  min-height: 100%;
-}
-.bgimg-1 {
-  background-image: url("../img/forest.jpg");
-}
-
-.bgimg-2 {
-  background-image: url("../img/cabin.jpg");
-}
-
-/*.bgimg-3 {
-  background-image: url("img_parallax3.jpg");
-  min-height: 400px;
-}*/
-
-/* Turn off parallax scrolling for tablets and phones */
-/*@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  position: fixed;
+  z-index: -1;
+  // Turn off parallax backgrounds on mobile
+  @media only screen and (max-device-width: 1024px) {
     background-attachment: scroll;
   }
-}*/
+}
 
 a {
   color: $bp-bitcamp-orange;
@@ -269,6 +262,10 @@ article.hero {
   }
   &.medium {
     background-color: $bp-bitcamp-orange;
+    color: white;
+  }
+  &.parallax {
+    height: 100vh;
     color: white;
   }
 }
@@ -594,11 +591,4 @@ article.footer {
       text-align: center;
     }
   }
-}
-
-div.separator {
-  height: 16rem;
-  margin-top: -.2rem;
-  margin-bottom: -.2rem;
-  background-size: cover;
 }
