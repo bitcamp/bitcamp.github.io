@@ -612,11 +612,11 @@ article.page-body {
   position: relative; }
 
 article.hero {
+  padding: 60rem 1.5rem 25rem;
   background-image: url("../img/parallax-backgrounds/hero.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: device-width;
-  height: 85.55rem;
+  background-size: cover;
+  background-position: bottom;
+  /* (2160 / 3840 * 100) */
   /*padding: 12rem 1.5rem;
   margin-bottom: -.2rem; // gap glitch fix
   background-color: $primary-bg-color;
@@ -679,13 +679,25 @@ article.hero {
         }
       }
     }*/ }
-  article.hero .logo-box img.logo {
-    width: 35rem;
-    margin-top: 35rem;
-    margin-left: 59rem; }
-    @media (max-width: 767.98px) {
-      article.hero .logo-box img.logo {
-        margin-right: 0; } }
+  article.hero .content {
+    text-align: center; }
+    article.hero .content h1 {
+      color: #FFAF3F; }
+    article.hero .content p {
+      color: #7F6C5F;
+      font-size: 2rem;
+      margin-top: -33rem; }
+    article.hero .content .logo-box {
+      position: relative; }
+      article.hero .content .logo-box img.fire {
+        position: absolute;
+        width: 32rem;
+        z-index: 12;
+        transform: translateX(-15.5rem) translateY(10rem); }
+      article.hero .content .logo-box img.logo {
+        width: 35rem;
+        height: 35rem;
+        margin-bottom: 1rem; }
 
 .page-section, article.intro, article.tracks, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
