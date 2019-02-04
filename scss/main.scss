@@ -141,7 +141,12 @@ article.page-body {
 }
 
 article.hero {
-  padding: 12rem 1.5rem;
+  background-image: url('../img/parallax-backgrounds/hero.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: device-width;
+  height: 85.55rem;
+  /*padding: 12rem 1.5rem;
   margin-bottom: -.2rem; // gap glitch fix
   background-color: $primary-bg-color;
   touch-action: none;
@@ -202,17 +207,18 @@ article.hero {
           }
         }
       }
-    }
+    }*/
     .logo-box {
       img.logo {
-        width: 20rem;
-        margin-right: 3rem;
+        width: 35rem;
+        margin-top: 35rem;
+        margin-left: 59rem;
         @media (max-width: $md-breakpoint) {
           margin-right: 0;
         }
       }
     }
-  }
+  //}
 }
 
 .page-section {
@@ -362,8 +368,10 @@ article.schedule {
     /* Style for currently active tab */
     li.current {
       border-color: $bp-bitcamp-orange;
+      background-color: transparent !important;
       a h4 {
         font-family: AvenirBold;
+        background-color: transparent;
       }
       @media (max-width: $md-breakpoint) {
         .date {
