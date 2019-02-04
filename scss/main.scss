@@ -391,14 +391,16 @@ article.schedule {
     border: 0px solid;
     margin-top: 7rem;
     margin-bottom: 5rem;
-
+    background-color: rgba(239, 239, 239, 0.65);
+    padding-bottom: 1.25rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-radius: 1.5rem;
     li.nav-item {
       margin: 0; /* Get rid of spacing between buttom borders */
-      //border-bottom: 5px solid $bp-warm-grey;
-      //width: 31rem;
-      width: 29%;
-      //background-color: rgba(239, 239, 239, 0.5);
-
+      border-bottom: 5px solid $bp-warm-grey;
+      padding-top: 1.25rem;
+      width: 32%;
       a {
         &:hover {
           -webkit-filter: none;
@@ -410,7 +412,7 @@ article.schedule {
     }
     /* Style for currently active tab */
     li.current {
-      //border-color: $bp-bitcamp-orange;
+      border-color: $bp-bitcamp-orange;
       a h4 {
         font-family: AvenirBold;
       }
@@ -445,6 +447,7 @@ article.schedule {
   p {
     text-align: left;
     margin-bottom: 0rem;
+    color: black;
   }
   h4 {
     text-align: left;
@@ -461,7 +464,7 @@ article.schedule {
     }
   }
   .event {
-    background-color: $bp-warm-grey;
+    background-color: rgba(239, 239, 239, 0.65);
     border-radius: 1.75rem;
     margin-top: 2rem;
     margin-left: 3rem;
