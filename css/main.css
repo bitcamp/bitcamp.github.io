@@ -330,38 +330,38 @@ body.fixed-nav {
     opacity: 0; } }
 
 #lake {
-  background-image: url("../img/parallax-backgrounds/lake-background-min.png"); }
-  #lake .waves {
-    background: url("../img/parallax-backgrounds/lake-components/waves.png") no-repeat;
-    background-size: 1920px;
-    background-position: cover center;
-    height: 1080px;
-    width: 1920px;
-    overflow: hidden;
-    position: absolute;
-    animation: waves 1.1s steps(2) infinite;
-    opacity: .84; }
-
+  background-image: url("../img/parallax-backgrounds/lake-background-min.png");
+}
+#lake .waves {
+  background: url("../img/parallax-backgrounds/lake-components/waves.png") no-repeat;
+  background-size: 100%;
+  background-position: cover center;
+  height: 100%;
+  width: 100%;
+  animation: waves 1.1s steps(2) infinite;
+  opacity: 0.84;
+}
 @keyframes waves {
   from {
     background-position-y: 0px; }
   to {
-    background-position-y: -2160px; } }
-  #lake .kayak {
-    position: absolute;
-    height: 360px;
-    bottom: 180px;
-    left: 525px;
-    transform: rotate(110deg); }
-  #lake .gill {
-    height: 100px;
-    width: 100px;
-    top: -100px;
-    position: absolute;
-    background-image: url("../img/parallax-backgrounds/lake-components/bluegill.png");
-    background-size: 900px 100px;
-    background-repeat: no-repeat; }
-
+    background-position-y: -2160px;
+  }
+}
+#lake .kayak {
+  height: 360px;
+  bottom: 180px;
+  left: 525px;
+  transform: rotate(110deg);
+}
+#lake .gill {
+  height: 100px;
+  width: 100px;
+  top: -100px;
+  background-image: url("../img/parallax-backgrounds/lake-components/bluegill.png");
+  background-size: 900px 100px;
+  background-repeat: no-repeat;
+}
 @keyframes gill-swim-1 {
   0% {
     background-position-x: -100px; }
@@ -402,16 +402,17 @@ body.fixed-nav {
 
 @keyframes gill-move-3 {
   to {
-    transform: translateY(1100px) translateX(1200px); } }
-  #lake .bass {
-    height: 160px;
-    width: 160px;
-    top: -160px;
-    position: absolute;
-    background-image: url("../img/parallax-backgrounds/lake-components/bass.png");
-    background-size: 1440px 160px;
-    background-repeat: no-repeat; }
-
+    transform: translateY(1100px) translateX(1200px);
+  }
+}
+#lake .bass {
+  height: 160px;
+  width: 160px;
+  top: -160px;
+  background-image: url("../img/parallax-backgrounds/lake-components/bass.png");
+  background-size: 1440px 160px;
+  background-repeat: no-repeat;
+}
 @keyframes bass-swim-1 {
   0% {
     background-position-x: -160px; }
@@ -472,20 +473,22 @@ body.fixed-nav {
 
 @keyframes gill-move-6 {
   to {
-    transform: translateY(1100px) translateX(1200px); } }
-  #lake .turtle {
-    height: 220px;
-    width: 220px;
-    top: -220px;
-    position: absolute;
-    background-image: url("../img/parallax-backgrounds/lake-components/turtle.png");
-    background-size: 220px 220px;
-    background-repeat: no-repeat;
-    right: 700px;
-    opacity: .79; }
-  #lake .turtle-container {
-    animation: turtle 120s infinite; }
-
+    transform: translateY(1100px) translateX(1200px);
+  }
+}
+#lake .turtle {
+  height: 220px;
+  width: 220px;
+  top: -220px;
+  background-image: url("../img/parallax-backgrounds/lake-components/turtle.png");
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+  right: 700px;
+  opacity: 0.79;
+}
+#lake .turtle-container {
+  animation: turtle 120s infinite;
+}
 @keyframes turtle {
   to {
     transform: translateY(1000px) translateX(1000px); } }
@@ -502,24 +505,30 @@ body.fixed-nav {
     background-position-y: -14040px; } }
 
 article.parallax {
-  background-color: transparent !important; }
-  article.parallax .parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1; }
-    article.parallax .parallax-bg div {
-      position: fixed;
-      visibility: hidden; }
-  article.parallax .container {
-    background-color: transparent;
-    z-index: 1; }
+  background-color: transparent !important;
+}
+article.parallax .parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+article.parallax .parallax-bg > div {
+  position: fixed;
+  display: none;
+}
+article.parallax .parallax-bg.visible > div {
+  display: block;
+}
+article.parallax .container {
+  background-color: transparent;
+  z-index: 1;
+}
 
 a {
   color: #FF6F3F; }
@@ -703,39 +712,49 @@ article.hero {
 .page-section, article.intro, article.tracks, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
   padding: 10rem 0rem;
-  background-color: white; }
-  .page-section h2, article.intro h2, article.tracks h2, article.colorwar h2, article.schedule h2, article.faq h2, article.sponsors h2, article.footer h2 {
-    margin-bottom: 2rem;
-    text-align: left;
-    font-size: 3.5rem;
-    color: #FF6F3F; }
-  .page-section h3, article.intro h3, article.tracks h3, article.colorwar h3, article.schedule h3, article.faq h3, article.sponsors h3, article.footer h3 {
-    font-weight: normal;
-    opacity: .9; }
-  .page-section h4, article.intro h4, article.tracks h4, article.colorwar h4, article.schedule h4, article.faq h4, article.sponsors h4, article.footer h4 {
-    font-size: 2.5rem;
-    color: black; }
-  .page-section h5, article.intro h5, article.tracks h5, article.colorwar h5, article.schedule h5, article.faq h5, article.sponsors h5, article.footer h5 {
-    font-size: 1.8rem;
-    color: #FFAF3F; }
-  .page-section div.h2-accent, article.intro div.h2-accent, article.tracks div.h2-accent, article.colorwar div.h2-accent, article.schedule div.h2-accent, article.faq div.h2-accent, article.sponsors div.h2-accent, article.footer div.h2-accent {
-    border: 2px solid #C79970;
-    /*@media (max-width: $md-breakpoint) {
-      margin-left: auto;
-      margin-right: auto;
-    }*/
-    width: 14rem; }
-  .page-section .btn-container, article.intro .btn-container, article.tracks .btn-container, article.colorwar .btn-container, article.schedule .btn-container, article.faq .btn-container, article.sponsors .btn-container, article.footer .btn-container {
-    margin-top: 4rem; }
-  .page-section.white, article.white.intro, article.white.tracks, article.white.colorwar, article.white.schedule, article.white.faq, article.white.sponsors, article.white.footer {
-    background-color: #FFFFFF;
-    color: black; }
-  .page-section.medium, article.medium.intro, article.medium.tracks, article.medium.colorwar, article.medium.schedule, article.medium.faq, article.medium.sponsors, article.medium.footer {
-    background-color: #FF6F3F;
-    color: white; }
-  .page-section.parallax, article.parallax.intro, article.parallax.tracks, article.parallax.colorwar, article.parallax.schedule, article.parallax.faq, article.parallax.sponsors, article.parallax.footer {
-    height: 100vh;
-    color: white; }
+  background-color: white;
+}
+.page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.colorwar h2, article.tracks h2, article.intro h2 {
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 3.5rem;
+  color: #FF6F3F;
+}
+.page-section h3, article.footer h3, article.sponsors h3, article.faq h3, article.schedule h3, article.colorwar h3, article.tracks h3, article.intro h3 {
+  font-weight: normal;
+  opacity: 0.9;
+}
+.page-section h4, article.footer h4, article.sponsors h4, article.faq h4, article.schedule h4, article.colorwar h4, article.tracks h4, article.intro h4 {
+  font-size: 2.5rem;
+  color: black;
+}
+.page-section h5, article.footer h5, article.sponsors h5, article.faq h5, article.schedule h5, article.colorwar h5, article.tracks h5, article.intro h5 {
+  font-size: 1.8rem;
+  color: #FFAF3F;
+}
+.page-section div.h2-accent, article.footer div.h2-accent, article.sponsors div.h2-accent, article.faq div.h2-accent, article.schedule div.h2-accent, article.colorwar div.h2-accent, article.tracks div.h2-accent, article.intro div.h2-accent {
+  border: 2px solid #C79970;
+  /*@media (max-width: $md-breakpoint) {
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+  width: 14rem;
+}
+.page-section .btn-container, article.footer .btn-container, article.sponsors .btn-container, article.faq .btn-container, article.schedule .btn-container, article.colorwar .btn-container, article.tracks .btn-container, article.intro .btn-container {
+  margin-top: 4rem;
+}
+.page-section.white, article.white.footer, article.white.sponsors, article.white.faq, article.white.schedule, article.white.colorwar, article.white.tracks, article.white.intro {
+  background-color: #FFFFFF;
+  color: black;
+}
+.page-section.medium, article.medium.footer, article.medium.sponsors, article.medium.faq, article.medium.schedule, article.medium.colorwar, article.medium.tracks, article.medium.intro {
+  background-color: #FF6F3F;
+  color: white;
+}
+.page-section.parallax, article.parallax.footer, article.parallax.sponsors, article.parallax.faq, article.parallax.schedule, article.parallax.colorwar, article.parallax.tracks, article.parallax.intro {
+  min-height: 80vh;
+  color: white;
+}
 
 @media (max-width: 767.98px) {
   article.intro {
