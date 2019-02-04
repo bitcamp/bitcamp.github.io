@@ -5,6 +5,15 @@ $(".faq-card h5").click(toggleFAQInfo);
 $('#nav .nav-link').click(handleNavLinkClick);
 $(window).scroll(adjustFixedNavbar);
 $(document).ready(adjustFixedNavbar);
+$('.parallax-bg div').inViewport(makeVisible);
+
+function makeVisible(px) {
+  if(px) {
+    $(this).addClass('visible');
+  } else {
+    $(this).removeClass('visible');
+  }
+}
 
 // Open up the faq-card info
 function toggleFAQInfo(event) {
