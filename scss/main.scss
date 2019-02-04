@@ -143,11 +143,42 @@ article.page-body {
 }
 
 article.hero {
+  padding: 60rem 1.5rem 25rem;
+  //margin-bottom: -.2rem; // gap glitch fix
   background-image: url('../img/parallax-backgrounds/hero.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: device-width;
-  height: 85.55rem;
+  background-size: cover;
+  background-position: bottom;
+  .content {
+    text-align: center;
+    h1 {
+      color: $bp-yellow-orange;
+    }
+    p {
+      color: $bp-dark-brown;
+      font-size: 2rem;
+      margin-top: -33rem;
+    }
+    h1, p {
+
+    }
+    .logo-box {
+      position: relative;
+      // Get ready for this hardcoded fire gif beauty :')
+      img.fire {
+        position: absolute;
+        width: 32rem;
+        z-index: 12;
+        transform: translateX(-15.5rem) translateY(10rem);
+      }
+      img.logo {
+        width: 35rem;
+        height: 35rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  //padding-top: ; /* (img-height / img-width * container-width) */
+                /* (2160 / 3840 * 100) */
   /*padding: 12rem 1.5rem;
   margin-bottom: -.2rem; // gap glitch fix
   background-color: $primary-bg-color;
@@ -210,16 +241,6 @@ article.hero {
         }
       }
     }*/
-    .logo-box {
-      img.logo {
-        width: 35rem;
-        margin-top: 35rem;
-        margin-left: 59rem;
-        @media (max-width: $md-breakpoint) {
-          margin-right: 0;
-        }
-      }
-    }
   //}
 }
 
