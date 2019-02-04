@@ -350,6 +350,10 @@ body.fixed-nav {
     bottom: 180px;
     left: 525px;
     transform: rotate(110deg); }
+    @media (max-width: 767.98px) {
+      #lake .kayak {
+        left: 300px;
+        bottom: -100px; } }
   #lake .gill {
     height: 100px;
     width: 100px;
@@ -519,6 +523,7 @@ article.parallax {
     article.parallax .parallax-bg.visible > div {
       display: block; }
     article.parallax .parallax-bg > img {
+      position: fixed;
       z-index: -3; }
   article.parallax .container {
     background-color: transparent;

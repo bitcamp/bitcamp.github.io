@@ -22,6 +22,10 @@
      bottom: 180px;
      left: 525px;
      transform: rotate(110deg);
+     @media (max-width: $md-breakpoint) {
+       left: 300px;
+       bottom: -100px;
+     }
   }
 
   .gill {

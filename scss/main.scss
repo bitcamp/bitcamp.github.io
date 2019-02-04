@@ -33,7 +33,7 @@ article.parallax {
       display: block;
     }
     &>img {
-      //position: fixed;
+      position: fixed;
       z-index: -3;
     }
   }
