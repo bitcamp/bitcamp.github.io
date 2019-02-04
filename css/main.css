@@ -645,10 +645,12 @@ article.parallax .parallax-bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  z-index: -2;
 }
 article.parallax .parallax-bg > div {
   position: fixed;
   display: none;
+  z-index: -1;
 }
 article.parallax .parallax-bg.visible > div {
   display: block;
@@ -832,26 +834,33 @@ article.hero {
           }
         }
       }
-    }*/ }
-  article.hero .content {
-    text-align: center; }
-    article.hero .content h1 {
-      color: #FFAF3F; }
-    article.hero .content p {
-      color: #7F6C5F;
-      font-size: 2rem;
-      margin-top: -33rem; }
-    article.hero .content .logo-box {
-      position: relative; }
-      article.hero .content .logo-box img.fire {
-        position: absolute;
-        width: 32rem;
-        z-index: 12;
-        transform: translateX(-15.5rem) translateY(10rem); }
-      article.hero .content .logo-box img.logo {
-        width: 35rem;
-        height: 35rem;
-        margin-bottom: 1rem; }
+    }*/
+}
+article.hero .content {
+  text-align: center;
+}
+article.hero .content h1 {
+  color: #FFAF3F;
+}
+article.hero .content p {
+  color: #7F6C5F;
+  font-size: 2rem;
+  margin-top: -33rem;
+}
+article.hero .content .logo-box {
+  position: relative;
+}
+article.hero .content .logo-box img.fire {
+  position: absolute;
+  width: 32rem;
+  z-index: 12;
+  transform: translateX(-15.5rem) translateY(10rem);
+}
+article.hero .content .logo-box img.logo {
+  width: 35rem;
+  height: 35rem;
+  margin-bottom: 1rem;
+}
 
 .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.tracks, article.intro {
   position: relative;

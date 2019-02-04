@@ -15,9 +15,11 @@ article.parallax {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    z-index: -2;
     &>div {
       position: fixed;
       display: none;
+      z-index: -1;
     }
     &.visible>div {
       display: block;
