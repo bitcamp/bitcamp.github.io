@@ -22,6 +22,10 @@ article.parallax {
     &.visible>div {
       display: block;
     }
+    &>img {
+      position: fixed;
+      z-index: 0;
+    }
   }
   .container {
     background-color: transparent;
