@@ -3,33 +3,25 @@
 @import 'nav';
 @import 'animations';
 
-body, html {
-  height: 100%;
-  overflow-x: hidden;
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges; 
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor;
-}
-
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-  // Turn off parallax backgrounds on mobile
-  @media only screen and (max-device-width: 1024px) {
-    background-attachment: scroll;
+article.parallax {
+  background-color: transparent !important;
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    &.in-view {
+      display: block; 
+    }
+  }
+  .container {
+    background-color: transparent;
+    z-index: 1;
   }
 }
 
@@ -224,6 +216,7 @@ article.hero {
 .page-section {
   position: relative;
   padding: 10rem 0rem;
+  background-color: white;
   h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -547,9 +540,8 @@ article.sponsors {
 
 article.footer {
   @extend .page-section;
-  //TODO: remove when merged
-  background: $primary-bg-color !important;
   color: black !important;
+  height: 800px;
   .contact-card {
     margin: 0 auto;
     min-width: 300px;

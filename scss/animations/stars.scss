@@ -144,6 +144,7 @@
         background-image : url('../img/parallax-backgrounds/stars/shooting2.png');
         background-size: 35vw 5vw;
         animation: shoot2 4s steps(7) 3s infinite;
+        
         @keyframes shoot2{
            0%{
               background-position-x:0px;
@@ -175,6 +176,7 @@
         background-image : url('../img/parallax-backgrounds/stars/shooting3.png');
         background-size: 35vw 5vw;
         animation: shoot3 6s steps(7) 3.5s infinite;
+
         @keyframes shoot3{
             0%{
                background-position-x:0px;
