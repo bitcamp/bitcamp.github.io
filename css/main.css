@@ -426,12 +426,10 @@ body.fixed-nav.no-animation #nav {
 }
 #lake .waves {
   background: url("../img/parallax-backgrounds/lake-components/waves.png") no-repeat;
-  background-size: 1920px;
+  background-size: 100%;
   background-position: cover center;
-  height: 1080px;
-  width: 1920px;
-  overflow: hidden;
-  position: absolute;
+  height: 100%;
+  width: 100%;
   animation: waves 1.1s steps(2) infinite;
   opacity: 0.84;
 }
@@ -444,7 +442,6 @@ body.fixed-nav.no-animation #nav {
   }
 }
 #lake .kayak {
-  position: absolute;
   height: 360px;
   bottom: 180px;
   left: 525px;
@@ -454,7 +451,6 @@ body.fixed-nav.no-animation #nav {
   height: 100px;
   width: 100px;
   top: -100px;
-  position: absolute;
   background-image: url("../img/parallax-backgrounds/lake-components/bluegill.png");
   background-size: 900px 100px;
   background-repeat: no-repeat;
@@ -518,7 +514,6 @@ body.fixed-nav.no-animation #nav {
   height: 160px;
   width: 160px;
   top: -160px;
-  position: absolute;
   background-image: url("../img/parallax-backgrounds/lake-components/bass.png");
   background-size: 1440px 160px;
   background-repeat: no-repeat;
@@ -608,7 +603,6 @@ body.fixed-nav.no-animation #nav {
   height: 220px;
   width: 220px;
   top: -220px;
-  position: absolute;
   background-image: url("../img/parallax-backgrounds/lake-components/turtle.png");
   background-size: 220px 220px;
   background-repeat: no-repeat;
@@ -651,11 +645,13 @@ article.parallax .parallax-bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: -1;
 }
-article.parallax .parallax-bg div {
+article.parallax .parallax-bg > div {
   position: fixed;
-  visibility: hidden;
+  display: none;
+}
+article.parallax .parallax-bg.visible > div {
+  display: block;
 }
 article.parallax .container {
   background-color: transparent;
@@ -892,7 +888,7 @@ article.hero .logo-box img.logo {
   color: white;
 }
 .page-section.parallax, article.parallax.footer, article.parallax.sponsors, article.parallax.faq, article.parallax.schedule, article.parallax.colorwar, article.parallax.tracks, article.parallax.intro {
-  height: 100vh;
+  min-height: 80vh;
   color: white;
 }
 

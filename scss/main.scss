@@ -15,10 +15,12 @@ article.parallax {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: -1;
-    div {
+    &>div {
       position: fixed;
-      visibility: hidden;
+      display: none;
+    }
+    &.visible>div {
+      display: block;
     }
   }
   .container {
@@ -266,7 +268,7 @@ article.hero {
     color: white;
   }
   &.parallax {
-    height: 100vh;
+    min-height: 80vh;
     color: white;
   }
 }
