@@ -1,13 +1,13 @@
 #lake {
   background-image : url('../img/parallax-backgrounds/lake-background-min.png');
-  
+
   .waves {
     background: url('../img/parallax-backgrounds/lake-components/waves.png') no-repeat;
     background-size: 100%;
     background-position: cover center;
     height: 100%;
     width: 100%;
-    
+
     animation: waves 1.1s steps(2) infinite;
     opacity: .84;
   }
@@ -18,7 +18,6 @@
   }
 
   .kayak {
-     
      height: 360px;
      bottom: 180px;
      left: 525px;
@@ -29,7 +28,7 @@
      height: 100px;
      width:100px;
      top: -100px;
-     
+
      background-image : url('../img/parallax-backgrounds/lake-components/bluegill.png');
      background-size: 900px 100px;
      background-repeat: no-repeat;
@@ -105,7 +104,7 @@
      height: 160px;
      width:160px;
      top: -160px;
-     
+
      background-image : url('../img/parallax-backgrounds/lake-components/bass.png');
      background-size: 1440px 160px;
      background-repeat: no-repeat;

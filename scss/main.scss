@@ -5,6 +5,12 @@
 
 article.parallax {
   background-color: transparent !important;
+  #stars-bg {
+    z-index: -2;
+  }
+  #lake {
+    z-index: -4;
+  }
   .parallax-bg {
     position: absolute;
     top: 0;
@@ -15,18 +21,20 @@ article.parallax {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: -2;
     &>div {
       position: fixed;
       display: none;
+      //z-index: -1;
+    }
+    &#stars-bg div.star, #stars-bg div.shooting-star{
       z-index: -1;
     }
     &.visible>div {
       display: block;
     }
     &>img {
-      position: fixed;
-      z-index: 0;
+      //position: fixed;
+      z-index: -3;
     }
   }
   .container {
@@ -374,6 +382,10 @@ article.colorwar {
 
 article.schedule {
   @extend .page-section;
+  /* Remove current tab background */
+  a.active, a.active:hover, a.active:focus {
+    background: transparent !important;
+  }
   /* Remove bootstrap styling */
   ul.nav-tabs {
     border: 0px solid;
@@ -398,7 +410,7 @@ article.schedule {
     }
     /* Style for currently active tab */
     li.current {
-      border-color: $bp-bitcamp-orange;
+      //border-color: $bp-bitcamp-orange;
       a h4 {
         font-family: AvenirBold;
       }

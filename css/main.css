@@ -496,32 +496,33 @@ body.fixed-nav {
     background-position-y: -14040px; } }
 
 article.parallax {
-  background-color: transparent !important;
-}
-article.parallax .parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -2;
-}
-article.parallax .parallax-bg > div {
-  position: fixed;
-  display: none;
-  z-index: -1;
-}
-article.parallax .parallax-bg.visible > div {
-  display: block;
-}
-article.parallax .container {
-  background-color: transparent;
-  z-index: 1;
-}
+  background-color: transparent !important; }
+  article.parallax #stars-bg {
+    z-index: -2; }
+  article.parallax #lake {
+    z-index: -4; }
+  article.parallax .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+    article.parallax .parallax-bg > div {
+      position: fixed;
+      display: none; }
+    article.parallax .parallax-bg#stars-bg div.star, article.parallax .parallax-bg #stars-bg div.shooting-star {
+      z-index: -1; }
+    article.parallax .parallax-bg.visible > div {
+      display: block; }
+    article.parallax .parallax-bg > img {
+      z-index: -3; }
+  article.parallax .container {
+    background-color: transparent;
+    z-index: 1; }
 
 a {
   color: #FF6F3F; }
@@ -681,33 +682,26 @@ article.hero {
           }
         }
       }
-    }*/
-}
-article.hero .content {
-  text-align: center;
-}
-article.hero .content h1 {
-  color: #FFAF3F;
-}
-article.hero .content p {
-  color: #7F6C5F;
-  font-size: 2rem;
-  margin-top: -33rem;
-}
-article.hero .content .logo-box {
-  position: relative;
-}
-article.hero .content .logo-box img.fire {
-  position: absolute;
-  width: 32rem;
-  z-index: 12;
-  transform: translateX(-15.5rem) translateY(10rem);
-}
-article.hero .content .logo-box img.logo {
-  width: 35rem;
-  height: 35rem;
-  margin-bottom: 1rem;
-}
+    }*/ }
+  article.hero .content {
+    text-align: center; }
+    article.hero .content h1 {
+      color: #FFAF3F; }
+    article.hero .content p {
+      color: #7F6C5F;
+      font-size: 2rem;
+      margin-top: -33rem; }
+    article.hero .content .logo-box {
+      position: relative; }
+      article.hero .content .logo-box img.fire {
+        position: absolute;
+        width: 32rem;
+        z-index: 12;
+        transform: translateX(-15.5rem) translateY(10rem); }
+      article.hero .content .logo-box img.logo {
+        width: 35rem;
+        height: 35rem;
+        margin-bottom: 1rem; }
 
 .page-section, article.intro, article.tracks, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
@@ -805,7 +799,10 @@ article.colorwar {
     margin-bottom: 4rem; }
 
 article.schedule {
+  /* Remove current tab background */
   /* Remove bootstrap styling */ }
+  article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
+    background: transparent !important; }
   article.schedule ul.nav-tabs {
     border: 0px solid;
     margin-top: 7rem;
@@ -822,13 +819,11 @@ article.schedule {
           -webkit-filter: none;
           filter: none;
           /* Remove link hover styling */ }
-    article.schedule ul.nav-tabs li.current {
-      border-color: #FF6F3F; }
-      article.schedule ul.nav-tabs li.current a h4 {
-        font-family: AvenirBold; }
-      @media (max-width: 767.98px) {
-        article.schedule ul.nav-tabs li.current .date {
-          color: #FF6F3F; } }
+    article.schedule ul.nav-tabs li.current a h4 {
+      font-family: AvenirBold; }
+    @media (max-width: 767.98px) {
+      article.schedule ul.nav-tabs li.current .date {
+        color: #FF6F3F; } }
   article.schedule .tab {
     text-align: center;
     font-family: Avenir; }
