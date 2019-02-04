@@ -374,9 +374,11 @@ article.schedule {
 
     li.nav-item {
       margin: 0; /* Get rid of spacing between buttom borders */
-      border-bottom: 5px solid $bp-warm-grey;
+      //border-bottom: 5px solid $bp-warm-grey;
       //width: 31rem;
       width: 29%;
+      //background-color: rgba(239, 239, 239, 0.5);
+
       a {
         &:hover {
           -webkit-filter: none;
@@ -389,10 +391,8 @@ article.schedule {
     /* Style for currently active tab */
     li.current {
       border-color: $bp-bitcamp-orange;
-      background-color: transparent !important;
       a h4 {
         font-family: AvenirBold;
-        background-color: transparent;
       }
       @media (max-width: $md-breakpoint) {
         .date {
