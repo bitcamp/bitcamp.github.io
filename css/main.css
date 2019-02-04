@@ -175,7 +175,6 @@ body.fixed-nav.no-animation #nav {
   background-image: url("../img/parallax-backgrounds/stars/sky.png");
 }
 #stars-bg .star, #stars-bg .shooting-star {
-  position: absolute;
   background-repeat: no-repeat;
 }
 #stars-bg .shooting-star {
@@ -448,10 +447,12 @@ article.parallax .parallax-bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   z-index: -1;
 }
-article.parallax .parallax-bg.in-view {
-  display: block;
+article.parallax .parallax-bg div {
+  position: fixed;
+  visibility: hidden;
 }
 article.parallax .container {
   background-color: transparent;

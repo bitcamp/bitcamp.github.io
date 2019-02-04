@@ -14,9 +14,11 @@ article.parallax {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     z-index: -1;
-    &.in-view {
-      display: block; 
+    div {
+      position: fixed;
+      visibility: hidden;
     }
   }
   .container {
