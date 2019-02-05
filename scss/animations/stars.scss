@@ -1,5 +1,7 @@
 #stars-bg {
-    background-image : url('../img/parallax-backgrounds/stars/sky.png');
+   &:before {
+      background-image : url('../img/parallax-backgrounds/stars/sky.png');
+   }
 
     @mixin setSize($sideLength) {
         height: $sideLength;

@@ -1,0 +1,53 @@
+#clouds {
+  &:before {
+    background-image: url('../img/parallax-backgrounds/hero.png');
+    background-position: bottom;
+  }
+  
+  /* Cloud Animations */
+  .cloud {
+    position: absolute;
+    z-index: -1;
+    animation: cloudDrift linear infinite;
+  }
+
+  .fadeInAndOut {
+    animation: fadeInAndOut linear infinite;
+  }
+
+  .long-duration {
+    animation-duration: 60s;
+  }
+  .medium-duration {
+    animation-duration: 45s;
+  }
+  .short-duration {
+    animation-duration: 35s;
+  }
+
+  .lrg {
+    top: 12%;
+    left: -5%;
+  }
+  .sml {
+    top: 25%;
+    left: 23%;
+  }
+  .med {
+    top: 30%;
+    left: 5%;
+  }
+
+  @keyframes cloudDrift {
+    from { transform: translateX(0rem); }
+    to { transform: translateX(75rem); }
+  }
+
+  /* Fade in */
+  @keyframes fadeInAndOut {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}

@@ -1,7 +1,9 @@
 #bulletin-bg {
-    background-image: url('../img/parallax-backgrounds/bulletin.png');
-    animation: rain 2s steps(13) infinite;
-    background-size: 100vw 14040px;
+    &:before {
+        background-image: url('../img/parallax-backgrounds/bulletin.png');
+        animation: rain 2s steps(13) infinite;
+        background-size: 100vw 14040px;
+    }
 
     @keyframes rain{
         from{background-position-y:0px;}

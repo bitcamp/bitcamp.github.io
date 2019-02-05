@@ -5,36 +5,36 @@
 
 article.parallax {
   background-color: transparent !important;
-  #stars-bg {
-    z-index: -2;
-  }
-  #lake {
-    z-index: -4;
-  }
+  color: white;
   .parallax-bg {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    &>div {
-      position: fixed;
+    &:before {
+      content: '';
       display: none;
-      //z-index: -1;
-    }
-    &#stars-bg div.star, #stars-bg div.shooting-star{
-      z-index: -1;
-    }
-    &.visible>div {
-      display: block;
-    }
-    &>img {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       position: fixed;
       z-index: -3;
+    }
+    &>* {
+      position: fixed;
+      display: none;
+      z-index: -2;
+    }
+    &.visible {
+      &>*,
+      &:before {
+        display: block;
+      }
     }
   }
   .container {
@@ -109,6 +109,14 @@ a.bp-btn {
   // border-top: 2px soid $bp-yellow-orange;
 }
 
+div.opaque-card {
+  background-color: rgba(239, 239, 239, 0.775);
+  border-radius: 1.75rem;
+  margin: 2rem 3rem 0rem;
+  padding: 2rem 3.25rem;
+  color: black;
+}
+
 article.mobile-top {
   background-color: $bp-midnight-blue;
   color: white;
@@ -159,11 +167,11 @@ article.page-body {
 article.hero {
   padding: 60rem 1.5rem 25rem;
   //margin-bottom: -.2rem; // gap glitch fix
-  background-image: url('../img/parallax-backgrounds/hero.png');
-  background-size: cover;
-  background-position: bottom;
+  position: relative;
   .content {
     text-align: center;
+    position: relative;
+    z-index: 0;
     h1 {
       color: $bp-yellow-orange;
     }
@@ -182,86 +190,75 @@ article.hero {
         position: absolute;
         width: 32rem;
         z-index: 12;
-        transform: translateX(-15.5rem) translateY(10rem);
-      }
-      img.logo {
-        width: 35rem;
-        height: 35rem;
-        margin-bottom: 1rem;
+        transform: translateX(-15.5rem);
       }
     }
   }
-  //padding-top: ; /* (img-height / img-width * container-width) */
-                /* (2160 / 3840 * 100) */
-  /*padding: 12rem 1.5rem;
-  margin-bottom: -.2rem; // gap glitch fix
-  background-color: $primary-bg-color;
-  touch-action: none;
-  .content {
-    .col-sm:nth-child(1) { // First column
-      text-align: right;
-    }
-    @media (max-width: $sm-breakpoint) {
-      .col-sm,
-      .col-sm:nth-child(1) {
-        text-align: center;
-      }
-    }
-    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-      font-size: 75%;
-    }
-    h1 {
-      color: $logo-color;
-      font-size: 5rem;
-      margin-bottom: 1rem;
-      & + p {
-        font-weight: bold;
-        font-size: 115%;
-      }
-    }
-    p {
-      margin-bottom: 0;
-    }
-    .call-to-action {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 0;
-      margin-top: 2rem;
-      span {
-        display: inline-block;
-        background: $secondary-btn-color;
-        color: $default-font-color;
-        padding: 1rem 2rem 1rem 3rem;
-        &:first-child {
-          position: relative;
-          background: $primary-btn-color;
-          color: white;
-          padding-left: 2rem;
-          &:after { // Triangle
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 91%;
-            z-index: 10;
-            background: $primary-btn-color;
-            width: 20px;
-            height: 100%;
-            -webkit-transform: skewX(-20deg);
-                    transform: skewX(-20deg);
-          }
-        }
-      }
-    }*/
-  //}
+  
+  /* Cloud Animations */
+  .clouds {
+    background-image: url('../img/parallax-backgrounds/hero.png');
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+
+  .cloud {
+    position: absolute;
+    animation: cloudDrift linear infinite;
+  }
+
+  .fadeInAndOut {
+    animation: fadeInAndOut linear infinite;
+  }
+
+  .long-duration {
+    animation-duration: 60s;
+  }
+  .medium-duration {
+    animation-duration: 45s;
+  }
+  .short-duration {
+    animation-duration: 35s;
+  }
+
+  .lrg {
+    top: 12%;
+    left: -5%;
+  }
+  .sml {
+    top: 25%;
+    left: 23%;
+  }
+  .med {
+    top: 30%;
+    left: 5%;
+  }
+
+  @keyframes cloudDrift {
+    from { transform: translateX(0rem); }
+    to { transform: translateX(75rem); }
+  }
+
+  /* Fade in */
+  @keyframes fadeInAndOut {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
 }
 
 .page-section {
   position: relative;
   padding: 10rem 0rem;
   background-color: white;
+  min-height: 100vh;
   h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -298,52 +295,31 @@ article.hero {
     background-color: $bp-cloud-white;
     color: black;
   }
-  &.medium {
-    background-color: $bp-bitcamp-orange;
-    color: white;
-  }
-  &.parallax {
-    min-height: 80vh;
-    color: white;
-  }
 }
 
 article.intro {
   @extend .page-section;
-  @media (max-width: $md-breakpoint) {
-    text-align: center;
-  }
-  .img-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  img {
-    width: 30rem;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
-    image-rendering: -o-pixelated;
-    image-rendering: pixelated;
-    -webkit-box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
-    @media (max-width: $md-breakpoint) {
-      margin-top: 8rem;
-    }
-  }
+  text-align: center;
   p {
-    margin-top: 3rem;
+    text-align: left;
+    margin: 3rem auto;
     font-size: 2.1rem;
   }
   h2 {
-    margin-top: 8rem;
+    text-align: center;
+  }
+  .vid-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -352,6 +328,9 @@ article.tracks {
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;
+      p {
+        text-align: left;
+      }
     }
     //padding-left: 2rem;
     //padding-right: 2rem;
@@ -361,10 +340,16 @@ article.tracks {
     }
   }
   h2 {
-    color: white;
+    color: black;
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
+  }
+  &.parallax h2 {
+    color: white;
+  }
+  &.parallax.design h2 {
+    color: black;
   }
 }
 
@@ -464,15 +449,7 @@ article.schedule {
     }
   }
   .event {
-    background-color: rgba(239, 239, 239, 0.65);
-    border-radius: 1.75rem;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 3.25rem;
-    padding-right: 3.25rem;
+    @extend .opaque-card;
   }
   .footer {
     text-align: center;
@@ -594,7 +571,7 @@ article.sponsors {
 
 article.footer {
   @extend .page-section;
-  color: black !important;
+  color: black;
   height: 800px;
   .contact-card {
     margin: 0 auto;
@@ -603,10 +580,6 @@ article.footer {
     width: 80%;
     background: #fff7f4;
     padding: 2rem;
-    @media (max-width: $md-breakpoint) {
-      width: 100%;
-      background: inherit;
-    }
     .email {
       display: block;
       font-family: $serif-stack;
@@ -636,5 +609,8 @@ article.footer {
     &, & h2 {
       text-align: center;
     }
+  }
+  .copyright {
+    margin-top: 2rem;
   }
 }
