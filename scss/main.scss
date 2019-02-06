@@ -165,7 +165,7 @@ article.page-body {
 }
 
 article.hero {
-  padding: 60rem 1.5rem 25rem;
+  padding: 5rem 1.5rem 25rem;
   //margin-bottom: -.2rem; // gap glitch fix
   position: relative;
   .content {
@@ -174,14 +174,17 @@ article.hero {
     z-index: 0;
     h1 {
       color: $bp-yellow-orange;
+      font-size: 4rem;
+      transform: translateY(17rem);
+      @media (max-width: $md-breakpoint) {
+        font-size: 3.5rem;
+        transform: translateY(15rem);
+      }
     }
     p {
       color: $bp-dark-brown;
       font-size: 2rem;
-      margin-top: -33rem;
-    }
-    h1, p {
-
+      transform: translateY(18rem);
     }
     .logo-box {
       position: relative;
@@ -190,11 +193,20 @@ article.hero {
         position: absolute;
         width: 32rem;
         z-index: 12;
-        transform: translateX(-15.5rem);
+        transform: translate3d(-15.5rem,-22rem,0);
+      }
+      img.logo {
+        width: 50rem;
+        height: 40rem;
+        transform: translate3d(-0.5rem,-25rem,0);
+        @media (max-width: $md-breakpoint) {
+          width: 35rem;
+          height: 35rem;
+        }
       }
     }
   }
-  
+
   /* Cloud Animations */
   .clouds {
     background-image: url('../img/parallax-backgrounds/hero.png');
