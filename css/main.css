@@ -855,6 +855,10 @@ article.schedule {
     margin-right: 8rem;
     border-radius: 1.5rem;
     /* Style for currently active tab */ }
+    @media (max-width: 767.98px) {
+      article.schedule ul.nav-tabs {
+        margin-left: 2.75rem;
+        margin-right: 2.75rem; } }
     article.schedule ul.nav-tabs li.nav-item {
       margin: 0;
       /* Get rid of spacing between buttom borders */
@@ -872,23 +876,30 @@ article.schedule {
       border-color: #FF6F3F; }
       article.schedule ul.nav-tabs li.current a h4 {
         font-family: AvenirBold; }
-      @media (max-width: 767.98px) {
+      @media (max-width: 1210px) {
         article.schedule ul.nav-tabs li.current .date {
           color: #FF6F3F; } }
   article.schedule .tab {
     text-align: center;
     font-family: Avenir; }
-    @media (max-width: 767.98px) {
-      article.schedule .tab span {
+    article.schedule .tab .xsm-screen {
+      display: none; }
+    @media (max-width: 1210px) {
+      article.schedule .tab .lg-screen span {
         display: block; }
-      article.schedule .tab .spacer {
+      article.schedule .tab .lg-screen .spacer {
         visibility: hidden; }
-      article.schedule .tab .date {
+      article.schedule .tab .lg-screen .date {
         font-size: 1.75rem;
         margin-left: -1.5rem;
         padding: 0;
         margin: 0;
         margin-top: -2.5rem; } }
+    @media (max-width: 397.98px) {
+      article.schedule .tab .lg-screen {
+        display: none; }
+      article.schedule .tab .xsm-screen {
+        display: block; } }
   article.schedule p {
     text-align: left;
     margin-bottom: 0rem;
