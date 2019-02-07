@@ -455,21 +455,23 @@ body.fixed-nav.no-animation #nav {
 }
 
 #lake {
-  height: 1080px;
   width: 1920px;
   background-color: #5d8594;
-  background-position: initial;
   overflow: hidden;
   z-index: -4;
 }
 #lake .waves, #lake .rocks, #lake .shore {
+  position: absolute;
   height: 1080px;
   width: 1920px;
   background-repeat: no-repeat;
-  background-size: 1920px 1080px;
+  background-size: 1920px;
 }
-#lake .animation-container {
+#lake div {
   position: static;
+}
+#lake div div {
+  position: absolute;
 }
 #lake .shore {
   background-image: url("../img/parallax-backgrounds/lake-components/shore.svg");
@@ -700,7 +702,6 @@ article.img-bg-section .img-bg {
   z-index: -3;
 }
 article.img-bg-section .img-bg > div, article.img-bg-section .img-bg > img {
-  overflow: hidden;
   position: absolute;
   display: block;
   z-index: -2;

@@ -1,19 +1,22 @@
 #lake {
    %fill-bg {
+      position: absolute;
       height: 1080px;
       width: 1920px;
       background-repeat: no-repeat;
-      background-size: 1920px 1080px;
+      background-size: 1920px;
    }
-   height: 1080px;
+
    width: 1920px;
    background-color: #5d8594;
-   background-position: initial;
    overflow: hidden;
    z-index: -4;
 
-   .animation-container {
+   div {
       position: static;
+      div {
+         position: absolute;
+      }
    }
 
    .shore {
