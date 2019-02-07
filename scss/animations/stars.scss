@@ -1,20 +1,33 @@
-#stars-bg {
-   &:before {
-      background-image : url('../img/parallax-backgrounds/stars/sky.png');
-   }
+#stars {
+   background-image : url('../img/parallax-backgrounds/stars/sky.png');
 
     @mixin setSize($sideLength) {
         height: $sideLength;
         width: $sideLength;
     }
 
-    .star, .shooting-star, {
+    .star, .shooting-star {
         background-repeat: no-repeat;
     }
 
     .shooting-star {
         opacity: 0;
     }
+
+    .telescope {
+      @media (min-aspect-ratio: 4/3) {
+         height: 25%;
+         width: 23%;
+         right: 40%;
+         top: 40%;
+      }
+      @media (max-aspect-ratio: 4/3) {
+         height: 23vw;
+         width: 23%;
+         right: 40%;
+         bottom: 35vh;
+      }
+   }
 
     .star-1 {
         @include setSize(5vw);
@@ -106,6 +119,21 @@
             12.501%,100%{background-position-x:0px;}
         }
      }
+
+     .star-7 {
+         @include setSize(4vw);
+         right: 8%;
+         top: 0%;
+         background-image : url('../img/parallax-backgrounds/stars/star4.png');
+         background-size: 8vw 4vw;
+         animation: play7 3s steps(2) infinite;
+         
+         @keyframes play7{
+            0%{background-position-x:0px;}
+            100%{background-position-x:-8vw;}
+         }
+      }
+      
      
      .shooting-1 {
         @include setSize(5vw);

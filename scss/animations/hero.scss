@@ -1,8 +1,6 @@
 #clouds {
-  &:before {
-    background-image: url('../img/parallax-backgrounds/hero.png');
-    background-position: bottom;
-  }
+  background-image: url('../img/parallax-backgrounds/hero.png');
+  background-position: bottom;
   
   /* Cloud Animations */
   .cloud {
