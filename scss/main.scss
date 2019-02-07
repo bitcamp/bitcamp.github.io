@@ -6,6 +6,7 @@
 article.img-bg-section {
   background-color: transparent !important;
   color: white;
+  min-height: 100vh;
   .img-bg {
     position: absolute;
     top: 0;
@@ -240,13 +241,13 @@ article.hero {
     left: -5%;
   }
   .sml {
-    height: 5%;
+    height: 10%;
     top: 25%;
     left: 23%;
-  }
+  } 
   .med {
-    height: 8%;
-    top: 30%;
+    height: 15%;
+    top: 5%;
     left: 5%;
   }
 
@@ -268,7 +269,6 @@ article.hero {
   position: relative;
   padding: 10rem 0rem;
   background-color: white;
-  min-height: 100vh;
   h2 {
     margin-bottom: 2rem;
     text-align: left;

@@ -672,6 +672,10 @@ body.fixed-nav.no-animation #nav {
   background-image: url("../img/parallax-backgrounds/bulletin.png");
   animation: rain 2s steps(13) infinite;
   background-size: 100vw 14040px;
+  z-index: 0;
+}
+#bulletin-bg div {
+  z-index: 1;
 }
 @keyframes rain {
   from {
@@ -689,6 +693,7 @@ body.fixed-nav.no-animation #nav {
 article.img-bg-section {
   background-color: transparent !important;
   color: white;
+  min-height: 100vh;
 }
 article.img-bg-section .img-bg {
   position: absolute;
@@ -921,13 +926,13 @@ article.hero .lrg {
   left: -5%;
 }
 article.hero .sml {
-  height: 5%;
+  height: 10%;
   top: 25%;
   left: 23%;
 }
 article.hero .med {
-  height: 8%;
-  top: 30%;
+  height: 15%;
+  top: 5%;
   left: 5%;
 }
 @keyframes cloudDrift {
@@ -957,7 +962,6 @@ article.hero .med {
   position: relative;
   padding: 10rem 0rem;
   background-color: white;
-  min-height: 100vh;
 }
 .page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.colorwar h2, article.tracks h2, article.intro h2 {
   margin-bottom: 2rem;

@@ -5,17 +5,6 @@ $(".faq-card h5").click(toggleFAQInfo);
 $('#nav .nav-link').click(handleNavLinkClick);
 $(window).scroll(adjustFixedNavbar);
 $(document).ready(adjustFixedNavbar);
-$('.parallax-bg').inViewport(makeVisible);
-
-// Make animated elements in the parallax backgrounds visible
-// Visibility toggling is necessary because all elements lie on the same z-index and are fixed positioned
-function makeVisible(numberOfPxOnScreen) {
-  if(numberOfPxOnScreen) {
-    $(this).addClass('visible');
-  } else {
-    $(this).removeClass('visible');
-  }
-}
 
 // Open up the faq-card info
 function toggleFAQInfo(event) {

@@ -2,6 +2,11 @@
     background-image: url('../img/parallax-backgrounds/bulletin.png');
     animation: rain 2s steps(13) infinite;
     background-size: 100vw 14040px;
+    z-index: 0;
+
+    div {
+        z-index: 1;
+    }
 
     @keyframes rain{
         from{background-position-y:0px;}
