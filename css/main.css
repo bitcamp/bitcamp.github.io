@@ -119,11 +119,12 @@ h1, h2, h3, h4, h5, h6, p {
   filter: none;
 }
 #nav .navbar-brand img {
-  height: 3.75rem;
+  width: 3.75rem;
   vertical-align: sub;
   margin-right: 1rem;
+  margin-left: -3.75rem;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 #nav .navbar-toggler .navbar-toggler-icon {
   color: #fa7041;
@@ -172,6 +173,7 @@ body.fixed-nav #nav #mlh-trust-badge {
 }
 body.fixed-nav #nav .navbar-brand img {
   opacity: 1;
+  margin-left: 0;
 }
 body.fixed-nav.no-animation #nav {
   top: 0;
@@ -360,7 +362,7 @@ article.hero .content .logo-box img.logo {
 }
 @media (max-width: 767.98px) {
   .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.tracks, article.intro {
-    padding: 5rem 0 10rem;
+    padding: 8rem 0 10rem;
   }
 }
 .page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.colorwar h2, article.tracks h2, article.intro h2 {
@@ -491,9 +493,34 @@ article.schedule ul.nav-tabs li.current {
 article.schedule ul.nav-tabs li.current a h4 {
   font-family: AvenirBold;
 }
+@media (max-width: 767.98px) {
+  article.schedule ul.nav-tabs li.current .date {
+    color: #FF6F3F;
+  }
+}
 article.schedule .tab {
   text-align: center;
   font-family: Avenir;
+}
+@media (max-width: 767.98px) {
+  article.schedule .tab span {
+    display: block;
+  }
+  article.schedule .tab .spacer {
+    visibility: hidden;
+  }
+  article.schedule .tab .date {
+    font-size: 1.75rem;
+    margin-left: -1.5rem;
+    padding: 0;
+    margin: 0;
+    margin-top: -2.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  article.schedule .tab .weekday {
+    font-size: 2rem;
+  }
 }
 article.schedule p {
   text-align: left;

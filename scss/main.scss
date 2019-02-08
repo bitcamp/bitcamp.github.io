@@ -187,7 +187,7 @@ article.hero {
   position: relative;
   padding: 10rem 0rem;
   @media (max-width: $md-breakpoint) {
-    padding: 5rem 0 10rem;
+    padding: 8rem 0 10rem;
   }
   h2 {
     margin-bottom: 2rem;
@@ -324,11 +324,36 @@ article.schedule {
       a h4 {
         font-family: AvenirBold;
       }
+      @media (max-width: $md-breakpoint) {
+        .date {
+          color: $bp-bitcamp-orange;
+        }
+      }
     }
   }
   .tab {
     text-align: center;
     font-family: Avenir;
+    @media (max-width: $md-breakpoint) {
+      span {
+        display: block;
+      }
+      .spacer {
+        visibility: hidden;
+      }
+      .date {
+        font-size: 1.75rem;
+        margin-left: -1.5rem;
+        padding: 0;
+        margin: 0;
+        margin-top: -2.5rem;
+      }
+    }
+    @media (max-width: $sm-breakpoint) {
+      .weekday {
+        font-size: 2rem;
+      }
+    }
   }
   p {
     text-align: left;
