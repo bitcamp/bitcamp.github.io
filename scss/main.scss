@@ -151,40 +151,49 @@ article.page-body {
 }
 
 article.hero {
-  padding: 5rem 1.5rem 25rem;
+  padding: 5rem 1.5rem 23rem;
   //margin-bottom: -.2rem; // gap glitch fix
   position: relative;
   .content {
     text-align: center;
     position: relative;
     z-index: 0;
-    margin-top: -6rem;
+    //margin-top: 3rem;
     h1 {
       color: $logo-color;
       font-size: 13rem;
+      transform: translate(0, -3rem);
       @media (max-width: $md-breakpoint) {
         font-size: 10rem;
-      }
-      @media (max-width: $sm-breakpoint) {
-        font-size: 7rem;
+        transform: translate(0, 0);
       }
     }
     h2 {
       color: $bp-yellow-orange;
       font-size: 4rem;
-      margin-top: -2rem;
+      margin-top: 3rem;
+      transform: translate(0, -8rem);
       @media (max-width: $md-breakpoint) {
         font-size: 3.5rem;
+        transform: translate(0, -4rem);
       }
       @media (max-width: $sm-breakpoint) {
-        font-size: 2.7rem;
+        font-size: 3.5rem;
         margin-top: 0;
+        transform: translate(0, -1.5rem);
       }
     }
     p {
       color: $bp-dark-brown;
       font-size: 2rem;
       margin: 2rem auto;
+      transform: translate(0, -8rem);
+      @media (max-width: $md-breakpoint) {
+        transform: translate(0, -5rem);
+      }
+      @media (max-width: $sm-breakpoint) {
+        transform: translate(0, -2.5rem);
+      }
     }
     .logo-box {
       position: relative;
@@ -194,9 +203,9 @@ article.hero {
         position: absolute;
         width: 32rem;
         z-index: 12;
-        transform: translate(-15.5rem, -5rem);
-        @media (max-width: 1250px) {
-         transform: translate(-15.5rem, -9rem);
+        transform: translate(-15.5rem, -11rem);
+        @media (max-width: $md-breakpoint) {
+          transform: translate(-15.5rem, -12rem);
         }
       }
     }
@@ -243,7 +252,7 @@ article.hero {
     height: 10%;
     top: 25%;
     left: 23%;
-  } 
+  }
   .med {
     height: 15%;
     top: 5%;
