@@ -710,6 +710,9 @@ article.hero {
         width: 32rem;
         z-index: 12;
         transform: translate(-15.5rem, -11rem); }
+        @media (max-width: 767.98px) {
+          article.hero .content .logo-box img.fire {
+            transform: translate(-15.5rem, -12rem); } }
   article.hero .clouds {
     background-image: url("../img/parallax-backgrounds/hero.png");
     background-size: cover;

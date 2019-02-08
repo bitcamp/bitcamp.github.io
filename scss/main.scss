@@ -205,6 +205,9 @@ article.hero {
         width: 32rem;
         z-index: 12;
         transform: translate(-15.5rem, -11rem);
+        @media (max-width: $md-breakpoint) {
+          transform: translate(-15.5rem, -12rem);
+        }
       }
     }
   }
