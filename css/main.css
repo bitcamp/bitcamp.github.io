@@ -180,21 +180,12 @@ body.fixed-nav.no-animation #nav {
 #stars .shooting-star {
   opacity: 0;
 }
-@media (min-aspect-ratio: 4/3) {
-  #stars .telescope {
-    height: 25%;
-    width: 23%;
-    right: 40%;
-    top: 40%;
-  }
-}
-@media (max-aspect-ratio: 4/3) {
-  #stars .telescope {
-    height: 23vw;
-    width: 23%;
-    right: 40%;
-    bottom: 35vh;
-  }
+#stars .telescope {
+  height: 25%;
+  width: 23%;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #stars .star-1 {
   height: 5vw;
@@ -1039,6 +1030,11 @@ article.tracks.img-bg-section h2 {
 }
 article.tracks.img-bg-section.design h2 {
   color: black;
+}
+article.tracks .external-link {
+  display: block;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 article.colorwar {

@@ -49,7 +49,6 @@ img.icon {
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -o-pixelated;
   image-rendering: pixelated;
-
 }
 
 a.bp-btn {
@@ -352,6 +351,11 @@ article.tracks {
   }
   &.img-bg-section.design h2 {
     color: black;
+  }
+  .external-link {
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
   }
 }
 

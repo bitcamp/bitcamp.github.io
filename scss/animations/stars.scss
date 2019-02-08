@@ -15,18 +15,11 @@
     }
 
     .telescope {
-      @media (min-aspect-ratio: 4/3) {
-         height: 25%;
-         width: 23%;
-         right: 40%;
-         top: 40%;
-      }
-      @media (max-aspect-ratio: 4/3) {
-         height: 23vw;
-         width: 23%;
-         right: 40%;
-         bottom: 35vh;
-      }
+      height: 25%;
+      width: 23%;
+      top: 42%;
+      left: 50%;
+      transform: translateX(-50%);
    }
 
     .star-1 {
