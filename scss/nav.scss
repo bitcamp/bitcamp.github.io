@@ -1,6 +1,5 @@
 @import 'vars';
 
-$nav-height: 80px;
 $nav-link-hover-color: #ffad77;
 $logo-font-size: 3rem;
 
@@ -9,10 +8,7 @@ $logo-font-size: 3rem;
     height: $nav-height;
     z-index: 100;
     @media (max-width: $lg-breakpoint) {
-        height: 65px;
-    }
-    @media (max-width: $md-breakpoint) {
-        height: initial;
+        height: $reduced-nav-height;
     }
     .navbar {
         height: 100%;

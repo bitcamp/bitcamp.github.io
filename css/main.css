@@ -74,11 +74,6 @@ h1, h2, h3, h4, h5, h6, p {
     height: 65px;
   }
 }
-@media (max-width: 767.98px) {
-  #nav {
-    height: initial;
-  }
-}
 #nav .navbar {
   height: 100%;
   width: 80%;
@@ -485,7 +480,7 @@ body.fixed-nav.no-animation #nav {
 }
 #lake .kayak {
   height: 360px;
-  bottom: 180px;
+  top: 411px;
   left: 525px;
   transform: rotate(110deg);
 }
@@ -679,6 +674,67 @@ body.fixed-nav.no-animation #nav {
 
 #treehouse {
   background-image: url("../img/parallax-backgrounds/treefort.png");
+  background-position: right center;
+}
+
+#clouds {
+  background-image: url("../img/parallax-backgrounds/hero.png");
+  /* Fade in */
+}
+#clouds .cloud {
+  position: absolute;
+  z-index: -1;
+  animation: cloudDrift linear infinite;
+}
+#clouds .fadeInAndOut {
+  position: static;
+  animation: fadeInAndOut linear infinite;
+}
+#clouds .long-duration {
+  animation-duration: 60s;
+}
+#clouds .medium-duration {
+  animation-duration: 45s;
+}
+#clouds .short-duration {
+  animation-duration: 35s;
+}
+#clouds .lrg {
+  height: 20%;
+  top: 12%;
+  left: -5%;
+}
+#clouds .sml {
+  height: 10%;
+  top: 25%;
+  left: 23%;
+}
+#clouds .med {
+  height: 15%;
+  top: 5%;
+  left: 5%;
+}
+@keyframes cloudDrift {
+  from {
+    transform: translateX(0rem);
+  }
+  to {
+    transform: translateX(75rem);
+  }
+}
+@keyframes fadeInAndOut {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 article.img-bg-section {
@@ -823,139 +879,60 @@ article.page-body {
 }
 
 article.hero {
-  padding: 5rem 1.5rem 23rem;
+  padding: 5rem 1.5rem 25rem;
   position: relative;
-  /* Cloud Animations */
-  /* Fade in */
 }
 article.hero .content {
   text-align: center;
-  position: relative;
   z-index: 0;
+  margin-top: -6rem;
 }
 article.hero .content h1 {
   color: #fa7041;
   font-size: 13rem;
-  transform: translate(0, -3rem);
 }
 @media (max-width: 767.98px) {
   article.hero .content h1 {
     font-size: 10rem;
-    transform: translate(0, 0);
+  }
+}
+@media (max-width: 575.98px) {
+  article.hero .content h1 {
+    font-size: 7rem;
   }
 }
 article.hero .content h2 {
   color: #FFAF3F;
   font-size: 4rem;
-  margin-top: 3rem;
-  transform: translate(0, -8rem);
+  margin-top: -2rem;
 }
 @media (max-width: 767.98px) {
   article.hero .content h2 {
     font-size: 3.5rem;
-    transform: translate(0, -4rem);
   }
 }
 @media (max-width: 575.98px) {
   article.hero .content h2 {
-    font-size: 3.5rem;
+    font-size: 2.7rem;
     margin-top: 0;
-    transform: translate(0, -1.5rem);
   }
 }
 article.hero .content p {
   color: #7F6C5F;
   font-size: 2rem;
   margin: 2rem auto;
-  transform: translate(0, -8rem);
 }
-@media (max-width: 767.98px) {
-  article.hero .content p {
-    transform: translate(0, -5rem);
-  }
-}
-@media (max-width: 575.98px) {
-  article.hero .content p {
-    transform: translate(0, -2.5rem);
-  }
-}
-article.hero .content .logo-box {
-  position: relative;
-  height: 10rem;
-}
-article.hero .content .logo-box img.fire {
+article.hero .content img.fire {
   position: absolute;
   width: 32rem;
+  bottom: 10rem;
+  left: 50%;
   z-index: 12;
-  transform: translate(-15.5rem, -11rem);
+  transform: translateX(-15rem);
 }
-@media (max-width: 767.98px) {
-  article.hero .content .logo-box img.fire {
-    transform: translate(-15.5rem, -12rem);
-  }
-}
-article.hero .clouds {
-  background-image: url("../img/parallax-backgrounds/hero.png");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-article.hero .cloud {
-  position: absolute;
-  animation: cloudDrift linear infinite;
-}
-article.hero .fadeInAndOut {
-  animation: fadeInAndOut linear infinite;
-}
-article.hero .long-duration {
-  animation-duration: 60s;
-}
-article.hero .medium-duration {
-  animation-duration: 45s;
-}
-article.hero .short-duration {
-  animation-duration: 35s;
-}
-article.hero .lrg {
-  height: 20%;
-  top: 12%;
-  left: -5%;
-}
-article.hero .sml {
-  height: 10%;
-  top: 25%;
-  left: 23%;
-}
-article.hero .med {
-  height: 15%;
-  top: 5%;
-  left: 5%;
-}
-@keyframes cloudDrift {
-  from {
-    transform: translateX(0rem);
-  }
-  to {
-    transform: translateX(75rem);
-  }
-}
-@keyframes fadeInAndOut {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+@media (max-width: 991.98px) {
+  article.hero .content img.fire {
+    bottom: 15rem;
   }
 }
 
