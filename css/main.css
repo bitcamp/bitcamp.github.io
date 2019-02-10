@@ -769,7 +769,7 @@ body.fixed-nav.no-animation #nav {
 #ground {
   flex: 1.5;
   background: url("../img/parallax-backgrounds/herolong-no-logs.svg") no-repeat;
-  background-position: top;
+  background-position: bottom;
   background-size: cover;
 }
 @media (max-width: 991.98px) {

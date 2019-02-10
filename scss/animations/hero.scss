@@ -63,7 +63,7 @@
 #ground {
   flex: 1.5;
   background: url('../img/parallax-backgrounds/herolong-no-logs.svg') no-repeat;
-  background-position: top;
+  background-position: bottom;
   background-size: cover;
   //background-size: 5000px 100%;
   @media (max-width: $lg-breakpoint) {
