@@ -598,8 +598,7 @@ body.fixed-nav {
 #ground {
   flex: 1.5;
   background: url("../img/parallax-backgrounds/herolong.svg");
-  background-position: top;
-  background-size: cover; }
+  background-position: top; }
   @media (max-width: 991.98px) {
     #ground {
       background-size: cover; } }
@@ -760,10 +759,12 @@ article.page-body {
 article.hero {
   background-color: #ccf2ff;
   position: relative;
-  height: 600px;
-  /*@media (max-width: $lg-breakpoint) {
-    height: calc(100vh - 65px);
-  }*/ }
+  height: calc(100vh - 80px); }
+  @media (max-width: 991.98px) {
+    article.hero {
+      height: calc(100vh - 65px); } }
+  article.hero #registration {
+    transform: translateY(3rem); }
   article.hero .content {
     position: relative;
     text-align: center;
