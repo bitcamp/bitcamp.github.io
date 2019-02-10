@@ -246,6 +246,9 @@ article.intro {
   text-align: center;
   p {
     text-align: left;
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+    }
     margin: 3rem auto;
     font-size: 2.1rem;
   }
@@ -274,7 +277,7 @@ article.tracks {
     @media (max-width: $md-breakpoint) {
       text-align: center;
       p {
-        text-align: left;
+        // /text-align: left;
       }
     }
     //padding-left: 2rem;
@@ -298,11 +301,18 @@ article.tracks {
     color: $bp-bitcamp-orange;
   }
   &#compass-challenge .container {
-    margin-top: 5rem;
+    margin-top: 4rem;
+  }
+  &#minors {
+    p {
+      @media (max-width: $md-breakpoint) {
+        margin-bottom: 5rem;
+      }
+    }
   }
   .external-link {
     display: block;
-    text-align: center;
+    //text-align: center;
     margin: 2rem 0;
   }
   img {
