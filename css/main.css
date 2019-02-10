@@ -360,7 +360,6 @@ body.fixed-nav {
     opacity: 0; } }
 
 #lake {
-  width: 1920px;
   background-color: #5d8594;
   overflow: hidden;
   z-index: -4; }
@@ -879,8 +878,8 @@ article.tracks.img-bg-section h2 {
 article.tracks.img-bg-section.design h2 {
   color: #FF6F3F; }
 
-article.tracks#compass-challenge .container {
-  margin-top: 4rem; }
+article.tracks#compass-challenge .container img.icon {
+  width: 7rem; }
 
 @media (max-width: 767.98px) {
   article.tracks#minors p {

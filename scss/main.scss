@@ -159,6 +159,14 @@ article.hero {
   @media (max-width: $lg-breakpoint) {
     height: calc(100vh - #{$reduced-nav-height});
   }
+  img.fire {
+    @media (max-width: $md-breakpoint) {
+
+    }
+    @media (max-width: $sm-breakpoint) {
+
+    }
+  }
   .content {
     position: relative;
     text-align: center;
@@ -306,7 +314,10 @@ article.tracks {
     color: $bp-bitcamp-orange;
   }
   &#compass-challenge .container {
-    margin-top: 4rem;
+    //margin-top: 4rem;
+    img.icon {
+      width: 7rem;
+    }
   }
   &#minors {
     p {
