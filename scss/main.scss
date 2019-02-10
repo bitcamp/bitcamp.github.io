@@ -1,6 +1,34 @@
 @import 'base';
 @import 'vars';
 @import 'nav';
+@import 'animations';
+
+article.img-bg-section {
+  background-color: transparent !important;
+  color: white;
+  min-height: 100vh;
+  .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+    &>div,
+    &>img {
+      position: absolute;
+      display: block;
+      z-index: -2;
+    }
+  }
+  .container {
+    background-color: transparent;
+    z-index: 1;
+  }
+}
 
 a {
   color: $bp-bitcamp-orange;
@@ -14,7 +42,13 @@ a {
 }
 
 img.icon {
-  height: 6rem;
+  width: 4rem;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  /*image-rendering: -o-pixelated;
+  image-rendering: pixelated;*/
 }
 
 a.bp-btn {
@@ -59,6 +93,14 @@ a.bp-btn {
             filter: brightness(90%);
   }
   // border-top: 2px soid $bp-yellow-orange;
+}
+
+div.opaque-card {
+  background-color: rgba(239, 239, 239, 0.775);
+  border-radius: 1.75rem;
+  margin: 2rem 3rem 0rem;
+  padding: 2rem 3.25rem;
+  color: black;
 }
 
 article.mobile-top {
@@ -109,76 +151,53 @@ article.page-body {
 }
 
 article.hero {
-  padding: 12rem 1.5rem;
-  margin-bottom: -.2rem; // gap glitch fix
-  background-color: $primary-bg-color;
-  color: $header-font-color;
-  .content {
-    .col-sm:nth-child(1) { // First column
-      text-align: right;
+  // padding: 5rem 1.5rem 25rem;
+  //margin-bottom: -.2rem; // gap glitch fix
+  background-color: $hero-sky-color;
+  position: relative;
+  height: calc(100vh - #{$nav-height});
+  @media (max-width: $lg-breakpoint) {
+    height: calc(100vh - #{$reduced-nav-height});
+  }
+  img.fire {
+    @media (max-width: $md-breakpoint) {
+
     }
     @media (max-width: $sm-breakpoint) {
-      .col-sm,
-      .col-sm:nth-child(1) {
-        text-align: center;
-      }
+
     }
-    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-      font-size: 75%;
-    }
+  }
+  .content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin: 0 auto;
     h1 {
       color: $logo-color;
-      font-size: 5rem;
-      margin-bottom: 1rem;
-      & + p {
-        font-weight: bold;
-        font-size: 115%;
+      font-size: 11.75rem;
+      @media (max-width: $md-breakpoint) {
+        font-size: 10rem;
+      }
+      @media (max-width: $sm-breakpoint) {
+        font-size: 7rem;
+      }
+    }
+    h2 {
+      color: $bp-yellow-orange;
+      font-size: 3.75rem;
+      margin-top: -2rem;
+      @media (max-width: $md-breakpoint) {
+        font-size: 3.5rem;
+      }
+      @media (max-width: $sm-breakpoint) {
+        font-size: 2.7rem;
+        margin-top: 0;
       }
     }
     p {
-      margin-bottom: 0;
-    }
-    .call-to-action {
-      display: inline-block;
-      text-transform: uppercase;
+      color: $bp-dark-brown;
       font-size: 2rem;
-      font-weight: bold;
-      padding: 0;
-      margin-top: 2rem;
-      span {
-        display: inline-block;
-        background: $secondary-btn-color;
-        color: $header-font-color;
-        padding: 1rem 2rem 1rem 3rem;
-        &:first-child {
-          position: relative;
-          background: $primary-btn-color;
-          color: white;
-          padding-left: 2rem;
-          &:after { // Triangle
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 91%;
-            z-index: 10;
-            background: $primary-btn-color;
-            width: 20px;
-            height: 98%;
-            -webkit-transform: skewX(-20deg);
-                    transform: skewX(-20deg);
-          }
-        }
-      }
-    }
-    .logo-box {
-      img.logo {
-        width: 20rem;
-        margin-right: 3rem;
-        @media (max-width: $md-breakpoint) {
-          margin-right: 0;
-        }
-      }
+      margin: 0.5rem auto 0;
     }
   }
 }
@@ -186,7 +205,8 @@ article.hero {
 .page-section {
   position: relative;
   padding: 10rem 0rem;
-  @media (max-width: $md-breakpoint) {
+  background-color: white;
+  @media (max-width: $md-breakpoint) { //TODO: see if this is needed
     padding: 8rem 0 10rem;
   }
   h2 {
@@ -232,59 +252,91 @@ article.hero {
     background-color: $bp-cloud-white;
     color: black;
   }
-  &.medium {
-    background-color: $bp-bitcamp-orange;
-    color: white;
-  }
 }
 
 article.intro {
   @extend .page-section;
-  .img-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  img {
-    width: 30rem;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
-    image-rendering: -o-pixelated;
-    image-rendering: pixelated;
-    -webkit-box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 54px -7px rgba(0,0,0,0.6);
-    @media (max-width: $md-breakpoint) {
-      margin-top: 8rem;
-    }
-  }
+  text-align: center;
   p {
-    margin-top: 3rem;
+    text-align: left;
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+    }
+    margin: 3rem auto;
     font-size: 2.1rem;
   }
   h2 {
-    margin-top: 8rem;
+    text-align: center;
+  }
+  .vid-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 article.tracks {
   @extend .page-section;
-  .col-content .icon {
-    margin: 2rem auto;
+  //background-color: black;
+  .col-content {
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+      p {
+        // /text-align: left;
+      }
+    }
+    //padding-left: 2rem;
+    //padding-right: 2rem;
+    .icon {
+      //margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
   }
   h2 {
+    color: $bp-bitcamp-orange;
+    margin-bottom: 0.5rem;
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+    }
+  }
+  &.img-bg-section h2 {
     color: white;
+  }
+  &.img-bg-section.design h2 {
+    color: $bp-bitcamp-orange;
+  }
+  &#compass-challenge .container {
+    //margin-top: 4rem;
+    img.icon {
+      width: 7rem;
+    }
+  }
+  &#minors {
+    p {
+      @media (max-width: $md-breakpoint) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+  .external-link {
+    display: block;
+    //text-align: center;
+    margin: 2rem 0;
+  }
+  img {
+    width: 10rem;
   }
 }
 
-article.colorwar {
+/*article.colorwar {
   @extend .page-section;
   background-image: url('../img/colorwarbg.jpg');
   background-size: cover;
@@ -294,21 +346,33 @@ article.colorwar {
     width: 8rem;
     margin-bottom: 4rem;
   }
-}
+}*/
 
 article.schedule {
   @extend .page-section;
+  /* Remove current tab background */
+  a.active, a.active:hover, a.active:focus {
+    background: transparent !important;
+  }
   /* Remove bootstrap styling */
   ul.nav-tabs {
     border: 0px solid;
     margin-top: 7rem;
     margin-bottom: 5rem;
-
+    background-color: rgba(239, 239, 239, 0.65);
+    padding-bottom: 1.25rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-radius: 1.5rem;
+    @media (max-width: $md-breakpoint) {
+      margin-left: 2.75rem;
+      margin-right: 2.75rem;
+    }
     li.nav-item {
       margin: 0; /* Get rid of spacing between buttom borders */
       border-bottom: 5px solid $bp-warm-grey;
-      //width: 31rem;
-      width: 29%;
+      padding-top: 1.25rem;
+      width: 32%;
       a {
         &:hover {
           -webkit-filter: none;
@@ -324,7 +388,7 @@ article.schedule {
       a h4 {
         font-family: AvenirBold;
       }
-      @media (max-width: $md-breakpoint) {
+      @media (max-width: 1210px) {
         .date {
           color: $bp-bitcamp-orange;
         }
@@ -334,30 +398,39 @@ article.schedule {
   .tab {
     text-align: center;
     font-family: Avenir;
-    @media (max-width: $md-breakpoint) {
-      span {
-        display: block;
-      }
-      .spacer {
-        visibility: hidden;
-      }
-      .date {
-        font-size: 1.75rem;
-        margin-left: -1.5rem;
-        padding: 0;
-        margin: 0;
-        margin-top: -2.5rem;
+    .xsm-screen {
+      display: none;
+    }
+    @media (max-width: 1210px) {
+      .lg-screen {
+        span {
+          display: block;
+        }
+        .spacer {
+          visibility: hidden;
+        }
+        .date {
+          font-size: 1.75rem;
+          margin-left: -1.5rem;
+          padding: 0;
+          margin: 0;
+          margin-top: -2.5rem;
+        }
       }
     }
-    @media (max-width: $sm-breakpoint) {
-      .weekday {
-        font-size: 2rem;
+    @media (max-width: $xsm-breakpoint) {
+      .lg-screen {
+        display: none;
+      }
+      .xsm-screen {
+        display: block;
       }
     }
   }
   p {
     text-align: left;
     margin-bottom: 0rem;
+    color: black;
   }
   h4 {
     text-align: left;
@@ -374,20 +447,22 @@ article.schedule {
     }
   }
   .event {
-    background-color: $bp-warm-grey;
-    border-radius: 1.75rem;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 3.25rem;
-    padding-right: 3.25rem;
+    @extend .opaque-card;
   }
   .footer {
     text-align: center;
     margin-top: 2.5rem;
     font-family: Avenir;
+  }
+  // TODO: Remove after schedule is finalized
+  min-height: unset;
+  .container {
+    .row {
+      padding: 3rem auto;
+    }
+    h4 {
+      text-align: center;
+    }
   }
 }
 
@@ -499,29 +574,35 @@ article.sponsors {
 
 article.footer {
   @extend .page-section;
-  background: $primary-bg-color;
+  color: black;
+  height: 800px;
+  .img-bg-section {
+    pointer-events: none;
+  }
   .contact-card {
-    margin: 0 auto;
+    pointer-events: all;
+    bottom: 15%;
+    left: 17%;
     min-width: 300px;
     max-width: 350px;
-    width: 80%;
+    width: 30%;
     background: #fff7f4;
     padding: 2rem;
-    @media (max-width: $md-breakpoint) {
-      width: 100%;
-      background: inherit;
-    }
     .email {
       display: block;
       font-family: $serif-stack;
       font-size: 150%;
       font-weight: bold;
       color: #c79b72;
-      margin: 1.75rem 0;   
+      margin: 1.75rem 0;
     }
   }
   p {
     margin: 0;
+  }
+  img.icon {
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
   }
   .social-icons {
     a {
@@ -542,11 +623,7 @@ article.footer {
       text-align: center;
     }
   }
-}
-
-div.separator {
-  height: 16rem;
-  margin-top: -.2rem;
-  margin-bottom: -.2rem;
-  background-size: cover;
+  .copyright {
+    margin-top: 2rem;
+  }
 }

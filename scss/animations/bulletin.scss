@@ -1,0 +1,16 @@
+#bulletin-bg {
+    background-image: url('../img/parallax-backgrounds/bulletin.png');
+    animation: rain 2s steps(13) infinite;
+    background-size: 1920px 14040px;
+    background-position: 25% center;
+    z-index: 0;
+
+    div {
+        z-index: 1;
+    }
+
+    @keyframes rain{
+        from{background-position-y:0px;}
+        to{background-position-y:-14040px;}
+     }
+}

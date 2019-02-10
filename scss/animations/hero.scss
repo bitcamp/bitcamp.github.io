@@ -1,0 +1,114 @@
+#sky {
+  flex: 0.5;
+  position: relative;
+  $sky-color: #ccf2ff;
+  background-color: $sky-color;
+  #clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .cloud {
+      position: absolute;
+      z-index: -1;
+      animation: cloudDrift linear infinite;
+    }
+  
+    .fadeInAndOut {
+      position: static;
+      animation: fadeInAndOut linear infinite;
+    }
+  
+    .long-duration {
+      animation-duration: 60s;
+    }
+    .medium-duration {
+      animation-duration: 45s;
+    }
+    .short-duration {
+      animation-duration: 35s;
+    }
+  
+    .lrg {
+      height: 40%;
+      top: 10%;
+      left: -5%;
+    }
+    .sml {
+      height: 10%;
+      top: 50%;
+      left: 10%;
+    }
+    .med {
+      height: 20%;
+      top: 70%;
+      left: 20%;
+    }
+  
+    @keyframes cloudDrift {
+      to { left: 90%; }
+    }
+  
+    /* Fade in */
+    @keyframes fadeInAndOut {
+      0%   { opacity: 0; }
+      5%   { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
+}
+
+#ground {
+  flex: 1.5;
+  background: url('../img/parallax-backgrounds/herolong.svg') no-repeat;
+  background-position: top;
+  background-size: 5000px 100%;
+  @media (max-width: $lg-breakpoint) {
+    background-size: cover;
+  }
+  
+  // Get ready for this hardcoded fire gif beauty :')
+  img.fire {
+    position: absolute;
+    width: 14rem;
+    left: 50%;
+    z-index: 12;
+    transform: translateX(-50%);
+    bottom: 8vh;
+  }
+  
+  .sign-container {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    @media (max-width: $md-breakpoint) {
+      display: none;
+    }
+    .signs {
+      height: 25rem;
+    }
+    .sign-link {
+      font-family: $serif-stack;
+      position: absolute;
+      display: block;
+      color: black;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover {
+        color: $bp-bitcamp-orange;
+      }
+    }
+    .hack {
+      top: 16%;
+      transform: translateX(-50%) rotate(15deg);
+    }
+    .mentor {
+      top: 47%;
+    }
+    .volunteer {
+      top: 73%;
+    }
+  }
+}

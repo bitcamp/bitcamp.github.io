@@ -9,6 +9,12 @@ $('#nav .nav-link').click(handleNavLinkClick);
 $('#ScheduleTabs .nav-item').click(switchScheduleTab);
 $(window).scroll(adjustFixedNavbar);
 $(document).ready(adjustFixedNavbar);
+$('.navbar-toggler').click(toggleExpandedNav);
+
+// Apply an expanded class to the nav when the toggler is clicked
+function toggleExpandedNav() {
+  $('#nav').toggleClass('expanded');
+}
 
 // Open up the faq-card info
 function toggleFAQInfo(event) {

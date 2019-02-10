@@ -34,7 +34,6 @@ html {
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
     font-size: 62.5%;
-
   }
 }
 
@@ -43,7 +42,13 @@ body {
   font-family: $sans-serif-stack;
   color: black;
   line-height: 1.5;
-  overflow-x: hidden !important;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 h1, h2, h3, h4, h5, h6 {
