@@ -38,6 +38,10 @@ html {
 }
 
 body {
+  margin-top: $nav-height;
+  @media (max-width: $lg-breakpoint) {
+    margin-top: $reduced-nav-height;
+  }
   font-size: 1.8rem;
   font-family: $sans-serif-stack;
   color: black;

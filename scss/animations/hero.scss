@@ -2,6 +2,7 @@ article.hero {
   background: url('../img/parallax-backgrounds/hero-with-fire.svg') no-repeat;
   background-position: bottom;
   background-size: cover;
+  overflow-x: hidden;
 
   .sign-container {
     position: absolute;
@@ -45,13 +46,8 @@ article.hero {
   bottom: 0;
   .cloud {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     animation: cloudDrift linear infinite;
-  }
-
-  .fadeInAndOut {
-    position: static;
-    animation: fadeInAndOut linear infinite;
   }
 
   .long-duration {
@@ -71,24 +67,22 @@ article.hero {
   }
   .sml {
     height: 8%;
-    top: 25%;
-    left: 10%;
+    top: 30%;
+    left: 30%;
   }
   .med {
     height: 15%;
-    top: 35%;
-    left: 20%;
+    top: 40%;
+    left: 10%;
   }
 
   @keyframes cloudDrift {
-    to { left: 90%; }
-  }
-
-  /* Fade in */
-  @keyframes fadeInAndOut {
-    0%   { opacity: 0; }
-    5%   { opacity: 1; }
-    90%  { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { 
+      opacity: 0;
+      left: 90%; 
+    }
   }
 }

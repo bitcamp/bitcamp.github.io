@@ -4,6 +4,11 @@ $nav-link-hover-color: #ffad77;
 $logo-font-size: 3rem;
 
 #nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
     background-color: white;
     height: $nav-height;
     z-index: 100;
@@ -84,32 +89,13 @@ $logo-font-size: 3rem;
             display: none;
         }
   }
-}
-
-body.fixed-nav {
-    margin-top: $nav-height;
-    #nav {
-        position: fixed;
-        width: 100%;
-        left: 0;
-        box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
-        top: -$nav-height;
-        animation: appear 300ms ease-in-out forwards;
-        @keyframes appear {
-            100% {
-                top: 0;
-            }
-        }
-        #mlh-trust-badge {
-            display: none;
-        }
-        .navbar-brand img {
-            opacity: 1;
-            margin-left: 0;
-        }
+  &.below-hero {
+    #mlh-trust-badge {
+        display: none;
     }
-    &.no-animation #nav {
-        top: 0;
-        animation: none;
+    .navbar-brand img {
+        opacity: 1;
+        margin-left: 0;
     }
+  }
 }

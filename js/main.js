@@ -1,12 +1,9 @@
 'use strict';
 
-// Store whether or not the window is in the middle of a smooth scroll animation
-let isSmoothScrolling = false;
-
 // Setup event listeners
 $('.faq-card h5').click(toggleFAQInfo);
-$('#nav .nav-link').click(handleNavLinkClick);
 $('#ScheduleTabs .nav-item').click(switchScheduleTab);
+$('#nav .nav-link').click(collapseNavbar);
 $(window).scroll(adjustFixedNavbar);
 $(document).ready(adjustFixedNavbar);
 $('.navbar-toggler').click(toggleExpandedNav);
@@ -23,40 +20,18 @@ function toggleFAQInfo(event) {
 
 // Make nav fixed to the top after leaving the intro section
 function adjustFixedNavbar() {
-  const body = $('body');
+  const nav = $('#nav');
 
-  if($(window).scrollTop() > ($('#about').offset().top - 1) || isSmoothScrolling) {
-    body.addClass('fixed-nav');
+  if($(window).scrollTop() > ($('#about').offset().top - 1)) {
+    nav.addClass('below-hero');
   } else {
-    body.removeClass('fixed-nav no-animation');
+    nav.removeClass('below-hero');
   }
-}
-
-// Prevent the default animation behavior of the navbar on a link click
-function handleNavLinkClick() {
-  collapseNavbar();
-  turnOffNavbarAnimation();
-  timeSmoothScrolling();
 }
 
 // Hide the expanded menu on mobile devices when a link is pressed
 function collapseNavbar() {
   $('.navbar-collapse').collapse('hide');
-}
-
-// Ensure that the fixed-nav doesn't animate into frame
-function turnOffNavbarAnimation() {
-  $('body').addClass('fixed-nav no-animation');
-}
-
-// Ensure that the scroll events aren't being triggered during a smooth scroll due to a link click
-function timeSmoothScrolling() {
-  const SMOOTH_SCROLL_DURATION = 500; // ms
-
-  isSmoothScrolling = true;
-  setTimeout(() => {
-    isSmoothScrolling = false;
-  }, SMOOTH_SCROLL_DURATION);
 }
 
 // Navigate between different tabs in the schedule section

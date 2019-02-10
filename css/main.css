@@ -41,6 +41,7 @@ html {
 }
 
 body {
+  margin-top: 80px;
   font-size: 1.8rem;
   font-family: Avenir, Georgia, sans-serif;
   color: black;
@@ -52,6 +53,11 @@ body {
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
+}
+@media (max-width: 991.98px) {
+  body {
+    margin-top: 65px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,6 +72,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #nav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
   background-color: white;
   height: 80px;
   z-index: 100;
@@ -154,33 +165,12 @@ h1, h2, h3, h4, h5, h6, p {
     display: none;
   }
 }
-
-body.fixed-nav {
-  margin-top: 80px;
-}
-body.fixed-nav #nav {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  box-shadow: 0 1px 5px rgba(117, 84, 84, 0.4);
-  top: -80px;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  100% {
-    top: 0;
-  }
-}
-body.fixed-nav #nav #mlh-trust-badge {
+#nav.below-hero #mlh-trust-badge {
   display: none;
 }
-body.fixed-nav #nav .navbar-brand img {
+#nav.below-hero .navbar-brand img {
   opacity: 1;
   margin-left: 0;
-}
-body.fixed-nav.no-animation #nav {
-  top: 0;
-  animation: none;
 }
 
 #stars {
@@ -709,6 +699,7 @@ article.hero {
   background: url("../img/parallax-backgrounds/hero-with-fire.svg") no-repeat;
   background-position: bottom;
   background-size: cover;
+  overflow-x: hidden;
 }
 article.hero .sign-container {
   position: absolute;
@@ -751,16 +742,11 @@ article.hero .sign-container .volunteer {
   left: 0;
   right: 0;
   bottom: 0;
-  /* Fade in */
 }
 #clouds .cloud {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   animation: cloudDrift linear infinite;
-}
-#clouds .fadeInAndOut {
-  position: static;
-  animation: fadeInAndOut linear infinite;
 }
 #clouds .long-duration {
   animation-duration: 60s;
@@ -778,31 +764,27 @@ article.hero .sign-container .volunteer {
 }
 #clouds .sml {
   height: 8%;
-  top: 25%;
-  left: 10%;
+  top: 30%;
+  left: 30%;
 }
 #clouds .med {
   height: 15%;
-  top: 35%;
-  left: 20%;
+  top: 40%;
+  left: 10%;
 }
 @keyframes cloudDrift {
-  to {
-    left: 90%;
-  }
-}
-@keyframes fadeInAndOut {
   0% {
     opacity: 0;
   }
   5% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    left: 90%;
   }
 }
 
