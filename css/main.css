@@ -742,7 +742,7 @@ article.hero {
 .page-section, article.intro, article.tracks, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
   padding: 10rem 0rem;
-  background-color: white; }
+  background-color: #EFEFEF; }
   .page-section h2, article.intro h2, article.tracks h2, article.colorwar h2, article.schedule h2, article.faq h2, article.sponsors h2, article.footer h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -784,30 +784,31 @@ article.intro {
       width: 100%;
       height: 100%; }
 
-article.tracks {
-  background-color: #FF6F3F; }
-  article.tracks p {
-    color: white; }
+@media (max-width: 767.98px) {
+  article.tracks .col-content {
+    text-align: center; }
+    article.tracks .col-content p {
+      text-align: left; } }
+
+article.tracks .col-content .icon {
+  margin-bottom: 2rem; }
+
+article.tracks h2 {
+  color: black; }
   @media (max-width: 767.98px) {
-    article.tracks .col-content {
-      text-align: center; }
-      article.tracks .col-content p {
-        text-align: left; } }
-  article.tracks .col-content .icon {
-    margin-bottom: 2rem; }
-  article.tracks h2 {
-    color: white; }
-    @media (max-width: 767.98px) {
-      article.tracks h2 {
-        text-align: center; } }
-  article.tracks.img-bg-section h2 {
-    color: white; }
-  article.tracks.img-bg-section.design h2 {
-    color: black; }
-  article.tracks .external-link {
-    display: block;
-    text-align: center;
-    margin: 2rem 0; }
+    article.tracks h2 {
+      text-align: center; } }
+
+article.tracks.img-bg-section h2 {
+  color: white; }
+
+article.tracks.img-bg-section.design h2 {
+  color: black; }
+
+article.tracks .external-link {
+  display: block;
+  text-align: center;
+  margin: 2rem 0; }
 
 article.colorwar {
   background-image: url("../img/colorwarbg.jpg");

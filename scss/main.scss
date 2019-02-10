@@ -204,7 +204,7 @@ article.hero {
 .page-section {
   position: relative;
   padding: 10rem 0rem;
-  background-color: white;
+  background-color: $bp-warm-grey;
   h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -263,10 +263,6 @@ article.intro {
 
 article.tracks {
   @extend .page-section;
-  background-color: $bp-bitcamp-orange;
-  p {
-    color: white;
-  }
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;
@@ -282,7 +278,7 @@ article.tracks {
     }
   }
   h2 {
-    color: white;//black;
+    color: black;
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
