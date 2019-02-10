@@ -12,6 +12,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 @media (max-width: 575.98px) {
   html {
@@ -42,7 +43,7 @@ html {
 body {
   font-size: 1.8rem;
   font-family: Avenir, Georgia, sans-serif;
-  color: #474b4e;
+  color: black;
   line-height: 1.5;
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
@@ -77,9 +78,16 @@ h1, h2, h3, h4, h5, h6, p {
 #nav .navbar {
   height: 100%;
   width: 80%;
+  min-width: 900px;
+}
+@media (max-width: 991.98px) {
+  #nav .navbar {
+    min-width: 766.98px;
+  }
 }
 @media (max-width: 767.98px) {
   #nav .navbar {
+    min-width: initial;
     width: 100%;
   }
 }
@@ -87,11 +95,6 @@ h1, h2, h3, h4, h5, h6, p {
   color: #474b4e;
   margin: 0 0.75rem;
   font-weight: bold;
-}
-@media (min-width: 767.98px) and (max-width: 991.98px) {
-  #nav .nav-link {
-    font-size: 1.375rem;
-  }
 }
 @media (max-width: 767.98px) {
   #nav .nav-link {
@@ -116,6 +119,14 @@ h1, h2, h3, h4, h5, h6, p {
 #nav .navbar-brand:hover {
   filter: none;
 }
+#nav .navbar-brand img {
+  width: 3rem;
+  vertical-align: sub;
+  margin-right: 1rem;
+  margin-left: -3rem;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
 #nav .navbar-toggler .navbar-toggler-icon {
   color: #fa7041;
   font-size: 2rem;
@@ -127,7 +138,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #nav #mlh-trust-badge {
   display: block;
-  max-width: 8rem;
+  max-width: 9rem;
   min-width: 6rem;
   position: absolute;
   top: 0;
@@ -136,7 +147,7 @@ h1, h2, h3, h4, h5, h6, p {
   transition: ease all 0.2s;
   z-index: 100;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1100px) {
   #nav #mlh-trust-badge {
     display: none;
   }
@@ -160,6 +171,10 @@ body.fixed-nav #nav {
 }
 body.fixed-nav #nav #mlh-trust-badge {
   display: none;
+}
+body.fixed-nav #nav .navbar-brand img {
+  opacity: 1;
+  margin-left: 0;
 }
 body.fixed-nav.no-animation #nav {
   top: 0;
@@ -657,7 +672,8 @@ body.fixed-nav.no-animation #nav {
 #bulletin-bg {
   background-image: url("../img/parallax-backgrounds/bulletin.png");
   animation: rain 2s steps(13) infinite;
-  background-size: 100vw 14040px;
+  background-size: 1920px 14040px;
+  background-position: 25% center;
   z-index: 0;
 }
 #bulletin-bg div {
@@ -994,6 +1010,11 @@ article.hero .content p {
   padding: 10rem 0rem;
   background-color: white;
 }
+@media (max-width: 767.98px) {
+  .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.tracks, article.intro {
+    padding: 8rem 0 10rem;
+  }
+}
 .page-section h2, article.footer h2, article.sponsors h2, article.faq h2, article.schedule h2, article.tracks h2, article.intro h2 {
   margin-bottom: 2rem;
   text-align: left;
@@ -1011,6 +1032,21 @@ article.hero .content p {
 .page-section h5, article.footer h5, article.sponsors h5, article.faq h5, article.schedule h5, article.tracks h5, article.intro h5 {
   font-size: 1.8rem;
   color: #FFAF3F;
+}
+.page-section .section-title, article.footer .section-title, article.sponsors .section-title, article.faq .section-title, article.schedule .section-title, article.tracks .section-title, article.intro .section-title {
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+.page-section .section-title:after, article.footer .section-title:after, article.sponsors .section-title:after, article.faq .section-title:after, article.schedule .section-title:after, article.tracks .section-title:after, article.intro .section-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 14rem;
+  height: 4px;
+  background: #C79970;
 }
 .page-section .btn-container, article.footer .btn-container, article.sponsors .btn-container, article.faq .btn-container, article.schedule .btn-container, article.tracks .btn-container, article.intro .btn-container {
   margin-top: 4rem;
@@ -1104,6 +1140,7 @@ article.tracks img {
 article.schedule {
   /* Remove current tab background */
   /* Remove bootstrap styling */
+  min-height: unset;
 }
 article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
   background: transparent !important;
@@ -1208,18 +1245,17 @@ article.schedule .footer {
   margin-top: 2.5rem;
   font-family: Avenir;
 }
+article.schedule .container .row {
+  padding: 3rem auto;
+}
+article.schedule .container h4 {
+  text-align: center;
+}
 
-article.faq {
-  background: white !important;
-}
-article.faq h2 {
-  color: #fa7041;
-  text-align: left;
-}
 article.faq h5 {
   cursor: pointer;
   font-family: Avenir, Georgia, sans-serif;
-  border-bottom: 1px solid #8c8c8c;
+  border-bottom: 2px solid #afafaf;
   color: black;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1350,7 +1386,8 @@ article.footer .social-icons a:first-child {
   margin-left: 0;
 }
 article.footer .social-icons a .icon {
-  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 0.5;
 }
 @media (max-width: 767.98px) {
   article.footer, article.footer h2 {

@@ -1,7 +1,8 @@
 #bulletin-bg {
     background-image: url('../img/parallax-backgrounds/bulletin.png');
     animation: rain 2s steps(13) infinite;
-    background-size: 100vw 14040px;
+    background-size: 1920px 14040px;
+    background-position: 25% center;
     z-index: 0;
 
     div {
