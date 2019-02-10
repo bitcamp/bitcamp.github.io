@@ -692,12 +692,47 @@ body.fixed-nav.no-animation #nav {
   background-position: right center;
 }
 
-#sky {
-  flex: 0.5;
-  position: relative;
-  background-color: #ccf2ff;
+article.hero {
+  background: url("../img/parallax-backgrounds/hero-with-fire.svg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
-#sky #clouds {
+article.hero .sign-container {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+@media (max-width: 767.98px) {
+  article.hero .sign-container {
+    display: none;
+  }
+}
+article.hero .sign-container .signs {
+  height: 25rem;
+}
+article.hero .sign-container .sign-link {
+  font-family: Aleo, Times, serif;
+  position: absolute;
+  display: block;
+  color: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+article.hero .sign-container .sign-link:hover {
+  color: #FF6F3F;
+}
+article.hero .sign-container .hack {
+  top: 16%;
+  transform: translateX(-50%) rotate(15deg);
+}
+article.hero .sign-container .mentor {
+  top: 47%;
+}
+article.hero .sign-container .volunteer {
+  top: 73%;
+}
+
+#clouds {
   position: absolute;
   top: 0;
   left: 0;
@@ -705,37 +740,37 @@ body.fixed-nav.no-animation #nav {
   bottom: 0;
   /* Fade in */
 }
-#sky #clouds .cloud {
+#clouds .cloud {
   position: absolute;
   z-index: -1;
   animation: cloudDrift linear infinite;
 }
-#sky #clouds .fadeInAndOut {
+#clouds .fadeInAndOut {
   position: static;
   animation: fadeInAndOut linear infinite;
 }
-#sky #clouds .long-duration {
+#clouds .long-duration {
   animation-duration: 60s;
 }
-#sky #clouds .medium-duration {
+#clouds .medium-duration {
   animation-duration: 45s;
 }
-#sky #clouds .short-duration {
+#clouds .short-duration {
   animation-duration: 35s;
 }
-#sky #clouds .lrg {
-  height: 40%;
-  top: 10%;
+#clouds .lrg {
+  height: 22%;
+  top: 5%;
   left: -5%;
 }
-#sky #clouds .sml {
-  height: 10%;
-  top: 50%;
+#clouds .sml {
+  height: 8%;
+  top: 25%;
   left: 10%;
 }
-#sky #clouds .med {
-  height: 20%;
-  top: 70%;
+#clouds .med {
+  height: 15%;
+  top: 35%;
   left: 20%;
 }
 @keyframes cloudDrift {
@@ -756,60 +791,6 @@ body.fixed-nav.no-animation #nav {
   100% {
     opacity: 0;
   }
-}
-
-#ground {
-  flex: 1.5;
-  background: url("../img/parallax-backgrounds/herolong-with-fire.svg") no-repeat;
-  background-position: bottom;
-  background-size: cover;
-}
-@media (max-width: 991.98px) {
-  #ground {
-    background-size: cover;
-  }
-}
-#ground img.fire {
-  position: absolute;
-  width: 14rem;
-  left: 50%;
-  z-index: 12;
-  transform: translateX(-50%);
-  bottom: 8vh;
-}
-#ground .sign-container {
-  position: absolute;
-  bottom: 0;
-  right: 2%;
-}
-@media (max-width: 767.98px) {
-  #ground .sign-container {
-    display: none;
-  }
-}
-#ground .sign-container .signs {
-  height: 25rem;
-}
-#ground .sign-container .sign-link {
-  font-family: Aleo, Times, serif;
-  position: absolute;
-  display: block;
-  color: black;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#ground .sign-container .sign-link:hover {
-  color: #FF6F3F;
-}
-#ground .sign-container .hack {
-  top: 16%;
-  transform: translateX(-50%) rotate(15deg);
-}
-#ground .sign-container .mentor {
-  top: 47%;
-}
-#ground .sign-container .volunteer {
-  top: 73%;
 }
 
 article.img-bg-section {
