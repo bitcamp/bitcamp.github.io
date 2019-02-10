@@ -874,12 +874,7 @@ a:hover {
 
 img.icon {
   width: 4rem;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor;
-  /*image-rendering: -o-pixelated;
-  image-rendering: pixelated;*/
+  image-rendering: initial;
 }
 
 a.bp-btn {
@@ -993,7 +988,7 @@ article.hero .content {
   position: relative;
   text-align: center;
   z-index: 1;
-  top: 4rem;
+  top: 10rem;
 }
 @media (max-width: 991.98px) {
   article.hero .content {
@@ -1185,6 +1180,12 @@ article.schedule {
   /* Remove bootstrap styling */
   min-height: unset;
   width: 100%;
+}
+article.schedule .section-title {
+  color: white;
+}
+article.schedule .section-title:after {
+  background-color: white;
 }
 article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
   background: transparent !important;
@@ -1409,17 +1410,17 @@ article.sponsors .sponsors-img {
 article.footer {
   color: black;
 }
-article.footer .img-bg-section {
-  pointer-events: none;
+article.footer .img-bg {
   z-index: 1;
 }
 article.footer .contact-card {
+  pointer-events: all;
+  z-index: 2;
   bottom: 15%;
   left: 17%;
   min-width: 300px;
   max-width: 350px;
   width: 30%;
-  background: rgba(255, 247, 244, 0.75);
   padding: 2rem;
   position: relative !important;
   top: 50%;
@@ -1433,15 +1434,10 @@ article.footer .contact-card .email {
   font-family: Aleo, Times, serif;
   font-size: 150%;
   font-weight: bold;
-  color: #c79b72;
   margin: 1.75rem 0;
 }
 article.footer p {
   margin: 0;
-}
-article.footer img.icon {
-  image-rendering: -o-pixelated;
-  image-rendering: pixelated;
 }
 article.footer .social-icons a {
   -webkit-transition: ease all 0.2s;
@@ -1455,6 +1451,8 @@ article.footer .social-icons a .icon {
   height: 3.5rem;
   width: auto;
   opacity: 0.5;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
 }
 @media (max-width: 991.98px) {
   article.footer .social-icons a .icon {
