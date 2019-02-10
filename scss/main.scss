@@ -153,10 +153,15 @@ article.page-body {
 article.hero {
   // padding: 5rem 1.5rem 25rem;
   //margin-bottom: -.2rem; // gap glitch fix
+  background-color: $hero-sky-color;
   position: relative;
+  //height: 600px;
   height: calc(100vh - #{$nav-height});
   @media (max-width: $lg-breakpoint) {
     height: calc(100vh - #{$reduced-nav-height});
+  }
+  #registration {
+    transform: translateY(3rem);
   }
   .content {
     position: relative;
@@ -309,7 +314,10 @@ article.tracks {
     color: $bp-bitcamp-orange;
   }
   &#compass-challenge .container {
-    margin-top: 4rem;
+    //margin-top: 4rem;
+    img.icon {
+      width: 7rem;
+    }
   }
   &#minors {
     p {

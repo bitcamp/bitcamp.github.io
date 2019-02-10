@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 991.98px) {
   #nav {
     min-height: 65px;
+    height: auto;
   }
 }
 #nav .navbar {
@@ -82,6 +83,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 991.98px) {
   #nav .navbar {
+    padding-top: 1.5rem;
     min-width: 766.98px;
   }
 }
@@ -112,7 +114,7 @@ h1, h2, h3, h4, h5, h6, p {
 #nav .navbar-brand {
   color: #fa7041;
   font-family: Aleo;
-  line-height: inherit;
+  line-height: 1;
   font-weight: bold;
   font-size: 3rem;
 }
@@ -456,7 +458,6 @@ body.fixed-nav.no-animation #nav {
 }
 
 #lake {
-  width: 1920px;
   background-color: #5d8594;
   overflow: hidden;
   z-index: -4;
@@ -669,23 +670,28 @@ body.fixed-nav.no-animation #nav {
   }
 }
 
+/*#bulletin-bg {
+    background-image: url('../img/parallax-backgrounds/bulletin.png');
+    animation: rain 2s steps(13) infinite;
+    background-size: 1920px 14040px;
+    background-position: 25% center;
+    z-index: 0;
+
+    div {
+        z-index: 1;
+    }
+
+    @keyframes rain{
+        from{background-position-y:0px;}
+        to{background-position-y:-14040px;}
+     }
+}*/
 #bulletin-bg {
-  background-image: url("../img/parallax-backgrounds/bulletin.png");
-  animation: rain 2s steps(13) infinite;
-  background-size: 1920px 14040px;
-  background-position: 25% center;
-  z-index: 0;
+  background-color: #528ca5;
+  background-image: url("../img/parallax-backgrounds/bulletin/foreground.png");
 }
 #bulletin-bg div {
   z-index: 1;
-}
-@keyframes rain {
-  from {
-    background-position-y: 0px;
-  }
-  to {
-    background-position-y: -14040px;
-  }
 }
 
 #treehouse {
@@ -763,7 +769,7 @@ body.fixed-nav.no-animation #nav {
   flex: 1.5;
   background: url("../img/parallax-backgrounds/herolong.svg") no-repeat;
   background-position: top;
-  background-size: 5000px 100%;
+  background-size: cover;
 }
 @media (max-width: 991.98px) {
   #ground {
@@ -955,6 +961,7 @@ article.page-body {
 }
 
 article.hero {
+  background-color: #ccf2ff;
   position: relative;
   height: calc(100vh - 80px);
 }
@@ -962,6 +969,9 @@ article.hero {
   article.hero {
     height: calc(100vh - 65px);
   }
+}
+article.hero #registration {
+  transform: translateY(3rem);
 }
 article.hero .content {
   position: relative;
@@ -1114,8 +1124,8 @@ article.tracks.img-bg-section h2 {
 article.tracks.img-bg-section.design h2 {
   color: #FF6F3F;
 }
-article.tracks#compass-challenge .container {
-  margin-top: 4rem;
+article.tracks#compass-challenge .container img.icon {
+  width: 7rem;
 }
 @media (max-width: 767.98px) {
   article.tracks#minors p {

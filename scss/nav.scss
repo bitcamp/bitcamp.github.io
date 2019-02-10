@@ -9,12 +9,14 @@ $logo-font-size: 3rem;
     z-index: 100;
     @media (max-width: $lg-breakpoint) {
         min-height: $reduced-nav-height;
+        height: auto;
     }
     .navbar {
         height: 100%;
         width: 80%;
         min-width: 900px;
         @media (max-width: $lg-breakpoint) {
+            padding-top: 1.5rem;
             min-width: $md-breakpoint - 1px;
         }
         @media (max-width: $md-breakpoint) {
@@ -42,7 +44,7 @@ $logo-font-size: 3rem;
     .navbar-brand {
         color: $logo-color;
         font-family: Aleo;
-        line-height: inherit;
+        line-height: 1;
         font-weight: bold;
         font-size: $logo-font-size;
         &:hover {
