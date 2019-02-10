@@ -227,12 +227,21 @@ article.hero {
     color: $bp-yellow-orange;
   }
   p {
-    //margin-top: 3rem;
+    @media (max-width: $md-breakpoint) {
+      text-align: justify;
+    }
   }
   .section-title {
     position: relative;
     padding-bottom: 2rem;
     margin-bottom: 0;
+    @mixin centered-title {
+      text-align: center;
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
     &:after {
       content: "";
       display: block;
@@ -243,12 +252,17 @@ article.hero {
       height: 4px;
       background: $bp-header-brown;
     }
-    
+    @media (max-width: $md-breakpoint) {
+      @include centered-title;
+    }
     &.on-dark-bg {
       color: white;
       &:after {
         background-color: white;
       }
+    }
+    &.always-centered {
+      @include centered-title;
     }
   }
   .btn-container {
@@ -265,17 +279,11 @@ article.intro {
   text-align: center;
   p {
     text-align: left;
-    @media (max-width: $md-breakpoint) {
-      text-align: center;
-    }
     margin: 3rem auto;
     font-size: 2.1rem;
-  }
-  .section-title {
-    text-align: center;
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);  
+    @media (max-width: $md-breakpoint) {
+      text-align: justify;
+      font-size: 1.8rem;
     }
   }
   .vid-container {
@@ -303,11 +311,9 @@ article.tracks {
     @media (max-width: $md-breakpoint) {
       text-align: center;
       p {
-        // /text-align: left;
+        text-align: justify;
       }
     }
-    //padding-left: 2rem;
-    //padding-right: 2rem;
     .icon {
       //margin-top: 2rem;
       margin-bottom: 0.5rem;
@@ -593,23 +599,6 @@ article.sponsors {
   }
 }
 
-.new-contact-card {
-  pointer-events: all;
-  bottom: 15%;
-  left: 17%;
-  min-width: 300px;
-  max-width: 350px;
-  width: 30%;
-  padding: 2rem;
-  .email {
-    display: block;
-    font-family: $serif-stack;
-    font-size: 150%;
-    font-weight: bold;
-    margin: 1.75rem 0;
-  }
-}
-
 article.footer {
   @extend .page-section;
   color: black;
@@ -643,6 +632,9 @@ article.footer {
   }
   p {
     margin: 0;
+    @media (max-width: $md-breakpoint) {
+      text-align: center;
+    }
   }
   .social-icons {
     a {

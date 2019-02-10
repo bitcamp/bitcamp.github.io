@@ -1021,6 +1021,11 @@ article.hero .content p {
   font-size: 1.8rem;
   color: #FFAF3F;
 }
+@media (max-width: 767.98px) {
+  .page-section p, article.footer p, article.sponsors p, article.faq p, article.schedule p, article.tracks p, article.intro p {
+    text-align: justify;
+  }
+}
 .page-section .section-title, article.footer .section-title, article.sponsors .section-title, article.faq .section-title, article.schedule .section-title, article.tracks .section-title, article.intro .section-title {
   position: relative;
   padding-bottom: 2rem;
@@ -1036,11 +1041,27 @@ article.hero .content p {
   height: 4px;
   background: #C79970;
 }
+@media (max-width: 767.98px) {
+  .page-section .section-title, article.footer .section-title, article.sponsors .section-title, article.faq .section-title, article.schedule .section-title, article.tracks .section-title, article.intro .section-title {
+    text-align: center;
+  }
+  .page-section .section-title:after, article.footer .section-title:after, article.sponsors .section-title:after, article.faq .section-title:after, article.schedule .section-title:after, article.tracks .section-title:after, article.intro .section-title:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .page-section .section-title.on-dark-bg, article.footer .section-title.on-dark-bg, article.sponsors .section-title.on-dark-bg, article.faq .section-title.on-dark-bg, article.schedule .section-title.on-dark-bg, article.tracks .section-title.on-dark-bg, article.intro .section-title.on-dark-bg {
   color: white;
 }
 .page-section .section-title.on-dark-bg:after, article.footer .section-title.on-dark-bg:after, article.sponsors .section-title.on-dark-bg:after, article.faq .section-title.on-dark-bg:after, article.schedule .section-title.on-dark-bg:after, article.tracks .section-title.on-dark-bg:after, article.intro .section-title.on-dark-bg:after {
   background-color: white;
+}
+.page-section .section-title.always-centered, article.footer .section-title.always-centered, article.sponsors .section-title.always-centered, article.faq .section-title.always-centered, article.schedule .section-title.always-centered, article.tracks .section-title.always-centered, article.intro .section-title.always-centered {
+  text-align: center;
+}
+.page-section .section-title.always-centered:after, article.footer .section-title.always-centered:after, article.sponsors .section-title.always-centered:after, article.faq .section-title.always-centered:after, article.schedule .section-title.always-centered:after, article.tracks .section-title.always-centered:after, article.intro .section-title.always-centered:after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .page-section .btn-container, article.footer .btn-container, article.sponsors .btn-container, article.faq .btn-container, article.schedule .btn-container, article.tracks .btn-container, article.intro .btn-container {
   margin-top: 4rem;
@@ -1060,15 +1081,9 @@ article.intro p {
 }
 @media (max-width: 767.98px) {
   article.intro p {
-    text-align: center;
+    text-align: justify;
+    font-size: 1.8rem;
   }
-}
-article.intro .section-title {
-  text-align: center;
-}
-article.intro .section-title:after {
-  left: 50%;
-  transform: translateX(-50%);
 }
 article.intro .vid-container {
   position: relative;
@@ -1091,6 +1106,9 @@ article.tracks .section-title {
 @media (max-width: 767.98px) {
   article.tracks .col-content {
     text-align: center;
+  }
+  article.tracks .col-content p {
+    text-align: justify;
   }
 }
 article.tracks .col-content .icon {
@@ -1356,23 +1374,6 @@ article.sponsors .sponsors-img {
   display: flex;
 }
 
-.new-contact-card {
-  pointer-events: all;
-  bottom: 15%;
-  left: 17%;
-  min-width: 300px;
-  max-width: 350px;
-  width: 30%;
-  padding: 2rem;
-}
-.new-contact-card .email {
-  display: block;
-  font-family: Aleo, Times, serif;
-  font-size: 150%;
-  font-weight: bold;
-  margin: 1.75rem 0;
-}
-
 article.footer {
   color: black;
   position: relative;
@@ -1408,6 +1409,11 @@ article.footer .contact-card .email {
 }
 article.footer p {
   margin: 0;
+}
+@media (max-width: 767.98px) {
+  article.footer p {
+    text-align: center;
+  }
 }
 article.footer .social-icons a {
   -webkit-transition: ease all 0.2s;
