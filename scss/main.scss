@@ -256,8 +256,12 @@ article.intro {
     margin: 3rem auto;
     font-size: 2.1rem;
   }
-  h2 {
+  .section-title {
     text-align: center;
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);  
+    }
   }
   .vid-container {
     position: relative;
@@ -444,9 +448,10 @@ article.schedule {
   }
   // TODO: Remove after schedule is finalized
   min-height: unset;
+  width: 100%;
   .container {
-    .row {
-      padding: 3rem auto;
+    .opaque-card {
+      padding: 3rem;
     }
     h4 {
       text-align: center;

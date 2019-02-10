@@ -1069,8 +1069,12 @@ article.intro p {
     text-align: center;
   }
 }
-article.intro h2 {
+article.intro .section-title {
   text-align: center;
+}
+article.intro .section-title:after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 article.intro .vid-container {
   position: relative;
@@ -1141,6 +1145,7 @@ article.schedule {
   /* Remove current tab background */
   /* Remove bootstrap styling */
   min-height: unset;
+  width: 100%;
 }
 article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
   background: transparent !important;
@@ -1245,8 +1250,8 @@ article.schedule .footer {
   margin-top: 2.5rem;
   font-family: Avenir;
 }
-article.schedule .container .row {
-  padding: 3rem auto;
+article.schedule .container .opaque-card, article.schedule .container .event {
+  padding: 3rem;
 }
 article.schedule .container h4 {
   text-align: center;
