@@ -155,17 +155,13 @@ article.hero {
   //margin-bottom: -.2rem; // gap glitch fix
   background-color: $hero-sky-color;
   position: relative;
+  //height: 600px;
   height: calc(100vh - #{$nav-height});
   @media (max-width: $lg-breakpoint) {
     height: calc(100vh - #{$reduced-nav-height});
   }
-  img.fire {
-    @media (max-width: $md-breakpoint) {
-
-    }
-    @media (max-width: $sm-breakpoint) {
-
-    }
+  #registration {
+    transform: translateY(3rem);
   }
   .content {
     position: relative;

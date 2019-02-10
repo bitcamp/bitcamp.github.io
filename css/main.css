@@ -599,7 +599,7 @@ body.fixed-nav {
   flex: 1.5;
   background: url("../img/parallax-backgrounds/herolong.svg") no-repeat;
   background-position: top;
-  background-size: 5000px 100%; }
+  background-size: cover; }
   @media (max-width: 991.98px) {
     #ground {
       background-size: cover; } }
@@ -764,6 +764,8 @@ article.hero {
   @media (max-width: 991.98px) {
     article.hero {
       height: calc(100vh - 65px); } }
+  article.hero #registration {
+    transform: translateY(3rem); }
   article.hero .content {
     position: relative;
     text-align: center;
