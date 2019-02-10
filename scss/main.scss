@@ -162,9 +162,14 @@ article.hero {
     position: relative;
     text-align: center;
     z-index: 1;
-    top: 10rem;
     @media (max-width: $lg-breakpoint) {
+      top: 4rem;
+    }
+    @media (max-width: $sm-breakpoint) {
       top: 8rem;
+    }
+    @media (max-height: 600px) {
+      top: 0;
     }
     h1 {
       color: $logo-color;
