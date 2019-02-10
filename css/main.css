@@ -817,10 +817,11 @@ article.intro {
       text-align: left; } }
 
 article.tracks .col-content .icon {
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
 
 article.tracks h2 {
-  color: #FF6F3F; }
+  color: #FF6F3F;
+  margin-bottom: 1rem; }
   @media (max-width: 767.98px) {
     article.tracks h2 {
       text-align: center; } }
