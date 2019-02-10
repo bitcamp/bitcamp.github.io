@@ -783,22 +783,21 @@ body.fixed-nav.no-animation #nav {
   left: 50%;
   z-index: 12;
   transform: translateX(-50%);
-  bottom: 2vh;
+  bottom: 2rem;
 }
 @media (max-width: 991.98px) {
   #ground img.fire {
     height: 15rem;
-    bottom: 2vh;
   }
 }
 @media (max-width: 767.98px) {
   #ground img.fire {
-    bottom: 3vh;
+    bottom: 3rem;
   }
 }
 @media (max-width: 575.98px) {
   #ground img.fire {
-    bottom: 3.5vh;
+    bottom: 3.5rem;
   }
 }
 #ground .sign-container {

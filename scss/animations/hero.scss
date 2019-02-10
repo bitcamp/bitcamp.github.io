@@ -77,16 +77,15 @@
     left: 50%;
     z-index: 12;
     transform: translateX(-50%);
-    bottom: 2vh;
+    bottom: 2rem;
     @media (max-width: $lg-breakpoint) {
       height: 15rem;
-      bottom: 2vh;
     }
     @media (max-width: $md-breakpoint) {
-      bottom: 3vh;
+      bottom: 3rem;
     }
     @media (max-width: $sm-breakpoint) {
-      bottom: 3.5vh;
+      bottom: 3.5rem;
     }
   }
 
