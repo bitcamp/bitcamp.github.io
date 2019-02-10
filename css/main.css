@@ -1388,25 +1388,22 @@ article.sponsors .sponsors-img {
 
 article.footer {
   color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 article.footer .img-bg {
   z-index: 1;
 }
 article.footer .contact-card {
   pointer-events: all;
+  position: static;
   z-index: 2;
-  bottom: 15%;
-  left: 17%;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 350px;
   width: 30%;
   padding: 2rem;
-  position: relative !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 250px;
-  max-width: 350px;
 }
 article.footer .contact-card .email {
   display: block;

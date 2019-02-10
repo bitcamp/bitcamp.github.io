@@ -613,15 +613,18 @@ article.sponsors {
 article.footer {
   @extend .page-section;
   color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .img-bg {
     z-index: 1;
   }
   .contact-card {
     pointer-events: all;
+    position: static;
     z-index: 2;
-    bottom: 15%;
-    left: 17%;
-    min-width: 300px;
+    min-width: 250px;
     max-width: 350px;
     width: 30%;
     padding: 2rem;
@@ -632,13 +635,6 @@ article.footer {
       font-weight: bold;
       margin: 1.75rem 0;
     }
-    //TODO: change these after animations are added back in
-    position: relative !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 250px;
-    max-width: 350px;
   }
   p {
     margin: 0;
