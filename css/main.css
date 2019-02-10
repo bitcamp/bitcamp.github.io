@@ -1148,6 +1148,14 @@ article.tracks.img-bg-section.design h2 {
 article.tracks#compass-challenge .container img.icon {
   width: 7rem;
 }
+article.tracks#minors .top.row {
+  margin-bottom: 3rem;
+}
+@media (max-width: 767.98px) {
+  article.tracks#minors .top.row {
+    margin-bottom: initial;
+  }
+}
 @media (max-width: 767.98px) {
   article.tracks#minors p {
     margin-bottom: 5rem;
@@ -1406,13 +1414,12 @@ article.footer .img-bg-section {
   z-index: 1;
 }
 article.footer .contact-card {
-  pointer-events: all;
   bottom: 15%;
   left: 17%;
   min-width: 300px;
   max-width: 350px;
   width: 30%;
-  background: #fff7f4;
+  background: rgba(255, 247, 244, 0.75);
   padding: 2rem;
   position: relative !important;
   top: 50%;

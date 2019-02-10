@@ -323,6 +323,12 @@ article.tracks {
     }
   }
   &#minors {
+    .top.row {
+      margin-bottom: 3rem;
+      @media (max-width: $md-breakpoint) {
+        margin-bottom: initial;
+      }
+    }
     p {
       @media (max-width: $md-breakpoint) {
         margin-bottom: 5rem;
@@ -601,13 +607,12 @@ article.footer {
     z-index: 1;
   }
   .contact-card {
-    pointer-events: all;
     bottom: 15%;
     left: 17%;
     min-width: 300px;
     max-width: 350px;
     width: 30%;
-    background: #fff7f4;
+    background: rgba(255, 247, 244, 0.75);;
     padding: 2rem;
     .email {
       display: block;

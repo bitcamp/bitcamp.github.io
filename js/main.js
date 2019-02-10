@@ -25,7 +25,7 @@ function toggleFAQInfo(event) {
 function adjustFixedNavbar() {
   const body = $('body');
 
-  if($(window).scrollTop() > $('#about').offset().top || isSmoothScrolling) {
+  if($(window).scrollTop() > ($('#about').offset().top - 1) || isSmoothScrolling) {
     body.addClass('fixed-nav');
   } else {
     body.removeClass('fixed-nav no-animation');
