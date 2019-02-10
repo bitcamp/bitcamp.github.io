@@ -810,6 +810,9 @@ article.tracks .external-link {
   text-align: center;
   margin: 2rem 0; }
 
+article.tracks img {
+  width: 100px; }
+
 article.colorwar {
   background-image: url("../img/colorwarbg.jpg");
   background-size: cover;
