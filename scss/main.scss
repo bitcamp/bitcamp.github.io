@@ -263,6 +263,10 @@ article.intro {
 
 article.tracks {
   @extend .page-section;
+  background-color: $bp-bitcamp-orange;
+  p {
+    color: white;
+  }
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;
@@ -278,7 +282,7 @@ article.tracks {
     }
   }
   h2 {
-    color: black;
+    color: white;//black;
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
