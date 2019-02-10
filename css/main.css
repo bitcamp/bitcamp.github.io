@@ -1,10 +1,16 @@
 @font-face {
   font-family: AvenirBold;
-  src: url("../fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype"); }
+  src: url("../fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype");
+  font-weight: bold; }
 
 @font-face {
   font-family: Avenir;
   src: url("../fonts/Avenir/AvenirLTStd-Book.otf") format("opentype"); }
+
+@font-face {
+  font-family: Aleo;
+  src: url("../fonts/Aleo/Aleo-Bold.otf") format("opentype");
+  font-weight: bold; }
 
 @font-face {
   font-family: Aleo;
@@ -42,8 +48,7 @@ body {
   image-rendering: -o-pixelated;
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  -ms-interpolation-mode: nearest-neighbor; }
   @media (max-width: 991.98px) {
     body {
       margin-top: 65px; } }
@@ -1236,7 +1241,8 @@ article.schedule {
     article.schedule ul.nav-tabs li.current {
       border-color: #FF6F3F; }
       article.schedule ul.nav-tabs li.current a h4 {
-        font-family: AvenirBold; }
+        font-family: AvenirBold;
+        font-weight: bold; }
       @media (max-width: 1210px) {
         article.schedule ul.nav-tabs li.current .date {
           color: #FF6F3F; } }

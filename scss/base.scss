@@ -2,10 +2,16 @@
 @font-face {
     font-family: AvenirBold;
     src: url("../fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype");
+    font-weight: bold;
 }
 @font-face {
     font-family: Avenir;
     src: url("../fonts/Avenir/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: Aleo;
+    src: url("../fonts/Aleo/Aleo-Bold.otf") format("opentype");
+    font-weight: bold;
 }
 @font-face {
     font-family: Aleo;
@@ -15,6 +21,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  //-webkit-font-smoothing: subpixel-antialiased;
   // Extra small devices (portrait phones, less than 576px)
   @media (max-width: 575.98px) {
     font-size: 55%;
@@ -54,7 +61,6 @@ body {
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
