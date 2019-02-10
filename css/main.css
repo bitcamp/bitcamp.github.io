@@ -759,6 +759,7 @@ article.page-body {
   position: relative; }
 
 article.hero {
+  background-color: #ccf2ff;
   position: relative;
   height: calc(100vh - 80px); }
   @media (max-width: 991.98px) {
