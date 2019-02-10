@@ -689,6 +689,7 @@ body.fixed-nav.no-animation #nav {
 #bulletin-bg {
   background-color: #528ca5;
   background-image: url("../img/parallax-backgrounds/bulletin/foreground.png");
+  background-repeat: no-repeat;
 }
 #bulletin-bg div {
   z-index: 1;
@@ -1379,10 +1380,10 @@ article.sponsors .sponsors-img {
 
 article.footer {
   color: black;
-  height: 800px;
 }
 article.footer .img-bg-section {
   pointer-events: none;
+  z-index: 1;
 }
 article.footer .contact-card {
   pointer-events: all;
@@ -1393,6 +1394,12 @@ article.footer .contact-card {
   width: 30%;
   background: #fff7f4;
   padding: 2rem;
+  position: relative !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 250px;
+  max-width: 350px;
 }
 article.footer .contact-card .email {
   display: block;
@@ -1419,7 +1426,13 @@ article.footer .social-icons a:first-child {
 }
 article.footer .social-icons a .icon {
   height: 3.5rem;
+  width: auto;
   opacity: 0.5;
+}
+@media (max-width: 991.98px) {
+  article.footer .social-icons a .icon {
+    height: 3rem;
+  }
 }
 @media (max-width: 767.98px) {
   article.footer, article.footer h2 {

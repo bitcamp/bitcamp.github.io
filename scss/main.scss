@@ -593,9 +593,9 @@ article.sponsors {
 article.footer {
   @extend .page-section;
   color: black;
-  height: 800px;
   .img-bg-section {
     pointer-events: none;
+    z-index: 1;
   }
   .contact-card {
     pointer-events: all;
@@ -614,6 +614,13 @@ article.footer {
       color: #c79b72;
       margin: 1.75rem 0;
     }
+    //TODO: change these after animations are added back in
+    position: relative !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 250px;
+    max-width: 350px;
   }
   p {
     margin: 0;
@@ -632,7 +639,11 @@ article.footer {
       }
       .icon {
         height: 3.5rem;
+        width: auto;
         opacity: 0.5;
+        @media (max-width: $lg-breakpoint) {
+          height: 3rem;
+        }
       }
     }
   }
