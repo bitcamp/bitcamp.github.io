@@ -277,6 +277,19 @@ article.intro {
       height: 100%;
     }
   }
+  .section-title {
+    &:after {
+      content: "";
+      display: block;
+      width: 20rem;
+      height: 4px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3rem;
+      background: $bp-header-brown;
+    }
+  }
 }
 
 article.tracks {

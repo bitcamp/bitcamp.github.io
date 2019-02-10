@@ -859,6 +859,16 @@ article.intro {
       left: 0;
       width: 100%;
       height: 100%; }
+  article.intro .section-title:after {
+    content: "";
+    display: block;
+    width: 20rem;
+    height: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    background: #C79970; }
 
 @media (max-width: 767.98px) {
   article.tracks .col-content {
