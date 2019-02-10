@@ -122,8 +122,8 @@ h1, h2, h3, h4, h5, h6, p {
   filter: none;
 }
 #nav .navbar-brand img {
-  width: 3rem;
-  vertical-align: sub;
+  width: 2.5rem;
+  vertical-align: baseline;
   margin-right: 1rem;
   margin-left: -3rem;
   opacity: 0;
@@ -1367,13 +1367,15 @@ article.sponsors .sponsors-img {
   min-width: 300px;
   max-width: 350px;
   width: 30%;
-  padding: 2rem; }
-  .new-contact-card .email {
-    display: block;
-    font-family: Aleo, Times, serif;
-    font-size: 150%;
-    font-weight: bold;
-    margin: 1.75rem 0; }
+  padding: 2rem;
+}
+.new-contact-card .email {
+  display: block;
+  font-family: Aleo, Times, serif;
+  font-size: 150%;
+  font-weight: bold;
+  margin: 1.75rem 0;
+}
 
 article.footer {
   color: black;
