@@ -1,4 +1,4 @@
-#bulletin-bg {
+/*#bulletin-bg {
     background-image: url('../img/parallax-backgrounds/bulletin.png');
     animation: rain 2s steps(13) infinite;
     background-size: 1920px 14040px;
@@ -13,4 +13,11 @@
         from{background-position-y:0px;}
         to{background-position-y:-14040px;}
      }
+}*/
+#bulletin-bg {
+    background-color: #528ca5;
+    background-image: url('../img/parallax-backgrounds/bulletin/foreground.png');
+    div {
+        z-index: 1;
+    }
 }
