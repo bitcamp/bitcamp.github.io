@@ -1049,6 +1049,12 @@ article.hero .content p {
   height: 4px;
   background: #C79970;
 }
+.page-section .section-title.on-dark-bg, article.footer .section-title.on-dark-bg, article.sponsors .section-title.on-dark-bg, article.faq .section-title.on-dark-bg, article.schedule .section-title.on-dark-bg, article.tracks .section-title.on-dark-bg, article.intro .section-title.on-dark-bg {
+  color: white;
+}
+.page-section .section-title.on-dark-bg:after, article.footer .section-title.on-dark-bg:after, article.sponsors .section-title.on-dark-bg:after, article.faq .section-title.on-dark-bg:after, article.schedule .section-title.on-dark-bg:after, article.tracks .section-title.on-dark-bg:after, article.intro .section-title.on-dark-bg:after {
+  background-color: white;
+}
 .page-section .btn-container, article.footer .btn-container, article.sponsors .btn-container, article.faq .btn-container, article.schedule .btn-container, article.tracks .btn-container, article.intro .btn-container {
   margin-top: 4rem;
 }
@@ -1092,6 +1098,9 @@ article.intro .vid-container iframe {
   height: 100%;
 }
 
+article.tracks .section-title {
+  margin-bottom: 5rem;
+}
 @media (max-width: 767.98px) {
   article.tracks .col-content {
     text-align: center;
@@ -1100,34 +1109,35 @@ article.intro .vid-container iframe {
 article.tracks .col-content .icon {
   margin-bottom: 0.5rem;
 }
-article.tracks h2 {
+article.tracks h3 {
+  font-size: 3.5rem;
   color: #FF6F3F;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 767.98px) {
-  article.tracks h2 {
+  article.tracks h3 {
     text-align: center;
   }
 }
-article.tracks.img-bg-section h2 {
+article.tracks.img-bg-section h3 {
   color: white;
 }
-article.tracks.img-bg-section.design h2 {
+article.tracks.img-bg-section.design h3 {
   color: #FF6F3F;
 }
 article.tracks#compass-challenge .container img.icon {
   width: 7rem;
 }
-article.tracks#minors .top.row {
+article.tracks#events .top.row {
   margin-bottom: 3rem;
 }
 @media (max-width: 767.98px) {
-  article.tracks#minors .top.row {
+  article.tracks#events .top.row {
     margin-bottom: initial;
   }
 }
 @media (max-width: 767.98px) {
-  article.tracks#minors p {
+  article.tracks#events p {
     margin-bottom: 5rem;
   }
 }
@@ -1155,12 +1165,6 @@ article.schedule {
   /* Remove bootstrap styling */
   min-height: unset;
   width: 100%;
-}
-article.schedule .section-title {
-  color: white;
-}
-article.schedule .section-title:after {
-  background-color: white;
 }
 article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
   background: transparent !important;

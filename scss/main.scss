@@ -243,6 +243,13 @@ article.hero {
       height: 4px;
       background: $bp-header-brown;
     }
+    
+    &.on-dark-bg {
+      color: white;
+      &:after {
+        background-color: white;
+      }
+    }
   }
   .btn-container {
     margin-top: 4rem;
@@ -289,6 +296,9 @@ article.intro {
 article.tracks {
   @extend .page-section;
   //background-color: black;
+  .section-title {
+    margin-bottom: 5rem;
+  }
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;
@@ -303,17 +313,18 @@ article.tracks {
       margin-bottom: 0.5rem;
     }
   }
-  h2 {
+  h3 {
+    font-size: 3.5rem;
     color: $bp-bitcamp-orange;
     margin-bottom: 0.5rem;
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
   }
-  &.img-bg-section h2 {
+  &.img-bg-section h3 {
     color: white;
   }
-  &.img-bg-section.design h2 {
+  &.img-bg-section.design h3 {
     color: $bp-bitcamp-orange;
   }
   &#compass-challenge .container {
@@ -322,7 +333,7 @@ article.tracks {
       width: 7rem;
     }
   }
-  &#minors {
+  &#events {
     .top.row {
       margin-bottom: 3rem;
       @media (max-width: $md-breakpoint) {
@@ -359,12 +370,6 @@ article.tracks {
 
 article.schedule {
   @extend .page-section;
-  .section-title {
-    color: white;
-    &:after {
-      background-color: white;
-    }
-  }
   /* Remove current tab background */
   a.active, a.active:hover, a.active:focus {
     background: transparent !important;
