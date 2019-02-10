@@ -1069,6 +1069,21 @@ article.sponsors {
     display: -ms-flexbox;
     display: flex; }
 
+.new-contact-card {
+  pointer-events: all;
+  bottom: 15%;
+  left: 17%;
+  min-width: 300px;
+  max-width: 350px;
+  width: 30%;
+  padding: 2rem; }
+  .new-contact-card .email {
+    display: block;
+    font-family: Aleo, Times, serif;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 1.75rem 0; }
+
 article.footer {
   color: black;
   height: 800px; }

@@ -568,6 +568,23 @@ article.sponsors {
   }
 }
 
+.new-contact-card {
+  pointer-events: all;
+  bottom: 15%;
+  left: 17%;
+  min-width: 300px;
+  max-width: 350px;
+  width: 30%;
+  padding: 2rem;
+  .email {
+    display: block;
+    font-family: $serif-stack;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 1.75rem 0;
+  }
+}
+
 article.footer {
   @extend .page-section;
   color: black;
