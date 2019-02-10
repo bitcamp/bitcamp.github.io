@@ -20,14 +20,16 @@ article.hero {
       display: block;
       color: black;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
       &:hover {
         color: $bp-bitcamp-orange;
       }
     }
     .hack {
       top: 16%;
-      transform: translateX(-50%) rotate(15deg);
+      -webkit-transform: translateX(-50%) rotate(15deg);
+              transform: translateX(-50%) rotate(15deg);
     }
     .mentor {
       top: 47%;
@@ -47,17 +49,21 @@ article.hero {
   .cloud {
     position: absolute;
     z-index: 0;
-    animation: cloudDrift linear infinite;
+    -webkit-animation: cloudDrift linear infinite;
+            animation: cloudDrift linear infinite;
   }
 
   .long-duration {
-    animation-duration: 60s;
+    -webkit-animation-duration: 60s;
+            animation-duration: 60s;
   }
   .medium-duration {
-    animation-duration: 45s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
   }
   .short-duration {
-    animation-duration: 35s;
+    -webkit-animation-duration: 35s;
+            animation-duration: 35s;
   }
 
   .lrg {
@@ -74,6 +80,16 @@ article.hero {
     height: 15%;
     top: 40%;
     left: 10%;
+  }
+
+  @-webkit-keyframes cloudDrift {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { 
+      opacity: 0;
+      left: 90%; 
+    }
   }
 
   @keyframes cloudDrift {

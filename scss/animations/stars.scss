@@ -19,7 +19,8 @@
       width: 23%;
       top: 42%;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
    }
 
     .star-1 {
@@ -28,7 +29,14 @@
         top: 8%;
         background-image : url('../img/parallax-backgrounds/stars/star1.png');
         background-size: 40vw 5vw;
-        animation: twinkle1 4s steps(8) infinite;
+        -webkit-animation: twinkle1 4s steps(8) infinite;
+                animation: twinkle1 4s steps(8) infinite;
+
+        @-webkit-keyframes twinkle1 {
+            0%{background-position-x:0px;}
+            20%{background-position-x:-40vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
 
         @keyframes twinkle1 {
             0%{background-position-x:0px;}
@@ -43,7 +51,14 @@
         top: 32%;
         background-image : url('../img/parallax-backgrounds/stars/star2.png');
         background-size: 18vw 4.5vw;
-        animation: twinkle2 1.5s steps(4) infinite;
+        -webkit-animation: twinkle2 1.5s steps(4) infinite;
+                animation: twinkle2 1.5s steps(4) infinite;
+
+        @-webkit-keyframes twinkle2 {
+            0%{background-position-x:0px;}
+            40%{background-position-x:-18vw;}
+            40.001%,100%{background-position-x:0px;}
+        }
 
         @keyframes twinkle2 {
             0%{background-position-x:0px;}
@@ -58,7 +73,14 @@
         top: 30%;
         background-image : url('../img/parallax-backgrounds/stars/star3.png');
         background-size: 17.5vw 3.5vw;
-        animation: twinkle3 4s steps(5) 2s infinite;
+        -webkit-animation: twinkle3 4s steps(5) 2s infinite;
+                animation: twinkle3 4s steps(5) 2s infinite;
+        
+        @-webkit-keyframes twinkle3{
+            0%{background-position-x:0px;}
+            20%{background-position-x:-17.5vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
         
         @keyframes twinkle3{
             0%{background-position-x:0px;}
@@ -73,7 +95,14 @@
         top: 2%;
         background-image : url('../img/parallax-backgrounds/stars/star2.png');
         background-size: 12vw 3vw;
-        animation: twinkle4 6s steps(4) -2s infinite;
+        -webkit-animation: twinkle4 6s steps(4) -2s infinite;
+                animation: twinkle4 6s steps(4) -2s infinite;
+
+        @-webkit-keyframes twinkle4 {
+            0%{background-position-x:0px;}
+            20%{background-position-x:-12vw;}
+            20.001%,100%{background-position-x:0px;}
+        }
 
         @keyframes twinkle4 {
             0%{background-position-x:0px;}
@@ -89,7 +118,14 @@
         top: 11%;
         background-image : url('../img/parallax-backgrounds/stars/star3.png');
         background-size: 10vw 2vw;
-        animation: twinkle5 1.5s steps(5) -2s infinite;
+        -webkit-animation: twinkle5 1.5s steps(5) -2s infinite;
+                animation: twinkle5 1.5s steps(5) -2s infinite;
+        
+        @-webkit-keyframes twinkle5 {
+            0%{background-position-x:0px;}
+            40%{background-position-x:-10vw;}
+            40.001%,100%{background-position-x:0px;}
+        }
         
         @keyframes twinkle5 {
             0%{background-position-x:0px;}
@@ -104,7 +140,14 @@
         top: 14%;
         background-image : url('../img/parallax-backgrounds/stars/star1.png');
         background-size: 20vw 2.5vw;
-        animation: twinkle6 5.5s steps(8) 3s infinite;
+        -webkit-animation: twinkle6 5.5s steps(8) 3s infinite;
+                animation: twinkle6 5.5s steps(8) 3s infinite;
+        
+        @-webkit-keyframes twinkle6{
+            0%{background-position-x:0px;}
+            12.5%{background-position-x:-20vw;}
+            12.501%,100%{background-position-x:0px;}
+        }
         
         @keyframes twinkle6{
             0%{background-position-x:0px;}
@@ -119,7 +162,13 @@
          top: 0%;
          background-image : url('../img/parallax-backgrounds/stars/star4.png');
          background-size: 8vw 4vw;
-         animation: play7 3s steps(2) infinite;
+         -webkit-animation: play7 3s steps(2) infinite;
+                 animation: play7 3s steps(2) infinite;
+         
+         @-webkit-keyframes play7{
+            0%{background-position-x:0px;}
+            100%{background-position-x:-8vw;}
+         }
          
          @keyframes play7{
             0%{background-position-x:0px;}
@@ -134,12 +183,14 @@
         top: 24%;
         background-image : url('../img/parallax-backgrounds/stars/shooting1.png');
         background-size: 35vw 5vw;
-        animation: shoot1 8s steps(7) infinite;
+        -webkit-animation: shoot1 8s steps(7) infinite;
+                animation: shoot1 8s steps(7) infinite;
 
-        @keyframes shoot1{
+        @-webkit-keyframes shoot1{
             0%{
                background-position-x:0px;
-               transform: translateY(5vh) translateX(5vw);
+               -webkit-transform: translateY(5vh) translateX(5vw);
+                       transform: translateY(5vh) translateX(5vw);
                opacity: 0;
             }
             2% {
@@ -150,7 +201,32 @@
             }
             7%{
                background-position-x:-35vw;
-               transform: translateY(25vh) translateX(-5vw);
+               -webkit-transform: translateY(25vh) translateX(-5vw);
+                       transform: translateY(25vh) translateX(-5vw);
+               opacity: 0;
+            }
+            7.001%,100%{
+               opacity: 0;
+            }
+        }
+
+        @keyframes shoot1{
+            0%{
+               background-position-x:0px;
+               -webkit-transform: translateY(5vh) translateX(5vw);
+                       transform: translateY(5vh) translateX(5vw);
+               opacity: 0;
+            }
+            2% {
+               opacity: 1;
+            }
+            4% {
+               opacity: 1;
+            }
+            7%{
+               background-position-x:-35vw;
+               -webkit-transform: translateY(25vh) translateX(-5vw);
+                       transform: translateY(25vh) translateX(-5vw);
                opacity: 0;
             }
             7.001%,100%{
@@ -165,12 +241,14 @@
         top: 14%;
         background-image : url('../img/parallax-backgrounds/stars/shooting2.png');
         background-size: 35vw 5vw;
-        animation: shoot2 4s steps(7) 3s infinite;
+        -webkit-animation: shoot2 4s steps(7) 3s infinite;
+                animation: shoot2 4s steps(7) 3s infinite;
         
-        @keyframes shoot2{
+        @-webkit-keyframes shoot2{
            0%{
               background-position-x:0px;
-              transform: translateX(0vw);
+              -webkit-transform: translateX(0vw);
+                      transform: translateX(0vw);
               opacity: 0;
            }
            4% {
@@ -181,7 +259,32 @@
            }
            9%{
               background-position-x:-35vw;
-              transform: translateX(20vw);
+              -webkit-transform: translateX(20vw);
+                      transform: translateX(20vw);
+              opacity: 0;
+           }
+           9.001%,100%{
+              opacity: 0;
+           }
+        }
+        
+        @keyframes shoot2{
+           0%{
+              background-position-x:0px;
+              -webkit-transform: translateX(0vw);
+                      transform: translateX(0vw);
+              opacity: 0;
+           }
+           4% {
+              opacity: 1;
+           }
+           6% {
+              opacity: 1;
+           }
+           9%{
+              background-position-x:-35vw;
+              -webkit-transform: translateX(20vw);
+                      transform: translateX(20vw);
               opacity: 0;
            }
            9.001%,100%{
@@ -197,12 +300,14 @@
         top: 22%;
         background-image : url('../img/parallax-backgrounds/stars/shooting3.png');
         background-size: 35vw 5vw;
-        animation: shoot3 6s steps(7) 3.5s infinite;
+        -webkit-animation: shoot3 6s steps(7) 3.5s infinite;
+                animation: shoot3 6s steps(7) 3.5s infinite;
 
-        @keyframes shoot3{
+        @-webkit-keyframes shoot3{
             0%{
                background-position-x:0px;
-               transform: translateX(0vw);
+               -webkit-transform: translateX(0vw);
+                       transform: translateX(0vw);
                opacity: 0;
             }
             4% {
@@ -213,7 +318,32 @@
             }
             9%{
                background-position-x:-35vw;
-               transform: translateX(20vw);
+               -webkit-transform: translateX(20vw);
+                       transform: translateX(20vw);
+               opacity: 0;
+            }
+            9.001%,100%{
+               opacity: 0;
+            }
+        }
+
+        @keyframes shoot3{
+            0%{
+               background-position-x:0px;
+               -webkit-transform: translateX(0vw);
+                       transform: translateX(0vw);
+               opacity: 0;
+            }
+            4% {
+               opacity: 1;
+            }
+            6% {
+               opacity: 1;
+            }
+            9%{
+               background-position-x:-35vw;
+               -webkit-transform: translateX(20vw);
+                       transform: translateX(20vw);
                opacity: 0;
             }
             9.001%,100%{
@@ -230,12 +360,14 @@
         top: 42%;
         background-image : url('../img/parallax-backgrounds/stars/shooting4.png');
         background-size: 20vw 4vw;
-        animation: shoot4 6s steps(5) 9.5s infinite;
+        -webkit-animation: shoot4 6s steps(5) 9.5s infinite;
+                animation: shoot4 6s steps(5) 9.5s infinite;
 
-        @keyframes shoot4{
+        @-webkit-keyframes shoot4{
             0% {
                background-position-x:0px;
-               transform: translateX(0vw) translateY(0vw);
+               -webkit-transform: translateX(0vw) translateY(0vw);
+                       transform: translateX(0vw) translateY(0vw);
                opacity: 0;
             }
             4% {
@@ -246,7 +378,32 @@
             }
             9%{
                background-position-x:-20vw;
-               transform: translateX(10vw) translateY(10vw);
+               -webkit-transform: translateX(10vw) translateY(10vw);
+                       transform: translateX(10vw) translateY(10vw);
+               opacity: 0;
+            }
+            9.001%,100%{
+               opacity: 0;
+            }
+        }
+
+        @keyframes shoot4{
+            0% {
+               background-position-x:0px;
+               -webkit-transform: translateX(0vw) translateY(0vw);
+                       transform: translateX(0vw) translateY(0vw);
+               opacity: 0;
+            }
+            4% {
+               opacity: 1;
+            }
+            6% {
+               opacity: 1;
+            }
+            9%{
+               background-position-x:-20vw;
+               -webkit-transform: translateX(10vw) translateY(10vw);
+                       transform: translateX(10vw) translateY(10vw);
                opacity: 0;
             }
             9.001%,100%{
