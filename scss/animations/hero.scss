@@ -1,8 +1,6 @@
 #clouds {
   background-image: url('../img/parallax-backgrounds/hero.png');
-  background-position: bottom;
-  
-  /* Cloud Animations */
+
   .cloud {
     position: absolute;
     z-index: -1;
@@ -10,6 +8,7 @@
   }
 
   .fadeInAndOut {
+    position: static;
     animation: fadeInAndOut linear infinite;
   }
 
@@ -24,15 +23,18 @@
   }
 
   .lrg {
+    height: 20%;
     top: 12%;
     left: -5%;
   }
   .sml {
+    height: 10%;
     top: 25%;
     left: 23%;
   }
   .med {
-    top: 30%;
+    height: 15%;
+    top: 5%;
     left: 5%;
   }
 
