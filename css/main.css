@@ -42,7 +42,8 @@ body {
   image-rendering: -o-pixelated;
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor; }
+  -ms-interpolation-mode: nearest-neighbor;
+  -webkit-font-smoothing: subpixel-antialiased; }
   @media (max-width: 991.98px) {
     body {
       margin-top: 65px; } }
