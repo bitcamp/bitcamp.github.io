@@ -167,7 +167,10 @@ article.hero {
     position: relative;
     text-align: center;
     z-index: 1;
-    margin: 150px auto 0px auto;
+    top: 4rem;
+    @media (max-width: $lg-breakpoint) {
+      top: 8rem;
+    }
     h1 {
       color: $logo-color;
       font-size: 11.75rem;
