@@ -598,7 +598,8 @@ body.fixed-nav {
 #ground {
   flex: 1.5;
   background: url("../img/parallax-backgrounds/herolong.svg");
-  background-position: top; }
+  background-position: top;
+  background-size: cover; }
   @media (max-width: 991.98px) {
     #ground {
       background-size: cover; } }

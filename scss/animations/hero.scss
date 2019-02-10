@@ -64,7 +64,7 @@
   flex: 1.5;
   background: url('../img/parallax-backgrounds/herolong.svg');
   background-position: top;
-  //background-size: cover;
+  background-size: cover;
   //background-size: 5000px 100%;
   @media (max-width: $lg-breakpoint) {
     background-size: cover;
