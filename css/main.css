@@ -677,50 +677,58 @@ body.fixed-nav.no-animation #nav {
   background-position: right center;
 }
 
-#clouds {
-  background-image: url("../img/parallax-backgrounds/hero.png");
-  background-position: bottom;
+#sky, #ground {
+  flex: 1;
+}
+
+#sky {
+  position: relative;
+  background-color: #ccf2ff;
+}
+#sky #clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   /* Fade in */
 }
-#clouds .cloud {
+#sky #clouds .cloud {
   position: absolute;
   z-index: -1;
   animation: cloudDrift linear infinite;
 }
-#clouds .fadeInAndOut {
+#sky #clouds .fadeInAndOut {
   position: static;
   animation: fadeInAndOut linear infinite;
 }
-#clouds .long-duration {
+#sky #clouds .long-duration {
   animation-duration: 60s;
 }
-#clouds .medium-duration {
+#sky #clouds .medium-duration {
   animation-duration: 45s;
 }
-#clouds .short-duration {
+#sky #clouds .short-duration {
   animation-duration: 35s;
 }
-#clouds .lrg {
-  height: 20%;
-  top: 12%;
+#sky #clouds .lrg {
+  height: 40%;
+  top: 10%;
   left: -5%;
 }
-#clouds .sml {
+#sky #clouds .sml {
   height: 10%;
-  top: 25%;
-  left: 23%;
+  top: 50%;
+  left: 10%;
 }
-#clouds .med {
-  height: 15%;
-  top: 5%;
-  left: 5%;
+#sky #clouds .med {
+  height: 20%;
+  top: 70%;
+  left: 20%;
 }
 @keyframes cloudDrift {
-  from {
-    transform: translateX(0rem);
-  }
   to {
-    transform: translateX(75rem);
+    left: 90%;
   }
 }
 @keyframes fadeInAndOut {
@@ -736,6 +744,25 @@ body.fixed-nav.no-animation #nav {
   100% {
     opacity: 0;
   }
+}
+
+#ground {
+  background: url("../img/parallax-backgrounds/hero-no-sky.png") no-repeat;
+  background-position: top;
+  background-size: 100% 100%;
+}
+@media (max-width: 991.98px) {
+  #ground {
+    background-size: cover;
+  }
+}
+#ground img.fire {
+  position: absolute;
+  width: 32rem;
+  left: 50%;
+  z-index: 12;
+  transform: translateX(-15rem);
+  bottom: 15vh;
 }
 
 article.img-bg-section {
@@ -880,17 +907,23 @@ article.page-body {
 }
 
 article.hero {
-  padding: 5rem 1.5rem 25rem;
   position: relative;
+  height: calc(100vh - 80px);
+}
+@media (max-width: 991.98px) {
+  article.hero {
+    height: calc(100vh - 65px);
+  }
 }
 article.hero .content {
+  position: relative;
   text-align: center;
-  z-index: 0;
-  margin-top: -6rem;
+  z-index: 1;
+  margin: 0 auto;
 }
 article.hero .content h1 {
   color: #fa7041;
-  font-size: 13rem;
+  font-size: 11.75rem;
 }
 @media (max-width: 767.98px) {
   article.hero .content h1 {
@@ -904,7 +937,7 @@ article.hero .content h1 {
 }
 article.hero .content h2 {
   color: #FFAF3F;
-  font-size: 4rem;
+  font-size: 3.75rem;
   margin-top: -2rem;
 }
 @media (max-width: 767.98px) {
@@ -921,20 +954,7 @@ article.hero .content h2 {
 article.hero .content p {
   color: #7F6C5F;
   font-size: 2rem;
-  margin: 2rem auto;
-}
-article.hero .content img.fire {
-  position: absolute;
-  width: 32rem;
-  left: 50%;
-  z-index: 12;
-  transform: translateX(-15rem);
-  bottom: 14rem;
-}
-@media (max-width: 991.98px) {
-  article.hero .content img.fire {
-    bottom: 13.5rem;
-  }
+  margin: 0.5rem auto 0;
 }
 
 .page-section, article.footer, article.sponsors, article.faq, article.schedule, article.colorwar, article.tracks, article.intro {
