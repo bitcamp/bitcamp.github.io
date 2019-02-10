@@ -817,11 +817,11 @@ article.intro {
       text-align: left; } }
 
 article.tracks .col-content .icon {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
 
 article.tracks h2 {
   color: #FF6F3F;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
   @media (max-width: 767.98px) {
     article.tracks h2 {
       text-align: center; } }
@@ -831,6 +831,9 @@ article.tracks.img-bg-section h2 {
 
 article.tracks.img-bg-section.design h2 {
   color: #FF6F3F; }
+
+article.tracks#compass-challenge .container {
+  margin-top: 5rem; }
 
 article.tracks .external-link {
   display: block;
