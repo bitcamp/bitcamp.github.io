@@ -47,8 +47,8 @@ img.icon {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: -o-pixelated;
-  image-rendering: pixelated;
+  /*image-rendering: -o-pixelated;
+  image-rendering: pixelated;*/
 }
 
 a.bp-btn {
@@ -255,7 +255,7 @@ article.intro {
 
 article.tracks {
   @extend .page-section;
-  
+  //background-color: black;
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;
@@ -271,7 +271,7 @@ article.tracks {
     }
   }
   h2 {
-    color: black;
+    color: $bp-bitcamp-orange;
     @media (max-width: $md-breakpoint) {
       text-align: center;
     }
@@ -280,16 +280,19 @@ article.tracks {
     color: white;
   }
   &.img-bg-section.design h2 {
-    color: black;
+    color: $bp-bitcamp-orange;
   }
   .external-link {
     display: block;
     text-align: center;
     margin: 2rem 0;
   }
+  img {
+    width: 10rem;
+  }
 }
 
-article.colorwar {
+/*article.colorwar {
   @extend .page-section;
   background-image: url('../img/colorwarbg.jpg');
   background-size: cover;
@@ -299,7 +302,7 @@ article.colorwar {
     width: 8rem;
     margin-bottom: 4rem;
   }
-}
+}*/
 
 article.schedule {
   @extend .page-section;
@@ -547,6 +550,10 @@ article.footer {
   }
   p {
     margin: 0;
+  }
+  img.icon {
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
   }
   .social-icons {
     a {
