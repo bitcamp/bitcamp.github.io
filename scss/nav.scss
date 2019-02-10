@@ -8,7 +8,7 @@ $logo-font-size: 3rem;
     height: $nav-height;
     z-index: 100;
     @media (max-width: $lg-breakpoint) {
-        height: $reduced-nav-height;
+        min-height: $reduced-nav-height;
     }
     .navbar {
         height: 100%;

@@ -191,20 +191,6 @@ article.hero {
       margin: 0.5rem auto 0;
     }
   }
-  .signs {
-    height: 25rem;
-    margin-bottom: -38rem;
-    margin-left: 130rem;
-    @media (max-width: $md-breakpoint) {
-      margin-left: 0rem;
-    }
-    @media (max-width: $sm-breakpoint) {
-
-    }
-  }
-  #ground {
-    justify-content: flex-end;
-  }
 }
 
 .page-section {
