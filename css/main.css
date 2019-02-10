@@ -970,7 +970,7 @@ a.bp-btn {
     filter: brightness(90%); }
 
 div.opaque-card, article.schedule div.event {
-  background-color: rgba(239, 239, 239, 0.775);
+  background-color: rgba(239, 239, 239, 0.9);
   border-radius: 1.75rem;
   margin: 2rem 3rem 0rem;
   padding: 2rem 3.25rem;
@@ -1417,7 +1417,7 @@ article.footer {
     article.footer .social-icons a .icon {
       height: 3.5rem;
       width: auto;
-      opacity: 0.5;
+      opacity: 0.8;
       image-rendering: crisp-edges;
       image-rendering: -moz-crisp-edges; }
       @media (max-width: 991.98px) {
