@@ -204,7 +204,7 @@ article.hero {
 .page-section {
   position: relative;
   padding: 10rem 0rem;
-  background-color: $bp-warm-grey;
+  background-color: white;
   h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -263,6 +263,7 @@ article.intro {
 
 article.tracks {
   @extend .page-section;
+  
   .col-content {
     @media (max-width: $md-breakpoint) {
       text-align: center;

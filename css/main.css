@@ -742,7 +742,7 @@ article.hero {
 .page-section, article.intro, article.tracks, article.colorwar, article.schedule, article.faq, article.sponsors, article.footer {
   position: relative;
   padding: 10rem 0rem;
-  background-color: #EFEFEF; }
+  background-color: white; }
   .page-section h2, article.intro h2, article.tracks h2, article.colorwar h2, article.schedule h2, article.faq h2, article.sponsors h2, article.footer h2 {
     margin-bottom: 2rem;
     text-align: left;
