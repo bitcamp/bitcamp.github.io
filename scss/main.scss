@@ -156,7 +156,8 @@ article.hero {
     height: calc(100vh - #{$reduced-nav-height});
   }
   #registration {
-    transform: translateY(3rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   .content {
     position: relative;
@@ -239,7 +240,8 @@ article.hero {
       text-align: center;
       &:after {
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
       }
     }
     &:after {
@@ -603,9 +605,15 @@ article.footer {
   @extend .page-section;
   color: black;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   .img-bg {
     z-index: 1;
   }

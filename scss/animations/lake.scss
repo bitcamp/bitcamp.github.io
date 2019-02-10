@@ -32,8 +32,14 @@
    .waves {
       @extend %fill-bg;
       background-image: url('../img/parallax-backgrounds/lake-components/waves.png');
-      animation: waves 1.1s steps(2) infinite;
+      -webkit-animation: waves 1.1s steps(2) infinite;
+              animation: waves 1.1s steps(2) infinite;
       opacity: .84;
+
+      @-webkit-keyframes waves{
+         from{background-position-y:0px;}
+         to{background-position-y:-2160px;}
+      }
 
       @keyframes waves{
          from{background-position-y:0px;}
@@ -45,7 +51,8 @@
       height: 360px;
       top: 411px;
       left: 525px;
-      transform: rotate(110deg);
+      -webkit-transform: rotate(110deg);
+              transform: rotate(110deg);
    }
 
    .gill {
@@ -57,12 +64,30 @@
       background-repeat: no-repeat;
    }
 
+   @-webkit-keyframes gill-swim-default{
+      0%{
+         background-position-x:-100px;
+      }
+      100%{
+         background-position-x:100px;
+      }
+   }
+
    @keyframes gill-swim-default{
       0%{
          background-position-x:-100px;
       }
       100%{
          background-position-x:100px;
+      }
+   }
+
+   @-webkit-keyframes gill-swim-secondary{
+      0%{
+         background-position-x:-200px;
+      }
+      100%{
+         background-position-x:-900px;
       }
    }
 
@@ -77,47 +102,77 @@
 
    .gill-1 {
       left: 600px;
-      animation: gill-swim-default 2s steps(2) infinite;
+      -webkit-animation: gill-swim-default 2s steps(2) infinite;
+              animation: gill-swim-default 2s steps(2) infinite;
    }
 
    .gill-container-1 {
-      animation: gill-move-1 25s steps(100) infinite;
+      -webkit-animation: gill-move-1 25s steps(100) infinite;
+              animation: gill-move-1 25s steps(100) infinite;
+   }
+
+   @-webkit-keyframes gill-move-1{
+      to{
+         -webkit-transform: translateY(1200px) translateX(1300px);
+                 transform: translateY(1200px) translateX(1300px);
+      }
    }
 
    @keyframes gill-move-1{
       to{
-         transform: translateY(1200px) translateX(1300px);
+         -webkit-transform: translateY(1200px) translateX(1300px);
+                 transform: translateY(1200px) translateX(1300px);
       }
    }
 
    .gill-2 {
       left: 500px;
-      animation: gill-swim-default 2.2s steps(2) infinite;
+      -webkit-animation: gill-swim-default 2.2s steps(2) infinite;
+              animation: gill-swim-default 2.2s steps(2) infinite;
    }
 
    .gill-container-2 {
-      animation: gill-move-2 25s steps(100) 1s infinite;
+      -webkit-animation: gill-move-2 25s steps(100) 1s infinite;
+              animation: gill-move-2 25s steps(100) 1s infinite;
+   }
+
+   @-webkit-keyframes gill-move-2{
+      to{
+         -webkit-transform: translateY(1200px) translateX(1300px);
+                 transform: translateY(1200px) translateX(1300px);
+      }
    }
 
    @keyframes gill-move-2{
       to{
-         transform: translateY(1200px) translateX(1300px);
+         -webkit-transform: translateY(1200px) translateX(1300px);
+                 transform: translateY(1200px) translateX(1300px);
       }
    }
 
    .gill-3 {
       left: 400px;
-      animation: gill-swim-default 1.7s steps(2) infinite;
+      -webkit-animation: gill-swim-default 1.7s steps(2) infinite;
+              animation: gill-swim-default 1.7s steps(2) infinite;
       opacity: .58;
    }
 
    .gill-container-3 {
-      animation: gill-move-3 23s steps(100) 1.4s infinite;
+      -webkit-animation: gill-move-3 23s steps(100) 1.4s infinite;
+              animation: gill-move-3 23s steps(100) 1.4s infinite;
+   }
+
+   @-webkit-keyframes gill-move-3{
+      to{
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
+      }
    }
 
    @keyframes gill-move-3{
       to{
-         transform: translateY(1100px) translateX(1200px);
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
       }
    }
 
@@ -130,12 +185,30 @@
       background-repeat: no-repeat;
    }
 
+   @-webkit-keyframes bass-swim-1{
+      0%{
+         background-position-x:-160px;
+      }
+      100%{
+         background-position-x:160px;
+      }
+   }
+
    @keyframes bass-swim-1{
       0%{
          background-position-x:-160px;
       }
       100%{
          background-position-x:160px;
+      }
+   }
+
+   @-webkit-keyframes bass-swim-2{
+      0%{
+         background-position-x:-320px;
+      }
+      100%{
+         background-position-x:-1440px;
       }
    }
 
@@ -150,81 +223,131 @@
 
    .bass-1 {
       right: 300px;
-      animation: bass-swim-1 1s steps(2) infinite;
+      -webkit-animation: bass-swim-1 1s steps(2) infinite;
+              animation: bass-swim-1 1s steps(2) infinite;
       opacity: .65;
    }
 
    .bass-container-1 {
-      animation: bass-move-1 20s steps(100) infinite;
+      -webkit-animation: bass-move-1 20s steps(100) infinite;
+              animation: bass-move-1 20s steps(100) infinite;
+   }
+
+   @-webkit-keyframes bass-move-1{
+      to{
+         -webkit-transform: translateY(500px) translateX(500px);
+                 transform: translateY(500px) translateX(500px);
+      }
    }
 
    @keyframes bass-move-1{
       to{
-         transform: translateY(500px) translateX(500px);
+         -webkit-transform: translateY(500px) translateX(500px);
+                 transform: translateY(500px) translateX(500px);
       }
    }
 
    .bass-2 {
       right: 500px;
-      animation: bass-swim-2 1.25s steps(7) infinite;
+      -webkit-animation: bass-swim-2 1.25s steps(7) infinite;
+              animation: bass-swim-2 1.25s steps(7) infinite;
       /*opacity: .5;*/
    }
 
    .bass-container-2 {
-      animation: bass-move-2 13s steps(100) 5s infinite;
+      -webkit-animation: bass-move-2 13s steps(100) 5s infinite;
+              animation: bass-move-2 13s steps(100) 5s infinite;
+   }
+
+   @-webkit-keyframes bass-move-2{
+      to{
+         -webkit-transform: translateY(1700px) translateX(1700px);
+                 transform: translateY(1700px) translateX(1700px);
+      }
    }
 
    @keyframes bass-move-2{
       to{
-         transform: translateY(1700px) translateX(1700px);
+         -webkit-transform: translateY(1700px) translateX(1700px);
+                 transform: translateY(1700px) translateX(1700px);
       }
    }
 
    .gill-4 {
       right: 500px;
-      animation: gill-swim-secondary 1s steps(7) infinite;
+      -webkit-animation: gill-swim-secondary 1s steps(7) infinite;
+              animation: gill-swim-secondary 1s steps(7) infinite;
       /*opacity: .56;*/
    }
 
    .gill-container-4 {
-      animation: gill-move-4 14s steps(100) 1.4s 2;
+      -webkit-animation: gill-move-4 14s steps(100) 1.4s 2;
+              animation: gill-move-4 14s steps(100) 1.4s 2;
+   }
+
+   @-webkit-keyframes gill-move-4{
+      to{
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
+      }
    }
 
    @keyframes gill-move-4{
       to{
-         transform: translateY(1100px) translateX(1200px);
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
       }
    }
 
    .gill-5 {
       left: 550px;
-      animation: gill-swim-default 1.5s steps(2) infinite;
+      -webkit-animation: gill-swim-default 1.5s steps(2) infinite;
+              animation: gill-swim-default 1.5s steps(2) infinite;
       /*opacity: .45;*/
    }
 
    .gill-container-5 {
-      animation: gill-move-5 24s steps(100) 2.4s 2;
+      -webkit-animation: gill-move-5 24s steps(100) 2.4s 2;
+              animation: gill-move-5 24s steps(100) 2.4s 2;
+   }
+
+   @-webkit-keyframes gill-move-5{
+      to{
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
+      }
    }
 
    @keyframes gill-move-5{
       to{
-         transform: translateY(1100px) translateX(1200px);
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
       }
    }
 
    .gill-6 {
       left: 650px;
-      animation: gill-swim-default 1.7s steps(2) infinite;
+      -webkit-animation: gill-swim-default 1.7s steps(2) infinite;
+              animation: gill-swim-default 1.7s steps(2) infinite;
       opacity: .5;
    }
 
    .gill-container-6 {
-      animation: gill-move-6 26s steps(100) 1s 2;
+      -webkit-animation: gill-move-6 26s steps(100) 1s 2;
+              animation: gill-move-6 26s steps(100) 1s 2;
+   }
+
+   @-webkit-keyframes gill-move-6{
+      to{
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
+      }
    }
 
    @keyframes gill-move-6{
       to{
-         transform: translateY(1100px) translateX(1200px);
+         -webkit-transform: translateY(1100px) translateX(1200px);
+                 transform: translateY(1100px) translateX(1200px);
       }
    }
 
@@ -244,12 +367,21 @@
    }
 
    .turtle-container {
-      animation: turtle 120s infinite;
+      -webkit-animation: turtle 120s infinite;
+              animation: turtle 120s infinite;
+   }
+
+   @-webkit-keyframes turtle {
+      to{
+         -webkit-transform: translateY(1000px) translateX(1000px);
+                 transform: translateY(1000px) translateX(1000px);
+      }
    }
 
    @keyframes turtle {
       to{
-         transform: translateY(1000px) translateX(1000px);
+         -webkit-transform: translateY(1000px) translateX(1000px);
+                 transform: translateY(1000px) translateX(1000px);
       }
    }
 }
