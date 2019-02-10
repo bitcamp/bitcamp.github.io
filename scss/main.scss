@@ -187,15 +187,14 @@ article.hero {
     }
     // Get ready for this hardcoded fire gif beauty :')
     img.fire {
-      $fire-center-offset: 30px;
       position: absolute;
       width: 32rem;
-      bottom: 10rem;
       left: 50%;
       z-index: 12;
       transform: translateX(-15rem);
+      bottom: 14rem;
       @media (max-width: $lg-breakpoint) {
-        bottom: 15rem;
+        bottom: 13.5rem;
       }
     }
   }
