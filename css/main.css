@@ -699,6 +699,11 @@ body.fixed-nav.no-animation #nav {
   background-image: url("../img/parallax-backgrounds/treefort.png");
   background-position: right center;
 }
+@media (max-width: 767.98px) {
+  #treehouse {
+    background-position-x: 90%;
+  }
+}
 
 article.hero {
   background: url("../img/parallax-backgrounds/hero-with-fire.svg") no-repeat;
@@ -1398,12 +1403,19 @@ article.footer .img-bg {
 }
 article.footer .contact-card {
   pointer-events: all;
-  position: static;
+  position: relative;
+  right: 20%;
   z-index: 2;
-  min-width: 250px;
+  min-width: 350px;
   max-width: 350px;
   width: 30%;
   padding: 2rem;
+}
+@media (max-width: 767.98px) {
+  article.footer .contact-card {
+    left: 0;
+    min-width: 250px;
+  }
 }
 article.footer .contact-card .email {
   display: block;

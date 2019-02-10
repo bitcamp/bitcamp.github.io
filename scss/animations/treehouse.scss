@@ -1,4 +1,9 @@
+@import '../vars';
+
 #treehouse {
     background-image: url('../img/parallax-backgrounds/treefort.png');
     background-position: right center;
+    @media (max-width: $md-breakpoint) {
+        background-position-x: 90%;
+    }
 }
