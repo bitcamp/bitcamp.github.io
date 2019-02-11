@@ -159,18 +159,27 @@ article.hero {
     -webkit-transform: translateY(3rem);
             transform: translateY(3rem);
   }
-  .fire-container {
+  .fire-container,.logs-container {
     display: inline-block; /* needed for scaling */
     position: absolute;
-    left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 1.5rem;
-
+  }
+  .fire-container {
+    bottom: 6.5vh;
+    left: 49.9%;
     img.fire {
       height: 17.5vh;
     }
   }
+  .logs-container {
+    bottom: 1.5rem;
+    left: 50%;
+    img.logs {
+      height: 6vh;
+    }
+  }
+
   .content {
     position: relative;
     text-align: center;

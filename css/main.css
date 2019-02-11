@@ -1034,16 +1034,22 @@ article.hero {
   article.hero #registration {
     -webkit-transform: translateY(3rem);
     transform: translateY(3rem); }
-  article.hero .fire-container {
+  article.hero .fire-container, article.hero .logs-container {
     display: inline-block;
     /* needed for scaling */
     position: absolute;
-    left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    bottom: 1.5rem; }
+    transform: translateX(-50%); }
+  article.hero .fire-container {
+    bottom: 6.5vh;
+    left: 49.9%; }
     article.hero .fire-container img.fire {
       height: 17.5vh; }
+  article.hero .logs-container {
+    bottom: 1.5rem;
+    left: 50%; }
+    article.hero .logs-container img.logs {
+      height: 6vh; }
   article.hero .content {
     position: relative;
     text-align: center;
