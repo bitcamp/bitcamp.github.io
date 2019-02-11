@@ -148,10 +148,10 @@ article.page-body {
 article.hero {
   // padding: 5rem 1.5rem 25rem;
   //margin-bottom: -.2rem; // gap glitch fix
-  background-color: $hero-sky-color;
+  //background-color: $hero-sky-color;
   position: relative;
   //height: 600px;
-  height: calc(100vh - #{$nav-height});
+  height: calc(100vh - #{$nav-height} + 20vh);
   @media (max-width: $lg-breakpoint) {
     height: calc(100vh - #{$reduced-nav-height});
   }
@@ -341,6 +341,12 @@ article.tracks {
     //margin-top: 4rem;
     img.icon {
       width: 7rem;
+    }
+    h2 {
+      margin-bottom: 3rem;
+      @media (max-width: $md-breakpoint) {
+        margin-bottom: 4rem;
+      }
     }
   }
   &#events {

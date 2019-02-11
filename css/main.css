@@ -813,7 +813,7 @@ h1, h2, h3, h4, h5, h6, p {
       background-position-x: 90%; } }
 
 article.hero {
-  background: url("../img/parallax-backgrounds/hero-with-fire.svg") no-repeat;
+  background: url("../img/parallax-backgrounds/herolong-no-logs.svg") no-repeat;
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden; }
@@ -1017,9 +1017,8 @@ article.page-body {
   position: relative; }
 
 article.hero {
-  background-color: #ccf2ff;
   position: relative;
-  height: calc(100vh - 80px); }
+  height: calc(100vh - 80px + 20vh); }
   @media (max-width: 991.98px) {
     article.hero {
       height: calc(100vh - 65px); } }
@@ -1172,6 +1171,12 @@ article.tracks.img-bg-section.design h3 {
 
 article.tracks#compass-challenge .container img.icon {
   width: 7rem; }
+
+article.tracks#compass-challenge .container h2 {
+  margin-bottom: 3rem; }
+  @media (max-width: 767.98px) {
+    article.tracks#compass-challenge .container h2 {
+      margin-bottom: 4rem; } }
 
 article.tracks#events .top.row {
   margin-bottom: 3rem; }

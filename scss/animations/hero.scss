@@ -1,5 +1,5 @@
 article.hero {
-  background: url('../img/parallax-backgrounds/hero-with-fire.svg') no-repeat;
+  background: url('../img/parallax-backgrounds/herolong-no-logs.svg') no-repeat;
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden;
@@ -86,9 +86,9 @@ article.hero {
     0% { opacity: 0; }
     5% { opacity: 1; }
     95% { opacity: 1; }
-    100% { 
+    100% {
       opacity: 0;
-      left: 90%; 
+      left: 90%;
     }
   }
 
@@ -96,9 +96,9 @@ article.hero {
     0% { opacity: 0; }
     5% { opacity: 1; }
     95% { opacity: 1; }
-    100% { 
+    100% {
       opacity: 0;
-      left: 90%; 
+      left: 90%;
     }
   }
 }
