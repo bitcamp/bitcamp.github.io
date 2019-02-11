@@ -1034,6 +1034,16 @@ article.hero {
   article.hero #registration {
     -webkit-transform: translateY(3rem);
     transform: translateY(3rem); }
+  article.hero .fire-container {
+    display: inline-block;
+    /* needed for scaling */
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 1.5rem; }
+    article.hero .fire-container img.fire {
+      height: 17.5vh; }
   article.hero .content {
     position: relative;
     text-align: center;

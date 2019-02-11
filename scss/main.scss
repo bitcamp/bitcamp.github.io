@@ -159,6 +159,18 @@ article.hero {
     -webkit-transform: translateY(3rem);
             transform: translateY(3rem);
   }
+  .fire-container {
+    display: inline-block; /* needed for scaling */
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 1.5rem;
+
+    img.fire {
+      height: 17.5vh;
+    }
+  }
   .content {
     position: relative;
     text-align: center;
