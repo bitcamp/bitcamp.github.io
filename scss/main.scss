@@ -229,6 +229,7 @@ article.hero {
   }
   p {
     text-align: left;
+    white-space: normal;
     @media (max-width: $md-breakpoint) {
       //text-align: justify;
     }

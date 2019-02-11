@@ -1086,7 +1086,8 @@ article.hero {
     font-size: 1.8rem;
     color: #FFAF3F; }
   .page-section p, article.intro p, article.tracks p, article.schedule p, article.faq p, article.sponsors p, article.footer p {
-    text-align: left; }
+    text-align: left;
+    white-space: normal; }
   .page-section .section-title, article.intro .section-title, article.tracks .section-title, article.schedule .section-title, article.faq .section-title, article.sponsors .section-title, article.footer .section-title {
     position: relative;
     padding-bottom: 2rem;
