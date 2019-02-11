@@ -284,7 +284,7 @@ article.intro {
     margin: 3rem auto;
     font-size: 2.1rem;
     @media (max-width: $md-breakpoint) {
-      text-align: justify;
+      //text-align: justify;
       font-size: 1.8rem;
     }
   }
@@ -313,7 +313,7 @@ article.tracks {
     @media (max-width: $md-breakpoint) {
       text-align: center;
       p {
-        text-align: justify;
+        //text-align: justify;
       }
     }
     .icon {
