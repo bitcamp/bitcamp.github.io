@@ -229,7 +229,7 @@ article.hero {
   }
   p {
     @media (max-width: $md-breakpoint) {
-      text-align: justify;
+      //text-align: justify;
     }
   }
   .section-title {
@@ -512,7 +512,6 @@ article.faq {
     margin-top: 2rem;
     display: none;
     color: black;
-    white-space: normal;
   }
   .faq-card {
     margin-top: 4rem;
