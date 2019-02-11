@@ -1305,7 +1305,8 @@ article.faq h5 {
 article.faq p {
   margin-top: 2rem;
   display: none;
-  color: black; }
+  color: black;
+  white-space: normal; }
 
 article.faq .faq-card {
   margin-top: 4rem;
