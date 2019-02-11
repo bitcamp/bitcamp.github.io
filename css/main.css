@@ -831,7 +831,7 @@ article.hero {
       position: absolute;
       display: block;
       color: black;
-      left: 50%;
+      left: 50.5%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%); }
       article.hero .sign-container .sign-link:hover {
