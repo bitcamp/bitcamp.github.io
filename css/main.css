@@ -1085,9 +1085,8 @@ article.hero {
   .page-section h5, article.intro h5, article.tracks h5, article.schedule h5, article.faq h5, article.sponsors h5, article.footer h5 {
     font-size: 1.8rem;
     color: #FFAF3F; }
-  @media (max-width: 767.98px) {
-    .page-section p, article.intro p, article.tracks p, article.schedule p, article.faq p, article.sponsors p, article.footer p {
-      text-align: justify; } }
+  .page-section p, article.intro p, article.tracks p, article.schedule p, article.faq p, article.sponsors p, article.footer p {
+    text-align: left; }
   .page-section .section-title, article.intro .section-title, article.tracks .section-title, article.schedule .section-title, article.faq .section-title, article.sponsors .section-title, article.footer .section-title {
     position: relative;
     padding-bottom: 2rem;
@@ -1132,7 +1131,6 @@ article.intro {
     font-size: 2.1rem; }
     @media (max-width: 767.98px) {
       article.intro p {
-        text-align: justify;
         font-size: 1.8rem; } }
   article.intro .vid-container {
     position: relative;
@@ -1152,9 +1150,7 @@ article.tracks .section-title {
 
 @media (max-width: 767.98px) {
   article.tracks .col-content {
-    text-align: center; }
-    article.tracks .col-content p {
-      text-align: justify; } }
+    text-align: center; } }
 
 article.tracks .col-content .icon {
   margin-bottom: 0.5rem; }
@@ -1305,8 +1301,7 @@ article.faq h5 {
 article.faq p {
   margin-top: 2rem;
   display: none;
-  color: black;
-  white-space: normal; }
+  color: black; }
 
 article.faq .faq-card {
   margin-top: 4rem;

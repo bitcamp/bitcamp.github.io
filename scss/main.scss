@@ -228,6 +228,7 @@ article.hero {
     color: $bp-yellow-orange;
   }
   p {
+    text-align: left;
     @media (max-width: $md-breakpoint) {
       //text-align: justify;
     }
