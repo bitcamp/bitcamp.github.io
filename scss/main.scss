@@ -91,7 +91,7 @@ a.bp-btn {
 }
 
 div.opaque-card {
-  background-color: rgba(239, 239, 239, 0.775);
+  background-color: rgba(239, 239, 239, 0.9);
   border-radius: 1.75rem;
   margin: 2rem 3rem 0rem;
   padding: 2rem 3.25rem;
@@ -658,7 +658,7 @@ article.footer {
       .icon {
         height: 3.5rem;
         width: auto;
-        opacity: 0.5;
+        //opacity: 0.5;
         image-rendering: crisp-edges;
         image-rendering: -moz-crisp-edges;
         @media (max-width: $lg-breakpoint) {
