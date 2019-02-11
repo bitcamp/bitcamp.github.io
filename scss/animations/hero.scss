@@ -1,5 +1,5 @@
 article.hero {
-  background: url('../img/parallax-backgrounds/herolong-no-logs.svg') no-repeat;
+  background: url('../img/parallax-backgrounds/herolong-no-logs-moresky.png') no-repeat;
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden;
@@ -67,19 +67,28 @@ article.hero {
   }
 
   .lrg {
-    height: 22%;
+    height: 18%;
     top: 5%;
     left: -5%;
+    @media (max-width: $sm-breakpoint) {
+      height: 15%;
+    }
   }
   .sml {
     height: 8%;
     top: 30%;
     left: 30%;
+    @media (max-width: $sm-breakpoint) {
+      height: 5%;
+    }
   }
   .med {
     height: 15%;
     top: 40%;
     left: 10%;
+    @media (max-width: $sm-breakpoint) {
+      height: 10%;
+    }
   }
 
   @-webkit-keyframes cloudDrift {

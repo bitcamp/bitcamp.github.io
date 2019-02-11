@@ -151,7 +151,7 @@ article.hero {
   //background-color: $hero-sky-color;
   position: relative;
   //height: 600px;
-  height: calc(100vh - #{$nav-height} + 20vh);
+  height: calc(100vh - #{$nav-height});
   @media (max-width: $lg-breakpoint) {
     height: calc(100vh - #{$reduced-nav-height});
   }
@@ -175,6 +175,7 @@ article.hero {
     h1 {
       color: $logo-color;
       font-size: 11.75rem;
+      margin-top: calc(15vh - #{$nav-height});
       @media (max-width: $md-breakpoint) {
         font-size: 10rem;
       }

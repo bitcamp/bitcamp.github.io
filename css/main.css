@@ -813,7 +813,7 @@ h1, h2, h3, h4, h5, h6, p {
       background-position-x: 90%; } }
 
 article.hero {
-  background: url("../img/parallax-backgrounds/herolong-no-logs.svg") no-repeat;
+  background: url("../img/parallax-backgrounds/herolong-no-logs-moresky.png") no-repeat;
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden; }
@@ -866,17 +866,26 @@ article.hero {
     -webkit-animation-duration: 35s;
     animation-duration: 35s; }
   #clouds .lrg {
-    height: 22%;
+    height: 18%;
     top: 5%;
     left: -5%; }
+    @media (max-width: 575.98px) {
+      #clouds .lrg {
+        height: 15%; } }
   #clouds .sml {
     height: 8%;
     top: 30%;
     left: 30%; }
+    @media (max-width: 575.98px) {
+      #clouds .sml {
+        height: 5%; } }
   #clouds .med {
     height: 15%;
     top: 40%;
     left: 10%; }
+    @media (max-width: 575.98px) {
+      #clouds .med {
+        height: 10%; } }
 
 @-webkit-keyframes cloudDrift {
   0% {
@@ -1018,7 +1027,7 @@ article.page-body {
 
 article.hero {
   position: relative;
-  height: calc(100vh - 80px + 20vh); }
+  height: calc(100vh - 80px); }
   @media (max-width: 991.98px) {
     article.hero {
       height: calc(100vh - 65px); } }
@@ -1040,7 +1049,8 @@ article.hero {
         top: 0; } }
     article.hero .content h1 {
       color: #fa7041;
-      font-size: 11.75rem; }
+      font-size: 11.75rem;
+      margin-top: calc(15vh - 80px); }
       @media (max-width: 767.98px) {
         article.hero .content h1 {
           font-size: 10rem; } }
