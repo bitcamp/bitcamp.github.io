@@ -658,6 +658,12 @@ h1, h2, h3, h4, h5, h6, p {
   width: 1920px;
   background-repeat: no-repeat;
   background-size: 1920px;
+  background-position: right;
+}
+@media (max-width: 575.98px) {
+  #lake .waves, #lake .rocks, #lake .shore {
+    right: 0;
+  }
 }
 #lake div {
   position: static;

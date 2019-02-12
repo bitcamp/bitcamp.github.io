@@ -1,3 +1,4 @@
+@import '../vars';
 #lake {
    %fill-bg {
       position: absolute;
@@ -5,6 +6,10 @@
       width: 1920px;
       background-repeat: no-repeat;
       background-size: 1920px;
+      background-position: right;
+      @media (max-width: $sm-breakpoint) {
+         right: 0;
+      }
    }
 
    //width: 1920px;
