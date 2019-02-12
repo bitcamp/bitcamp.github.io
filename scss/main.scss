@@ -687,8 +687,11 @@ article.footer {
         height: 3.5rem;
         width: auto;
         //opacity: 0.5;
-        image-rendering: crisp-edges;
-        image-rendering: -moz-crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-pixelated;
+            image-rendering: pixelated;
         @media (max-width: $md-breakpoint) {
           height: 3rem;
         }
