@@ -634,6 +634,7 @@ article.sponsors {
 
 article.footer {
   @extend .page-section;
+  $rope-color: #FFAF3F;
   color: black;
   position: relative;
   display: -webkit-box;
@@ -647,6 +648,16 @@ article.footer {
           align-items: center;
   .img-bg {
     z-index: 1;
+  }
+  a,
+  .icon {
+    color: $rope-color;
+    -webkit-transition: ease all .2s;
+    transition: ease all .2s;
+    &:hover {
+      filter: none;
+      color: lighten($rope-color, 15%);
+    }
   }
   .contact-card {
     pointer-events: all;
@@ -677,23 +688,18 @@ article.footer {
   }
   .social-icons {
     a {
-      -webkit-transition: ease all .2s;
-      transition: ease all .2s;
       margin-left: 1rem;
+      color: white;
       &:first-child {
         margin-left: 0;
       }
       .icon {
-        height: 3.5rem;
-        width: auto;
-        //opacity: 0.5;
-        -ms-interpolation-mode: nearest-neighbor;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: -o-pixelated;
-            image-rendering: pixelated;
+        display: inline-block;
+        background-position: center;
+        font-size: 4rem;
+        vertical-align: middle;
         @media (max-width: $md-breakpoint) {
-          height: 3rem;
+          font-size: 3.5rem;
         }
       }
     }

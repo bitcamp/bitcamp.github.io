@@ -1782,6 +1782,17 @@ article.footer {
 article.footer .img-bg {
   z-index: 1;
 }
+article.footer a,
+article.footer .icon {
+  color: #FFAF3F;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+article.footer a:hover,
+article.footer .icon:hover {
+  filter: none;
+  color: #ffcf8c;
+}
 article.footer .contact-card {
   pointer-events: all;
   position: relative;
@@ -1814,25 +1825,21 @@ article.footer p {
   }
 }
 article.footer .social-icons a {
-  -webkit-transition: ease all 0.2s;
-  transition: ease all 0.2s;
   margin-left: 1rem;
+  color: white;
 }
 article.footer .social-icons a:first-child {
   margin-left: 0;
 }
 article.footer .social-icons a .icon {
-  height: 3.5rem;
-  width: auto;
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-pixelated;
-  image-rendering: pixelated;
+  display: inline-block;
+  background-position: center;
+  font-size: 4rem;
+  vertical-align: middle;
 }
 @media (max-width: 767.98px) {
   article.footer .social-icons a .icon {
-    height: 3rem;
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 767.98px) {
