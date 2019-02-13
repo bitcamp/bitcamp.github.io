@@ -162,21 +162,22 @@ article.hero {
   .fire-container,.logs-container {
     display: inline-block; /* needed for scaling */
     position: absolute;
+
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   .fire-container {
-    bottom: 6.5vh;
+    bottom: 10vh;
     left: 49.9%;
     img.fire {
-      height: 17.5vh;
+      height: 20vh;
     }
   }
   .logs-container {
-    bottom: 1.5rem;
+    bottom: 5vh;
     left: 50%;
     img.logs {
-      height: 6vh;
+      height: 7vh;
     }
   }
 
