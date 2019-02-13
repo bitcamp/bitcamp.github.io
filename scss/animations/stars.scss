@@ -185,6 +185,10 @@
         background-size: 35vw 5vw;
         -webkit-animation: shoot1 8s steps(7) infinite;
                 animation: shoot1 8s steps(7) infinite;
+         @media (max-width: $sm-breakpoint) {
+            -webkit-animation-name: shoot1-mobile;
+                    animation-name: shoot1-mobile;
+         }
 
         @-webkit-keyframes shoot1{
             0%{
@@ -233,6 +237,52 @@
                opacity: 0;
             }
         }
+        @-webkit-keyframes shoot1-mobile{
+            0%{
+               background-position-x:0px;
+               -webkit-transform: translateY(5vh) translateX(5vw);
+                     transform: translateY(5vh) translateX(5vw);
+               opacity: 0;
+            }
+            2% {
+               opacity: 1;
+            }
+            4% {
+               opacity: 1;
+            }
+            7%{
+               background-position-x:-35vw;
+               -webkit-transform: translateY(13vh) translateX(-6vw);
+                     transform: translateY(13vh) translateX(-6vw);
+               opacity: 0;
+            }
+            7.001%,100%{
+               opacity: 0;
+            }
+         }
+        @keyframes shoot1-mobile{
+            0%{
+               background-position-x:0px;
+               -webkit-transform: translateY(5vh) translateX(5vw);
+                     transform: translateY(5vh) translateX(5vw);
+               opacity: 0;
+            }
+            2% {
+               opacity: 1;
+            }
+            4% {
+               opacity: 1;
+            }
+            7%{
+               background-position-x:-35vw;
+               -webkit-transform: translateY(13vh) translateX(-6vw);
+                     transform: translateY(13vh) translateX(-6vw);
+               opacity: 0;
+            }
+            7.001%,100%{
+               opacity: 0;
+            }
+         }
      }
      
      .shooting-2 {
