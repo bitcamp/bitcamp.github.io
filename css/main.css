@@ -1100,6 +1100,7 @@ article.hero .sign-container .sign-link {
   display: block;
   color: black;
   left: 50.5%;
+  padding: 1.4rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -1107,15 +1108,15 @@ article.hero .sign-container .sign-link:hover {
   color: #FF6F3F;
 }
 article.hero .sign-container .hack {
-  top: 16%;
+  top: 11%;
   -webkit-transform: translateX(-50%) rotate(15deg);
   transform: translateX(-50%) rotate(15deg);
 }
 article.hero .sign-container .mentor {
-  top: 47%;
+  top: 41%;
 }
 article.hero .sign-container .volunteer {
-  top: 73%;
+  top: 67%;
 }
 
 #clouds {

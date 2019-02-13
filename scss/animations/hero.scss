@@ -20,6 +20,7 @@ article.hero {
       display: block;
       color: black;
       left: 50.5%;
+      padding: 1.4rem;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       &:hover {
@@ -27,15 +28,15 @@ article.hero {
       }
     }
     .hack {
-      top: 16%;
+      top: 11%;
       -webkit-transform: translateX(-50%) rotate(15deg);
               transform: translateX(-50%) rotate(15deg);
     }
     .mentor {
-      top: 47%;
+      top: 41%;
     }
     .volunteer {
-      top: 73%;
+      top: 67%;
     }
   }
 }
