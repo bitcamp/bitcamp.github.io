@@ -1,11 +1,7 @@
-@import '../vars';
+@import '_bg-img-mixins';
 #lake {
-   %fill-bg {
-      position: absolute;
-      height: 1080px;
-      width: 1920px;
-      background-repeat: no-repeat;
-      background-size: 1920px;
+   %fill-lake-bg {
+      @include fill-bg(1920px, 1080px);
       background-position: right;
       @media (max-width: $sm-breakpoint) {
          right: 0;
@@ -25,17 +21,17 @@
    }
 
    .shore {
-      @extend %fill-bg;
+      @extend %fill-lake-bg;
       background-image: url('../img/parallax-backgrounds/lake-components/shore.svg');
    }
 
    .rocks {
-      @extend %fill-bg;
+      @extend %fill-lake-bg;
       background-image: url('../img/parallax-backgrounds/lake-components/rocks.png');
    }
 
    .waves {
-      @extend %fill-bg;
+      @extend %fill-lake-bg;
       background-image: url('../img/parallax-backgrounds/lake-components/waves.png');
       -webkit-animation: waves 1.1s steps(2) infinite;
               animation: waves 1.1s steps(2) infinite;

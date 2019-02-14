@@ -1,10 +1,6 @@
+@import '_bg-img-mixins';
 #stars {
    background-image : url('../img/parallax-backgrounds/stars/sky.png');
-
-    @mixin setSize($sideLength) {
-        height: $sideLength;
-        width: $sideLength;
-    }
 
     .star, .shooting-star {
         background-repeat: no-repeat;

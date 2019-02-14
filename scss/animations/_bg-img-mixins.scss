@@ -1,0 +1,14 @@
+@import '../vars';
+
+@mixin fill-bg($width, $height) {
+    position: absolute;
+    height: $height;
+    width: $width;
+    background-repeat: no-repeat;
+    background-size: $width;
+}
+
+@mixin setSize($sideLength) {
+    height: $sideLength;
+    width: $sideLength; 
+}

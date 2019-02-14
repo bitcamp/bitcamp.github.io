@@ -1,9 +1,140 @@
-@import '../vars';
+@import '_bg-img-mixins.scss';
 
 #treehouse {
-    background-image: url('../img/parallax-backgrounds/treefort.png');
-    background-position: right center;
-    @media (max-width: $md-breakpoint) {
-        background-position-x: 90%;
+    $width: 1920px * 0.8;
+    $height: 1080px * 0.8;
+    $fort-mobile-offset: 160px;
+
+    %fill-treehouse-bg {
+        @include fill-bg($width, $height);
+        background-position: right;
+        right: 0;
+        @media (max-width: $sm-breakpoint) {
+            right: -$width / 7.68;
+        }
     }
+
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges; 
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;   
+    overflow: hidden;
+    background-color: #cbf2ff;
+     
+     .background {
+        @extend %fill-treehouse-bg;
+        background-image: url('../img/parallax-backgrounds/treefort/background.svg');
+     }
+     
+     .treefort {
+        $right: 165px;
+        background: url('../img/parallax-backgrounds/treefort/treefort1.svg') no-repeat;
+        @include setSize($height / 2.5);
+        top: 155px;
+        right: $right;
+        @media (max-width: $sm-breakpoint) {
+            right: $right - $fort-mobile-offset;
+        }
+     }
+     
+     .rope-1 {
+        $right: 165px;
+        background: url('../img/parallax-backgrounds/treefort/rope1.svg') no-repeat;
+        height: 60px;
+        width: 60px;
+        top: 145px;
+        right: $right;
+        @media (max-width: $sm-breakpoint) {
+            right: $right - $fort-mobile-offset;
+        }
+     }
+     
+     .rope-2 {
+        $right: 175px;
+        background: url('../img/parallax-backgrounds/treefort/rope2.svg') no-repeat;
+        height: 875px;
+        width: 80px;
+        top: 190px;
+        right: $right;
+        animation-duration: 1s;
+        transform-origin: 100px 0px;
+        animation: rope 10s infinite;
+        @media (max-width: $sm-breakpoint) {
+            right: $right - $fort-mobile-offset;
+        }
+     }
+     
+     @keyframes rope {
+         0%,9% {
+             transform: rotate(0deg);
+         }
+         17% {
+             transform: rotate(1.1deg);
+         }
+         31% {
+             transform: rotate(-2deg);
+         }
+         46% {
+             transform: rotate(1.1deg);
+         }
+         67% {
+             transform: rotate(-1.2deg);
+         }
+         75% {
+             transform: rotate(.5deg);
+         }
+         85% {
+             transform: rotate(-1.5deg);
+         }
+     }
+     
+     
+     .foreground {
+        @extend %fill-treehouse-bg;
+        background-image: url('../img/parallax-backgrounds/treefort/foreground.png');
+     }
+     
+     .tree {
+        @extend %fill-treehouse-bg;
+        background-image: url('../img/parallax-backgrounds/treefort/tree1.png');
+        animation: tree 5s steps(8) infinite;
+    
+        @keyframes tree{
+            0%,15%{background-position-y:0px;}
+            85%{background-position-y:-8 * $height;}
+            85.001%,100%{background-position-y:0px;}
+        }
+     }
+     
+     .grass {
+        @extend %fill-treehouse-bg;
+        background-image: url('../img/parallax-backgrounds/treefort/grass1.png');
+        animation: grass1 steps(14) 10s  infinite;
+        
+        @keyframes grass1{
+            0%{background-position-y:0px;}
+            85%{background-position-y:-14 * $height;}
+            85.001%,100%{background-position-y:0px;}
+        }
+     }
+     
+     .deer {
+        background: url('../img/parallax-backgrounds/treefort/deer.png') no-repeat;
+        background-size: 3000px 300px;
+        background-position: cover center;
+        @include setSize(300px);
+        overflow: hidden;
+        right: $width / 3;
+        top: $height / 3.75;
+        animation: deer 13s steps(10) 5s infinite;
+     }
+     
+     @keyframes deer{
+        0%{background-position-x:0px;}
+        60%{background-position-x:-3000px;}
+        60.001%{background-position-x:0px;}
+     }     
 }

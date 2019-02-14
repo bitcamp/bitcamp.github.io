@@ -1066,12 +1066,148 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #treehouse {
-  background-image: url("../img/parallax-backgrounds/treefort.png");
-  background-position: right center;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  overflow: hidden;
+  background-color: #cbf2ff;
 }
-@media (max-width: 767.98px) {
-  #treehouse {
-    background-position-x: 90%;
+#treehouse .grass, #treehouse .tree, #treehouse .foreground, #treehouse .background {
+  position: absolute;
+  height: 864px;
+  width: 1536px;
+  background-repeat: no-repeat;
+  background-size: 1536px;
+  background-position: right;
+  right: 0;
+}
+@media (max-width: 575.98px) {
+  #treehouse .grass, #treehouse .tree, #treehouse .foreground, #treehouse .background {
+    right: -200px;
+  }
+}
+#treehouse .background {
+  background-image: url("../img/parallax-backgrounds/treefort/background.svg");
+}
+#treehouse .treefort {
+  background: url("../img/parallax-backgrounds/treefort/treefort1.svg") no-repeat;
+  height: 345.6px;
+  width: 345.6px;
+  top: 155px;
+  right: 165px;
+}
+@media (max-width: 575.98px) {
+  #treehouse .treefort {
+    right: 5px;
+  }
+}
+#treehouse .rope-1 {
+  background: url("../img/parallax-backgrounds/treefort/rope1.svg") no-repeat;
+  height: 60px;
+  width: 60px;
+  top: 145px;
+  right: 165px;
+}
+@media (max-width: 575.98px) {
+  #treehouse .rope-1 {
+    right: 5px;
+  }
+}
+#treehouse .rope-2 {
+  background: url("../img/parallax-backgrounds/treefort/rope2.svg") no-repeat;
+  height: 875px;
+  width: 80px;
+  top: 190px;
+  right: 175px;
+  animation-duration: 1s;
+  transform-origin: 100px 0px;
+  animation: rope 10s infinite;
+}
+@media (max-width: 575.98px) {
+  #treehouse .rope-2 {
+    right: 15px;
+  }
+}
+@keyframes rope {
+  0%, 9% {
+    transform: rotate(0deg);
+  }
+  17% {
+    transform: rotate(1.1deg);
+  }
+  31% {
+    transform: rotate(-2deg);
+  }
+  46% {
+    transform: rotate(1.1deg);
+  }
+  67% {
+    transform: rotate(-1.2deg);
+  }
+  75% {
+    transform: rotate(0.5deg);
+  }
+  85% {
+    transform: rotate(-1.5deg);
+  }
+}
+#treehouse .foreground {
+  background-image: url("../img/parallax-backgrounds/treefort/foreground.png");
+}
+#treehouse .tree {
+  background-image: url("../img/parallax-backgrounds/treefort/tree1.png");
+  animation: tree 5s steps(8) infinite;
+}
+@keyframes tree {
+  0%, 15% {
+    background-position-y: 0px;
+  }
+  85% {
+    background-position-y: -6912px;
+  }
+  85.001%, 100% {
+    background-position-y: 0px;
+  }
+}
+#treehouse .grass {
+  background-image: url("../img/parallax-backgrounds/treefort/grass1.png");
+  animation: grass1 steps(14) 10s infinite;
+}
+@keyframes grass1 {
+  0% {
+    background-position-y: 0px;
+  }
+  85% {
+    background-position-y: -12096px;
+  }
+  85.001%, 100% {
+    background-position-y: 0px;
+  }
+}
+#treehouse .deer {
+  background: url("../img/parallax-backgrounds/treefort/deer.png") no-repeat;
+  background-size: 3000px 300px;
+  background-position: cover center;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  right: 512px;
+  top: 230.4px;
+  animation: deer 13s steps(10) 5s infinite;
+}
+@keyframes deer {
+  0% {
+    background-position-x: 0px;
+  }
+  60% {
+    background-position-x: -3000px;
+  }
+  60.001% {
+    background-position-x: 0px;
   }
 }
 
@@ -1887,7 +2023,7 @@ article.footer .social-icons a .icon {
 }
 @media (max-width: 767.98px) {
   article.footer .social-icons a .icon {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 @media (max-width: 767.98px) {
