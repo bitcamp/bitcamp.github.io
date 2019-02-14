@@ -1832,9 +1832,6 @@ article.footer {
   -ms-flex-align: center;
   align-items: center;
 }
-article.footer h2 {
-  color: #FFAF3F;
-}
 article.footer .img-bg {
   z-index: 1;
 }
