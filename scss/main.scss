@@ -646,8 +646,8 @@ article.footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  a:hover {
-    filter: brightness(125%);
+  h2 {
+    color: $bp-yellow-orange;
   }
   .img-bg {
     z-index: 1;
@@ -666,7 +666,6 @@ article.footer {
       min-width: 250px;
     }
     .email {
-      color: #ffaf40;
       display: block;
       font-family: $serif-stack;
       font-size: 150%;
@@ -689,11 +688,11 @@ article.footer {
         margin-left: 0;
       }
       .icon {
-        height: 3.5rem;
+        font-size: 3.5rem;
         width: auto;
         //opacity: 0.5;
         @media (max-width: $md-breakpoint) {
-          height: 3rem;
+          font-size: 3.5rem;
         }
       }
     }

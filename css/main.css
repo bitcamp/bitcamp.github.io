@@ -1832,8 +1832,8 @@ article.footer {
   -ms-flex-align: center;
   align-items: center;
 }
-article.footer a:hover {
-  filter: brightness(125%);
+article.footer h2 {
+  color: #FFAF3F;
 }
 article.footer .img-bg {
   z-index: 1;
@@ -1855,7 +1855,6 @@ article.footer .contact-card {
   }
 }
 article.footer .contact-card .email {
-  color: #ffaf40;
   display: block;
   font-family: Aleo, Times, serif;
   font-size: 150%;
@@ -1879,12 +1878,12 @@ article.footer .social-icons a:first-child {
   margin-left: 0;
 }
 article.footer .social-icons a .icon {
-  height: 3.5rem;
+  font-size: 3.5rem;
   width: auto;
 }
 @media (max-width: 767.98px) {
   article.footer .social-icons a .icon {
-    height: 3rem;
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 767.98px) {
