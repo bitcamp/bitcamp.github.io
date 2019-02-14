@@ -1832,6 +1832,13 @@ article.footer {
   -ms-flex-align: center;
   align-items: center;
 }
+article.footer a {
+  opacity: 0.6;
+}
+article.footer a:hover {
+  filter: none;
+  opacity: 1;
+}
 article.footer .img-bg {
   z-index: 1;
 }

@@ -646,6 +646,13 @@ article.footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  a {
+    opacity: 0.6;
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
   .img-bg {
     z-index: 1;
   }
