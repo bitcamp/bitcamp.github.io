@@ -167,10 +167,12 @@ article.hero {
     transform: translateX(-50%);
   }
   .fire-container {
-    bottom: 10vh;
-    left: 49.9%;
+    bottom: 10.5vh;
+    left: 50%;
     img.fire {
-      height: 20vh;
+      height: 24vh;
+      -webkit-transform: translateX(-0.3rem);
+      transform: translateX(-0.3rem);
     }
   }
   .logs-container {
