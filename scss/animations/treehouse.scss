@@ -33,7 +33,7 @@
         $right: 165px;
         background: url('../img/parallax-backgrounds/treefort/treefort1.svg') no-repeat;
         @include setSize($height / 2.5);
-        top: 155px;
+        top: 55px;
         right: $right;
         @media (max-width: $sm-breakpoint) {
             right: $right - $fort-mobile-offset;
@@ -45,7 +45,7 @@
         background: url('../img/parallax-backgrounds/treefort/rope1.svg') no-repeat;
         height: 60px;
         width: 60px;
-        top: 145px;
+        top: 45px;
         right: $right;
         @media (max-width: $sm-breakpoint) {
             right: $right - $fort-mobile-offset;
@@ -57,7 +57,7 @@
         background: url('../img/parallax-backgrounds/treefort/rope2.svg') no-repeat;
         height: 875px;
         width: 80px;
-        top: 190px;
+        top: 90px;
         right: $right;
         animation-duration: 1s;
         transform-origin: 100px 0px;
@@ -101,6 +101,7 @@
         @extend %fill-treehouse-bg;
         background-image: url('../img/parallax-backgrounds/treefort/tree1.png');
         animation: tree 5s steps(8) infinite;
+        bottom: 0;
     
         @keyframes tree{
             0%,15%{background-position-y:0px;}
