@@ -3,33 +3,6 @@
 @import 'nav';
 @import 'animations';
 
-article.img-bg-section {
-  background-color: transparent !important;
-  color: white;
-  min-height: 100vh;
-  .img-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -3;
-    &>div,
-    &>img {
-      position: absolute;
-      display: block;
-      z-index: -2;
-    }
-  }
-  .container {
-    background-color: transparent;
-    z-index: 1;
-  }
-}
-
 a {
   color: $bp-bitcamp-orange;
   &:hover {
@@ -301,6 +274,33 @@ article.hero {
   }
 }
 
+article.img-bg-section {
+  background-color: transparent !important;
+  color: white;
+  padding: 20rem 0rem;
+  .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+    &>div,
+    &>img {
+      position: absolute;
+      display: block;
+      z-index: -2;
+    }
+  }
+  .container {
+    background-color: transparent;
+    z-index: 1;
+  }
+}
+
 article.intro {
   @extend .page-section;
   text-align: center;
@@ -409,6 +409,7 @@ article.tracks {
 
 article.schedule {
   @extend .page-section;
+  padding: 10rem 0;
   /* Remove current tab background */
   a.active, a.active:hover, a.active:focus {
     background: transparent !important;

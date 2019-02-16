@@ -1066,13 +1066,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #treehouse {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor;
   overflow: hidden;
   background-color: #cbf2ff;
 }
@@ -1088,6 +1081,12 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 575.98px) {
   #treehouse .grass, #treehouse .tree, #treehouse .foreground, #treehouse .background {
     right: -200px;
+  }
+}
+@media (min-width: 1536px) {
+  #treehouse .background, #treehouse .foreground {
+    width: 100%;
+    background-size: cover;
   }
 }
 #treehouse .background {
@@ -1177,6 +1176,11 @@ h1, h2, h3, h4, h5, h6, p {
   background-image: url("../img/parallax-backgrounds/treefort/grass1.png");
   animation: grass1 steps(14) 10s infinite;
 }
+@media (min-width: 1536px) {
+  #treehouse .grass {
+    top: 1rem;
+  }
+}
 @keyframes grass1 {
   0% {
     background-position-y: 0px;
@@ -1196,8 +1200,14 @@ h1, h2, h3, h4, h5, h6, p {
   width: 300px;
   overflow: hidden;
   right: 512px;
-  top: 230.4px;
+  top: 233.5135135135px;
   animation: deer 13s steps(10) 5s infinite;
+}
+@media (min-width: 1536px) {
+  #treehouse .deer {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @keyframes deer {
   0% {
@@ -1339,32 +1349,6 @@ article.hero .sign-container .volunteer {
     opacity: 0;
     left: 90%;
   }
-}
-
-article.img-bg-section {
-  background-color: transparent !important;
-  color: white;
-  min-height: 100vh;
-}
-article.img-bg-section .img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -3;
-}
-article.img-bg-section .img-bg > div, article.img-bg-section .img-bg > img {
-  position: absolute;
-  display: block;
-  z-index: -2;
-}
-article.img-bg-section .container {
-  background-color: transparent;
-  z-index: 1;
 }
 
 a {
@@ -1647,6 +1631,32 @@ article.hero .content p {
   color: black;
 }
 
+article.img-bg-section {
+  background-color: transparent !important;
+  color: white;
+  padding: 20rem 0rem;
+}
+article.img-bg-section .img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
+}
+article.img-bg-section .img-bg > div, article.img-bg-section .img-bg > img {
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+article.img-bg-section .container {
+  background-color: transparent;
+  z-index: 1;
+}
+
 article.intro {
   text-align: center;
 }
@@ -1746,6 +1756,7 @@ article.tracks img {
   }
 }*/
 article.schedule {
+  padding: 10rem 0;
   /* Remove current tab background */
   /* Remove bootstrap styling */
   min-height: unset;

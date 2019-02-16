@@ -14,17 +14,17 @@
         }
     }
 
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges; 
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;   
     overflow: hidden;
     background-color: #cbf2ff;
      
-     .background {
+    .background, .foreground {
+        @include ultra-wide-rules($width) {
+            width: 100%;
+            background-size: cover;
+        }
+    }
+
+    .background {
         @extend %fill-treehouse-bg;
         background-image: url('../img/parallax-backgrounds/treefort/background.svg');
      }
@@ -113,6 +113,18 @@
         @extend %fill-treehouse-bg;
         background-image: url('../img/parallax-backgrounds/treefort/grass1.png');
         animation: grass1 steps(14) 10s  infinite;
+        @include ultra-wide-rules($width) {
+            top: 0.5vw;
+        }
+        @media (min-width: 1600px) {
+            top: 1.25vw;
+        }
+        @media (min-width: 1710px) {
+            top: 2vw;
+        }
+        @media (min-width: 1900px) {
+            top: 3vw;
+        }
         
         @keyframes grass1{
             0%{background-position-y:0px;}
@@ -128,8 +140,12 @@
         @include setSize(300px);
         overflow: hidden;
         right: $width / 3;
-        top: $height / 3.75;
+        top: $height / 3.7;
         animation: deer 13s steps(10) 5s infinite;
+        @include ultra-wide-rules($width) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
      }
      
      @keyframes deer{

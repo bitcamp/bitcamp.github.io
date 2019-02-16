@@ -8,6 +8,12 @@
     background-size: $width;
 }
 
+@mixin ultra-wide-rules($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
 @mixin setSize($sideLength) {
     height: $sideLength;
     width: $sideLength; 
