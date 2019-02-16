@@ -1178,7 +1178,22 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (min-width: 1536px) {
   #treehouse .grass {
-    top: 1rem;
+    top: 0.5vw;
+  }
+}
+@media (min-width: 1600px) {
+  #treehouse .grass {
+    top: 1.25vw;
+  }
+}
+@media (min-width: 1710px) {
+  #treehouse .grass {
+    top: 2vw;
+  }
+}
+@media (min-width: 1900px) {
+  #treehouse .grass {
+    top: 3vw;
   }
 }
 @keyframes grass1 {
@@ -1471,8 +1486,14 @@ article.hero {
   }
 }
 article.hero #registration {
-  -webkit-transform: translateY(3rem);
-  transform: translateY(3rem);
+  -webkit-transform: translateY(2.5rem);
+  transform: translateY(2.5rem);
+}
+@media (max-height: 650px) {
+  article.hero #registration {
+    -webkit-transform: translateY(1.5rem);
+    transform: translateY(1.5rem);
+  }
 }
 article.hero .fire-container, article.hero .logs-container {
   display: inline-block;
@@ -1482,11 +1503,13 @@ article.hero .fire-container, article.hero .logs-container {
   transform: translateX(-50%);
 }
 article.hero .fire-container {
-  bottom: 10vh;
-  left: 49.9%;
+  bottom: 10.5vh;
+  left: 50%;
 }
 article.hero .fire-container img.fire {
-  height: 20vh;
+  height: 24vh;
+  -webkit-transform: translateX(-0.3rem);
+  transform: translateX(-0.3rem);
 }
 article.hero .logs-container {
   bottom: 5vh;
@@ -1530,6 +1553,11 @@ article.hero .content h1 {
     font-size: 7rem;
   }
 }
+@media (max-height: 667px) {
+  article.hero .content h1 {
+    font-size: 10rem;
+  }
+}
 article.hero .content h2 {
   color: #FFAF3F;
   font-size: 3.75rem;
@@ -1544,6 +1572,11 @@ article.hero .content h2 {
   article.hero .content h2 {
     font-size: 2.7rem;
     margin-top: 0;
+  }
+}
+@media (max-height: 667px) {
+  article.hero .content h2 {
+    font-size: 3.5rem;
   }
 }
 article.hero .content p {
