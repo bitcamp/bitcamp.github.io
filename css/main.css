@@ -1182,8 +1182,12 @@ article.hero {
     article.hero {
       height: calc(100vh - 65px); } }
   article.hero #registration {
-    -webkit-transform: translateY(3rem);
-    transform: translateY(3rem); }
+    -webkit-transform: translateY(2.5rem);
+    transform: translateY(2.5rem); }
+    @media (max-height: 650px) {
+      article.hero #registration {
+        -webkit-transform: translateY(1.5rem);
+        transform: translateY(1.5rem); } }
   article.hero .fire-container, article.hero .logs-container {
     display: inline-block;
     /* needed for scaling */
@@ -1225,6 +1229,9 @@ article.hero {
       @media (max-width: 575.98px) {
         article.hero .content h1 {
           font-size: 7rem; } }
+      @media (max-height: 667px) {
+        article.hero .content h1 {
+          font-size: 10rem; } }
     article.hero .content h2 {
       color: #FFAF3F;
       font-size: 3.75rem;
@@ -1236,6 +1243,9 @@ article.hero {
         article.hero .content h2 {
           font-size: 2.7rem;
           margin-top: 0; } }
+      @media (max-height: 667px) {
+        article.hero .content h2 {
+          font-size: 3.5rem; } }
     article.hero .content p {
       color: #7F6C5F;
       font-size: 2rem;
