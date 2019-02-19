@@ -1006,15 +1006,32 @@ article.hero {
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%); }
       article.hero .sign-container .sign-link:hover {
-        color: #FF6F3F; }
+        color: #FF6F3F;
+        font-weight: bolder; }
     article.hero .sign-container .hack {
-      top: 11%;
+      top: 5%;
       -webkit-transform: translateX(-50%) rotate(15deg);
       transform: translateX(-50%) rotate(15deg); }
+      article.hero .sign-container .hack div {
+        padding-left: 2rem;
+        padding-right: 3.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem; }
     article.hero .sign-container .mentor {
-      top: 41%; }
+      top: 36%; }
+      article.hero .sign-container .mentor div {
+        padding-left: 2rem;
+        padding-right: 1.5rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem; }
     article.hero .sign-container .volunteer {
-      top: 67%; }
+      top: 62%;
+      left: 50%; }
+      article.hero .sign-container .volunteer div {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 1.26rem;
+        padding-bottom: 1.26rem; }
 
 #clouds {
   position: absolute;
