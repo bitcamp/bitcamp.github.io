@@ -1492,7 +1492,7 @@ article.schedule {
     overflow-y: scroll;
     overflow-x: hidden; }
   article.schedule .tab-content {
-    height: 605px; }
+    height: 500px; }
   article.schedule .footer {
     text-align: center;
     margin-top: 2.5rem;
