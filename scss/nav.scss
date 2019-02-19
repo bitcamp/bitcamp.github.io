@@ -47,6 +47,14 @@ $logo-font-size: 3rem;
             text-transform: uppercase;
             color: $logo-color;
         }
+        &.sign-alt {
+          text-transform: uppercase;
+          color: $bp-header-brown;
+          display: none;
+          @media (max-width: $md-breakpoint) {
+            display: inline;
+          }
+        }
     }
     .navbar-brand {
         color: $logo-color;
