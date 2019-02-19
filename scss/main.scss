@@ -427,7 +427,7 @@ article.schedule {
     border: 0px solid;
     margin-top: 7rem;
     margin-bottom: 5rem;
-    background-color: rgba(239, 239, 239, 0.65);
+    background-color: rgba(239, 239, 239, 0.9);
     padding-bottom: 1.25rem;
     margin-left: 8rem;
     margin-right: 8rem;
@@ -438,7 +438,7 @@ article.schedule {
     }
     li.nav-item {
       margin: 0; /* Get rid of spacing between buttom borders */
-      border-bottom: 5px solid $bp-warm-grey;
+      border-bottom: 5px solid white;
       padding-top: 1.25rem;
       width: 32%;
       a {
@@ -515,6 +515,13 @@ article.schedule {
       padding-top: 0rem;
     }
   }
+  #myTabContent {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .tab-content {
+    height: 605px;
+  }
   .event {
     @extend .opaque-card;
   }
@@ -531,7 +538,7 @@ article.schedule {
       padding: 3rem;
     }
     h4 {
-      text-align: center;
+      //text-align: center;
     }
   }
 }
