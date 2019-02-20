@@ -3,7 +3,7 @@
    %fill-lake-bg {
       @include fill-bg(1920px, 1080px);
       background-position: right;
-      @media (max-width: $sm-breakpoint) {
+      @media (max-width: $md-breakpoint) {
          right: 0;
       }
    }
@@ -54,6 +54,9 @@
       left: 525px;
       -webkit-transform: rotate(110deg);
               transform: rotate(110deg);
+      @media (max-width: $md-breakpoint) {
+         display: none;
+      }
    }
 
    .gill {
