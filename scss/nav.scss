@@ -51,6 +51,9 @@ $logo-font-size: 3rem;
           text-transform: uppercase;
           color: $bp-header-brown;
           display: none;
+          &:hover {
+              color: lighten($bp-header-brown, 15%);
+          }
           @media (max-width: $md-breakpoint) {
             display: inline;
           }
