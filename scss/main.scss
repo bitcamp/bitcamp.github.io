@@ -55,7 +55,8 @@ a.bp-btn {
     -webkit-filter: brightness(140%);
             filter: brightness(140%);
   }
-  &:active {
+  &:active,
+  &:focus {
     opacity: 1;
     -webkit-filter: brightness(90%);
             filter: brightness(90%);
@@ -167,7 +168,7 @@ article.hero {
       top: 8rem;
     }
     @media (max-height: 600px) {
-      top: 0;
+      //top: 0;
     }
     h1 {
       color: $logo-color;
@@ -175,12 +176,18 @@ article.hero {
       margin-top: calc(15vh - #{$nav-height});
       @media (max-width: $md-breakpoint) {
         font-size: 10rem;
+        margin-top: calc(10vh - #{$nav-height});
       }
       @media (max-width: $sm-breakpoint) {
+        margin-top: calc(10vh - #{$nav-height});
         font-size: 7rem;
       }
       @media (max-height: 667px) {
-        font-size: 10rem;
+        margin-top: calc(15vh - #{$nav-height});
+        font-size: 7rem;
+      }
+      @media (max-height: 590px) {
+        margin-top: calc(15vh - #{$nav-height});
       }
     }
     h2 {
@@ -192,10 +199,10 @@ article.hero {
       }
       @media (max-width: $sm-breakpoint) {
         font-size: 2.7rem;
-        margin-top: 0;
+        //margin-top: 0;
       }
       @media (max-height: 667px) {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
       }
     }
     p {

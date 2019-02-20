@@ -20,15 +20,18 @@ article.hero {
       display: block;
       color: black;
       left: 50.5%;
-      padding: 1.4rem;
+      padding: 1.3rem 2.4rem;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       &:hover {
         color: $bp-bitcamp-orange;
+        font-weight: bolder;
       }
     }
     .hack {
       top: 11%;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
       -webkit-transform: translateX(-50%) rotate(15deg);
               transform: translateX(-50%) rotate(15deg);
     }

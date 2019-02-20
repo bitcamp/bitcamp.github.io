@@ -131,6 +131,16 @@ h1, h2, h3, h4, h5, h6, p {
   text-transform: uppercase;
   color: #fa7041;
 }
+#nav .nav-link.sign-alt {
+  text-transform: uppercase;
+  color: #C79970;
+  display: none;
+}
+@media (max-width: 767.98px) {
+  #nav .nav-link.sign-alt {
+    display: inline;
+  }
+}
 #nav .navbar-brand {
   color: #fa7041;
   font-family: Aleo;
@@ -173,6 +183,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transition: ease all 0.2s;
   transition: ease all 0.2s;
   z-index: 100;
+  transition: opacity 300ms ease-in-out;
 }
 @media (max-width: 1100px) {
   #nav #mlh-trust-badge {
@@ -180,7 +191,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 #nav.below-hero #mlh-trust-badge {
-  display: none;
+  opacity: 0;
 }
 #nav.below-hero .navbar-brand img {
   opacity: 1;
@@ -1262,15 +1273,18 @@ article.hero .sign-container .sign-link {
   display: block;
   color: black;
   left: 50.5%;
-  padding: 1.4rem;
+  padding: 1.3rem 2.4rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 article.hero .sign-container .sign-link:hover {
   color: #FF6F3F;
+  font-weight: bolder;
 }
 article.hero .sign-container .hack {
   top: 11%;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
   -webkit-transform: translateX(-50%) rotate(15deg);
   transform: translateX(-50%) rotate(15deg);
 }
@@ -1417,7 +1431,7 @@ a.bp-btn:hover {
   -webkit-filter: brightness(140%);
   filter: brightness(140%);
 }
-a.bp-btn:active {
+a.bp-btn:active, a.bp-btn:focus {
   opacity: 1;
   -webkit-filter: brightness(90%);
   filter: brightness(90%);
@@ -1534,11 +1548,6 @@ article.hero .content {
     top: 8rem;
   }
 }
-@media (max-height: 600px) {
-  article.hero .content {
-    top: 0;
-  }
-}
 article.hero .content h1 {
   color: #fa7041;
   font-size: 11.75rem;
@@ -1547,16 +1556,24 @@ article.hero .content h1 {
 @media (max-width: 767.98px) {
   article.hero .content h1 {
     font-size: 10rem;
+    margin-top: calc(10vh - 80px);
   }
 }
 @media (max-width: 575.98px) {
   article.hero .content h1 {
+    margin-top: calc(10vh - 80px);
     font-size: 7rem;
   }
 }
 @media (max-height: 667px) {
   article.hero .content h1 {
-    font-size: 10rem;
+    margin-top: calc(15vh - 80px);
+    font-size: 7rem;
+  }
+}
+@media (max-height: 590px) {
+  article.hero .content h1 {
+    margin-top: calc(15vh - 80px);
   }
 }
 article.hero .content h2 {
@@ -1572,12 +1589,11 @@ article.hero .content h2 {
 @media (max-width: 575.98px) {
   article.hero .content h2 {
     font-size: 2.7rem;
-    margin-top: 0;
   }
 }
 @media (max-height: 667px) {
   article.hero .content h2 {
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
 }
 article.hero .content p {
