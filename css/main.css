@@ -772,6 +772,11 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transform: rotate(110deg);
   transform: rotate(110deg);
 }
+@media (max-width: 767.98px) {
+  #lake .kayak {
+    display: none;
+  }
+}
 #lake .gill {
   height: 100px;
   width: 100px;
@@ -1443,7 +1448,7 @@ a.bp-btn:active, a.bp-btn:focus {
 div.opaque-card, article.schedule div.event {
   background-color: rgba(239, 239, 239, 0.9);
   border-radius: 1.75rem;
-  margin: 2rem 3rem 0rem;
+  margin: 2rem 3rem;
   padding: 2rem 3.25rem;
   color: black;
 }
@@ -1812,8 +1817,6 @@ article.schedule {
   padding: 10rem 0;
   /* Remove current tab background */
   /* Remove bootstrap styling */
-  min-height: unset;
-  width: 100%;
 }
 article.schedule a.active, article.schedule a.active:hover, article.schedule a.active:focus {
   background: transparent !important;
@@ -1917,6 +1920,10 @@ article.schedule .external-link {
 article.schedule #myTabContent {
   overflow-y: scroll;
   overflow-x: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-left: none;
+  border-right: none;
+  position: relative;
 }
 article.schedule #myTabContent::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.2);
@@ -1937,6 +1944,12 @@ article.schedule .footer {
 article.schedule .container .opaque-card, article.schedule .container .event {
   padding: 3rem;
 }
+@media (max-width: 575.98px) {
+  article.schedule .container h4 {
+    font-size: 2.2rem;
+  }
+}
+
 article.faq h5 {
   cursor: pointer;
   font-family: Avenir, Georgia, sans-serif;

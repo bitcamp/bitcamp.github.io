@@ -54,6 +54,9 @@
       left: 525px;
       -webkit-transform: rotate(110deg);
               transform: rotate(110deg);
+      @media (max-width: $md-breakpoint) {
+         display: none;
+      }
    }
 
    .gill {

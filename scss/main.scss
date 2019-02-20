@@ -67,7 +67,7 @@ a.bp-btn {
 div.opaque-card {
   background-color: rgba(239, 239, 239, 0.9);
   border-radius: 1.75rem;
-  margin: 2rem 3rem 0rem;
+  margin: 2rem 3rem;
   padding: 2rem 3.25rem;
   color: black;
 }
@@ -525,6 +525,10 @@ article.schedule {
   #myTabContent {
     overflow-y: scroll;
     overflow-x: hidden;
+    border: 4px solid rgba(white, 0.4);
+    border-left: none;
+    border-right: none;
+    position: relative;
 
     &::-webkit-scrollbar {
       background-color: rgba(255,255,255,0.2);
@@ -546,15 +550,14 @@ article.schedule {
     margin-top: 2.5rem;
     font-family: Avenir;
   }
-  // TODO: Remove after schedule is finalized
-  min-height: unset;
-  width: 100%;
   .container {
     .opaque-card {
       padding: 3rem;
-    }
+    }  
     h4 {
-      //text-align: center;
+      @media (max-width: $sm-breakpoint) {
+        font-size: 2.2rem;
+      }
     }
   }
 }
