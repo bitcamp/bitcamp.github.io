@@ -518,6 +518,15 @@ article.schedule {
   #myTabContent {
     overflow-y: scroll;
     overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($logo-color, 0.8);
+      border-radius: 5px;
+    }
   }
   .tab-content {
     height: 500px;
