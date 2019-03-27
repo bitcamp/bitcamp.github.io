@@ -293,6 +293,14 @@ article.img-bg-section {
   background-color: transparent !important;
   color: white;
   padding: 20rem 0rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-pixelated;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
   .img-bg {
     position: absolute;
     top: 0;
@@ -394,7 +402,7 @@ article.tracks {
         margin-bottom: initial;
       }
     }
-    p {
+    .col-content {
       @media (max-width: $md-breakpoint) {
         margin-bottom: 5rem;
       }
@@ -407,6 +415,30 @@ article.tracks {
   }
   img {
     width: 10rem;
+  }
+  .event-links {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $lg-breakpoint) {
+      flex-direction: column;
+    }
+    @media (max-width: $lg-breakpoint) {
+      align-items: flex-start;
+    }
+    a {
+      margin-right: 2rem;
+      @media (max-width: $xl-breakpoint) {
+        font-size: 1.6rem;
+      }
+      @media (max-width: $lg-breakpoint) {
+        font-size: inherit;
+        margin: 0.5rem 0;
+      }
+    }
+    img {
+      width: 1.5em;
+      vertical-align: top;
+    }
   }
 }
 
