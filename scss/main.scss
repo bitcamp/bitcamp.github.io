@@ -427,6 +427,7 @@ article.tracks {
     }
     a {
       margin-right: 2rem;
+      margin-bottom: 1rem;
       @media (max-width: $xl-breakpoint) {
         font-size: 1.6rem;
       }
@@ -585,7 +586,7 @@ article.schedule {
   .container {
     .opaque-card {
       padding: 3rem;
-    }  
+    }
     h4 {
       @media (max-width: $sm-breakpoint) {
         font-size: 2.2rem;
@@ -777,5 +778,3 @@ article.footer {
     margin-top: 2rem;
   }
 }
-
-
