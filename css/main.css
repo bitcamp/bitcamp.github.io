@@ -1821,6 +1821,7 @@ article.tracks .event-links {
 }
 article.tracks .event-links a {
   margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 1199.98px) {
   article.tracks .event-links a {
