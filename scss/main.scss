@@ -427,6 +427,7 @@ article.tracks {
     }
     a {
       margin-right: 2rem;
+      margin-bottom: 1rem;
       @media (max-width: $xl-breakpoint) {
         font-size: 1.6rem;
       }
@@ -585,7 +586,7 @@ article.schedule {
   .container {
     .opaque-card {
       padding: 3rem;
-    }  
+    }
     h4 {
       @media (max-width: $sm-breakpoint) {
         font-size: 2.2rem;
@@ -689,6 +690,43 @@ article.sponsors {
       max-width: 100%;
     }
   }
+  div.cohost {
+    a {
+      &:hover {
+        -webkit-filter: none;
+                filter: none;
+      }
+      display: block;
+      height: 20rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      &#NSA {
+        -webkit-box-pack: flex-end;
+            -ms-flex-pack: flex-end;
+                justify-content: flex-end;
+                @media (max-width: 577px) {
+                  margin-bottom: 3rem;
+                  -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                          justify-content: center;
+                }
+      }
+      &#LTS {
+        -webkit-box-pack: flex-start;
+            -ms-flex-pack: flex-start;
+                justify-content: flex-start;
+                @media (max-width: 577px) {
+                  -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                          justify-content: center;
+                }
+      }
+      img {
+        height: 100%;
+      }
+    }
+  }
 
   /* image styling for sponsor logos */
   .sponsors-img {
@@ -777,5 +815,3 @@ article.footer {
     margin-top: 2rem;
   }
 }
-
-
