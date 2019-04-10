@@ -702,9 +702,13 @@ article.sponsors {
       display: -ms-flexbox;
       display: flex;
       &#NSA {
+        padding-right: 3rem;
         -webkit-box-pack: flex-end;
             -ms-flex-pack: flex-end;
                 justify-content: flex-end;
+                @media (max-width: $sm-breakpoint) {
+                  padding-right: 0;
+                }
                 @media (max-width: 577px) {
                   margin-bottom: 3rem;
                   -webkit-box-pack: center;
@@ -713,9 +717,13 @@ article.sponsors {
                 }
       }
       &#LTS {
+        padding-left: 3rem;
         -webkit-box-pack: flex-start;
             -ms-flex-pack: flex-start;
                 justify-content: flex-start;
+                @media (max-width: $sm-breakpoint) {
+                  padding-left: 0;
+                }
                 @media (max-width: 577px) {
                   -webkit-box-pack: center;
                       -ms-flex-pack: center;

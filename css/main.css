@@ -1637,9 +1637,13 @@ article.sponsors {
       -webkit-filter: none;
       filter: none; }
     article.sponsors div.cohost a#NSA {
+      padding-right: 3rem;
       -webkit-box-pack: flex-end;
       -ms-flex-pack: flex-end;
       justify-content: flex-end; }
+      @media (max-width: 575.98px) {
+        article.sponsors div.cohost a#NSA {
+          padding-right: 0; } }
       @media (max-width: 577px) {
         article.sponsors div.cohost a#NSA {
           margin-bottom: 3rem;
@@ -1647,9 +1651,13 @@ article.sponsors {
           -ms-flex-pack: center;
           justify-content: center; } }
     article.sponsors div.cohost a#LTS {
+      padding-left: 3rem;
       -webkit-box-pack: flex-start;
       -ms-flex-pack: flex-start;
       justify-content: flex-start; }
+      @media (max-width: 575.98px) {
+        article.sponsors div.cohost a#LTS {
+          padding-left: 0; } }
       @media (max-width: 577px) {
         article.sponsors div.cohost a#LTS {
           -webkit-box-pack: center;
