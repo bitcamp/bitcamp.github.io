@@ -94,7 +94,8 @@
         <div class="navbar-nav">
           <a href="#about" class="nav-item nav-link">About</a>
           <a href="#faq" class="nav-item nav-link">FAQ</a>
-          <a href="#schedule" class="nav-item nav-link">Schedule</a>
+          <a href="#schedule" class="nav-item nav-link" onclick="handleSchedule()">Schedule</a>
+          <a href="#schedule" class="nav-item nav-link" onclick="handleWorkshops()">Workshops</a>
           <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
           <a href="#contact" class="nav-item nav-link">Contact</a>
           <a href="https://bit.camp/mentor" target="_blank" class="nav-item nav-link sign-alt">Mentor</a>
@@ -491,14 +492,18 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12 col-12">
-            <h2 class="section-title on-dark-bg">Schedule</h2>
+            <h2>
+              <button class="schedule-btn active-btn" id="schedule-btn" onclick="switchScheduleWorkshop(this)">
+                <input type="radio" name="schedule" checked/>
+                Schedule
+              </button>
+              <button class="schedule-btn" id="workshops-btn" onclick="switchScheduleWorkshop(this)">
+                <input type="radio" name="schedule"/>
+                Workshops
+              </button>
+            </h2>
             <div class="container justify-content-center">
-              <!--<div class="row opaque-card">
-                <div class="col-lg-12 col-md-12">
-                  <h4>Stay tuned for updates!</h4>
-                </div>
-              </div>-->
-              <!-- Scedule Navbar -->
+              <!-- Schedule Navbar -->
               <ul class="nav nav-tabs justify-content-center" id="ScheduleTabs" role="tablist">
                 <li class="nav-item current" id="Friday-tab">
                   <a class="nav-link active" data-toggle="tab" href="#Friday" role="tab">
@@ -553,184 +558,427 @@
               <div class="tab-content" id="myTabContent">
                 <!-- Friday, April 12th -->
                 <div class="tab-pane fade active show" id="Friday" role="tabpanel" aria-labelledby="Friday-tab">
-                  <!--<div class="row justify-content-center event">
-                    <div class="col-md-6">
-                      <p>5:00 PM</p>
-                      <h4>Hacker Check-in</h4>
-                      <p>Xfinity Center, Gate A</p>
+                  <div class="schedule-div">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>5:00 PM - 6:00 PM</p>
+                        <h4>Hacker Check-in</h4>
+                        <p>Xfinity Center, Gate A</p>
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <p class="external-link"><a href="">hacker checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>5:00 PM - 6:00 PM</p>
+                        <h4>Mentor Check-in</h4>
+                        <p>Xfinity Center, Gate A</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-md-6">
-                      <p>6:00 PM</p>
-                      <h4>UMD Student Check-in</h4>
-                      <p>Xfinity Center, Gate A</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>6:00 PM - 7:30 PM</p>
+                        <h4>UMD Student Check-in</h4>
+                        <p>Xfinity Center, Gate A</p>
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <p class="external-link"><a href="">UMD Student Checklist <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>6:00 PM - 8:00 PM</p>
+                        <h4>Dinner</h4>
+                        <p>Food Station</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-md-6">
-                      <p>6:00 PM</p>
-                      <h4>Dinner: Pizza</h4>
-                      <p>Canteen</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>6:00 PM - 8:30 PM</p>
+                        <h4>Sponsorship Fair</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <p class="external-link"><a href="">dietary accomodations <span><i class="fas fa-chevron-right"></i></span></a></p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>7:30 PM - 9:00 PM</p>
+                        <h4>Opening Ceremony</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
-                  </div>-->
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>5:00 PM - 6:00 PM</p>
-                      <h4>Hacker Check-in</h4>
-                      <p>Xfinity Center, Gate A</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM</p>
+                        <h4>Hacking Starts</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>5:00 PM - 6:00 PM</p>
-                      <h4>Mentor Check-in</h4>
-                      <p>Xfinity Center, Gate A</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM</p>
+                        <h4>Dessert</h4>
+                        <p>The Dock</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>6:00 PM - 7:30 PM</p>
-                      <h4>UMD Student Check-in</h4>
-                      <p>Xfinity Center, Gate A</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>6:00 PM - 8:00 PM</p>
-                      <h4>Dinner</h4>
-                      <p>Canteen</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>6:00 PM - 8:30 PM</p>
-                      <h4>Sponsorship Fair</h4>
-                      <p>Campgrounds</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>6:00 PM - 10:30 PM</p>
-                      <h4>Team Formation</h4>
-                      <p>Campfire</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM - 10:30 PM</p>
+                        <h4>Team Formation</h4>
+                        <p>The Treehouse</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>7:30 PM - 9:00 PM</p>
-                      <h4>Opening Ceremony</h4>
-                      <p>Campfire</p>
+                  <!--Workshops-->
+                  <div class="workshops">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM - 9:30 PM</p>
+                        <h4>Bitcamp 101</h4>
+                        <p>The Treehouse</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>9:00 PM</p>
-                      <h4>Hacking Starts</h4>
-                      <p>Campgrounds</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM - 10:00 PM</p>
+                        <h4>Amp Up Your Apps with Maps By Esri</h4>
+                        <p>The Cabin</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>9:00 PM</p>
-                      <h4>Dessert</h4>
-                      <p>Canteen</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 PM - 11:00 PM</p>
+                        <h4>Compass Challenge Panel</h4>
+                        <p>The Treehouse</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 PM - 11:00 PM</p>
+                        <h4>Intro to Hardware</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 PM - 11:00 PM</p>
+                        <h4>Cloud 101</h4>
+                        <p>The Observatory</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 PM - 12:00 AM</p>
+                        <h4>Introduction to ATTiny and Wearable Design</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 PM - 12:00 AM</p>
+                        <h4>Rocking the Coding Interview</h4>
+                        <p>The Treehouse</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- Saturday, April 13th -->
                 <div class="tab-pane fade" id="Saturday" role="tabpanel" aria-labelledby="Saturday-tab">
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>12:00 AM - 3:00 AM</p>
-                      <h4>Insomnia Cookies</h4>
-                      <p>Canteen</p>
+                  <div class="schedule-div">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:00 AM - 1:00 AM</p>
+                        <h4>Hungry Hungry Hippos</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:00 AM - 2:00 AM</p>
+                        <h4>Smash Tournament By Capital One</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>8:30 AM - 10:00 AM</p>
+                        <h4>Breakfast</h4>
+                        <p>Food Station</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:30 AM</p>
+                        <h4>Mural Unveiling</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:30 PM - 2:00 PM</p>
+                        <h4>Lunch</h4>
+                        <p>Food Station</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>2:30 PM - 3:30 PM</p>
+                        <h4>Travel Reimbursements</h4>
+                        <p>Bitcamp Help Desk</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>4:30 PM - 6:00 PM</p>
+                        <h4>Colorwar</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>6:00 PM - 8:00 PM</p>
+                        <h4>Dinner</h4>
+                        <p>Food Station</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>7:30 PM - 8:30 PM</p>
+                        <h4>Cup Stacking With MLH</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM - 10:30 PM</p>
+                        <h4>Zumba</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>8:30 AM - 10:00 AM</p>
-                      <h4>Breakfast</h4>
-                      <p>Canteen</p>
+                  <!--Workshops-->
+                  <div class="workshops">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 AM - 11:00 AM</p>
+                        <h4>Introduction to Unity</h4>
+                        <p>The Treehouse</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>12:30 PM - 2:00 PM</p>
-                      <h4>Lunch</h4>
-                      <p>Canteen</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 AM - 11:00 AM</p>
+                        <h4>Real Time Network Visualization By NSA</h4>
+                        <p>The Cabin</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>4:30 PM - 6:00 PM</p>
-                      <h4>Colorwar</h4>
-                      <p>Campfire</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 AM - 12:00 PM</p>
+                        <h4>Attorney AMA: Open Forum</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>6:00 PM - 8:00 PM</p>
-                      <h4>Dinner</h4>
-                      <p>Canteen</p>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 AM - 12:00 PM</p>
+                        <h4>FINRA Tech Talk</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>2:00 PM - 2:30 PM</p>
+                        <h4>Risk Management in CyberSpace</h4>
+                        <p>The Observatory</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>2:00 PM - 3:00 PM</p>
+                        <h4>Attorney AMA: Tech, Law, and Social Change</h4>
+                        <p>The Treehouse</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>2:00 PM - 3:00 PM</p>
+                        <h4>Designing a Web Application</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>3:00 PM - 4:00 PM</p>
+                        <h4>Ghidra Software Reverse Engineering Framework By NSA</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>3:00 PM - 4:00 PM</p>
+                        <h4>UMD Organizations Panel</h4>
+                        <p>The Treehouse</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>4:00 PM - 5:00 PM</p>
+                        <h4>High Schooler's Panel</h4>
+                        <p>The Observatory</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>4:00 PM - 5:00 PM</p>
+                        <h4>TCS Game of Games</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>4:00 PM - 5:30 AM</p>
+                        <h4>Making Everything Easier Using Mathematica</h4>
+                        <p>The Treehouse</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>5:00 PM - 6:00 PM</p>
+                        <h4>Building Serverless Apps Using Firebase</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>5:00 PM - 6:00 PM</p>
+                        <h4>Intro to Illustator and Photoshop</h4>
+                        <p>The Observatory</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>8:00 PM - 9:00 PM</p>
+                        <h4>Programming a Web Application</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>8:00 PM - 9:00 PM</p>
+                        <h4>Algorithms Review (CMSC351)</h4>
+                        <p>The Treehouse</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 PM - 10:00 PM</p>
+                        <h4>Mobile Augmented Reality Development with Unity</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:30 PM - 10:30 PM</p>
+                        <h4>How to Pitch Your Project</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 PM - 10:30 PM</p>
+                        <h4>Devpost Office Hours</h4>
+                        <p>The Observatory</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>10:00 PM - 11:00 PM</p>
+                        <h4>Making Your Hacks Learn</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 PM - 12:00 AM</p>
+                        <h4>Intro to Generative Art with Processing</h4>
+                        <p>The Cabin</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- Sunday, April 14th -->
                 <div class="tab-pane fade" id="Sunday" role="tabpanel" aria-labelledby="Sunday-tab">
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>8:00 AM</p>
-                      <h4>Devpost Submission Deadline</h4>
-                      <p>Campgrounds</p>
+                  <div class="schedule-div">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:00 AM - 2:00 AM</p>
+                        <h4>Movie Night</h4>
+                        <p>The Cabin</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:00 AM - 3:00 AM</p>
+                        <h4>S'mores</h4>
+                        <p>The Dock</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>8:00 AM</p>
+                        <h4>Devpost Submission Deadline</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>8:00 AM - 10:00 AM</p>
+                        <h4>Breakfast</h4>
+                        <p>Food Station</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:00 AM</p>
+                        <h4>Hacking Ends</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>9:30 AM - 10:30 AM</p>
+                        <h4>Expo A</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>11:00 AM - 12:00 PM</p>
+                        <h4>Expo B</h4>
+                        <p>The Campfire</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>12:00 PM - 1:00 PM</p>
+                        <h4>Lunch</h4>
+                        <p>Food Station</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <p>1:00 PM - 3:00 PM</p>
+                        <h4>Closing Ceremony</h4>
+                        <p>The Campfire</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>9:00 AM</p>
-                      <h4>Hacking Ends</h4>
-                      <p>Campgrounds</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>9:30 AM - 10:30 AM</p>
-                      <h4>Expo A</h4>
-                      <p>Campgrounds</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>11:00 AM - 12:00 PM</p>
-                      <h4>Expo B</h4>
-                      <p>Campgrounds</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>12:00 PM - 1:00 PM</p>
-                      <h4>Lunch</h4>
-                      <p>Canteen</p>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center event">
-                    <div class="col-lg-12 col-md-12">
-                      <p>1:00 PM - 3:00 PM</p>
-                      <h4>Closing Ceremony </h4>
-                      <p>Campfire</p>
+                  <!--Workshops-->
+                  <div class="workshops">
+                    <div class="row justify-content-center event">
+                      <div class="col-lg-12 col-md-12">
+                        <h4 style="text-align: center">There are no workshops</h4>
+                      </div>
                     </div>
                   </div>
                 </div>
             </div>
+
             <!-- Footer -->
             <div class="row justify-content-center">
               <div class="col">
@@ -1088,6 +1336,13 @@
                   </div>
               </div>
               <div class="col-sm-3 centered">
+                <div class="logo">
+                  <a target="_blank" href="http://www.validatek.com/careers/current-openings">
+                    <img class="sponsors-img" src="img/sponsor_logos_2019/def.svg"
+                      title="Drew Eckl Farnham"></a>
+                </div>
+            </div>
+              <div class="col-sm-3 centered">
                   <div class="logo">
                     <a target="_blank" href="http://hackp.ac/mlh-stickermule-hackathons">
                       <img class="sponsors-img" src="img/sponsor_logos_2019/stickermule.svg"
@@ -1101,6 +1356,9 @@
                         title="Technica"></a>
                   </div>
               </div>
+            </div>
+            <!-- 12========================================================================================================================================================== -->
+            <div class="row">
               <div class="col-sm-3 centered">
                   <div class="logo">
                     <a target="_blank" href="https://soylent.com/">
@@ -1108,9 +1366,6 @@
                         title="Soylent"></a>
                   </div>
               </div>
-            </div>
-            <!-- 12========================================================================================================================================================== -->
-            <div class="row">
               <div class="col-sm-3 centered">
                   <div class="logo">
                     <a target="_blank" href="https://stics.umd.edu/">
@@ -1132,16 +1387,16 @@
                         title="AWC"></a>
                   </div>
               </div>
+            </div>
+            <!-- 13========================================================================================================================================================== -->
+            <div class="row">
               <div class="col-sm-3 centered">
                   <div class="logo">
                     <a target="_blank" href="https://startupshell.org/">
                       <img class="sponsors-img" src="img/sponsor_logos_2019/startupshell.svg"
-                        title="Startup Shell"></a>
+                          title="Startup Shell"></a>
                   </div>
               </div>
-            </div>
-            <!-- 13========================================================================================================================================================== -->
-            <div class="row">
               <div class="col-sm-3 centered">
                   <div class="logo">
                     <a target="_blank" href="http://terrapinhackers.com/">
