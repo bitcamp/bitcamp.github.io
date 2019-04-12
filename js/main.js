@@ -42,3 +42,53 @@ function switchScheduleTab(event) {
     $(event.currentTarget).addClass('current');
   }
 }
+
+function handleWorkshops() {
+  document.getElementById('workshops-btn').classList.add('active-btn');
+  document.getElementById('workshops-btn').children[0].checked = true;
+  document.getElementById('schedule-btn').classList.remove('active-btn');
+  document.getElementById('schedule-btn').children[0].checked = false;
+  let workshops = document.getElementsByClassName('workshops');
+  let schedule = document.getElementsByClassName('schedule-div');
+  for (let i = 0; i < 3; i++) {
+    workshops[i].style.display = 'block';
+    schedule[i].style.display = 'none';
+  }
+}
+
+function handleSchedule() {
+  document.getElementById('workshops-btn').classList.remove('active-btn');
+  document.getElementById('workshops-btn').children[0].checked = false;
+  document.getElementById('schedule-btn').classList.add('active-btn');
+  document.getElementById('schedule-btn').children[0].checked = true;
+  let workshops = document.getElementsByClassName('workshops');
+  let schedule = document.getElementsByClassName('schedule-div');
+  for (let i = 0; i < 3; i++) {
+    workshops[i].style.display = 'none';
+    schedule[i].style.display = 'block';
+  }
+}
+
+function switchScheduleWorkshop(elt) {
+  if (!elt.children[0].checked) {
+    elt.children[0].checked = true;
+    elt.classList.add('active-btn');
+    let workshops = document.getElementsByClassName('workshops');
+    let schedule = document.getElementsByClassName('schedule-div');
+    if (elt.id === 'schedule-btn') {
+      document.getElementById('workshops-btn').classList.remove('active-btn');
+      document.getElementById('workshops-btn').children[0].checked = false;
+      for (let i = 0; i < 3; i++) {
+        workshops[i].style.display = 'none';
+        schedule[i].style.display = 'block';
+      }
+    } else {
+      document.getElementById('schedule-btn').classList.remove('active-btn');
+      document.getElementById('schedule-btn').children[0].checked = false;
+      for (let i = 0; i < 3; i++) {
+        workshops[i].style.display = 'block';
+        schedule[i].style.display = 'none';
+      }
+    }
+  }
+}
