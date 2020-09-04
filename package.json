@@ -20,7 +20,7 @@
   "homepage": "https://github.com/bitcamp/bitcamp-site-2018#readme",
   "dependencies": {
     "connect": "^3.6.5",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.13.1",
     "serve-static": "^1.13.1"
   }
 }
